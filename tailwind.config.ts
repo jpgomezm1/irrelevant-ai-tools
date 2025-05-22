@@ -35,14 +35,10 @@ export default {
 					secondary: '#9CA3AF',
 					tertiary: '#6B7280',
 				},
-				card: {
-					bg: 'rgba(139, 95, 255, 0.08)',
-					border: 'rgba(139, 95, 255, 0.2)',
-				},
-				input: {
-					bg: 'rgba(255, 255, 255, 0.05)',
-					border: 'rgba(255, 255, 255, 0.1)',
-				},
+				'card-bg': 'rgba(139, 95, 255, 0.08)',
+				'card-border': 'rgba(139, 95, 255, 0.2)',
+				'input-bg': 'rgba(255, 255, 255, 0.05)',
+				'input-border': 'rgba(255, 255, 255, 0.1)',
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
