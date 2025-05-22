@@ -84,3 +84,48 @@ export interface HeaderProps {
   onLanguageChange: (lang: Language) => void;
   onNewsletterClick: () => void;
 }
+
+export interface PlaylistItem {
+  id: string;
+  title: {
+    es: string;
+    en: string;
+  };
+  description: {
+    es: string;
+    en: string;
+  };
+  thumbnail: string;
+  url: string;
+  duration?: string;
+  episodes?: number;
+  category: string;
+  featured: boolean;
+}
+
+export interface ResourceItem {
+  id: string;
+  title: {
+    es: string;
+    en: string;
+  };
+  description: {
+    es: string;
+    en: string;
+  };
+  type: 'course' | 'community' | 'book' | 'newsletter' | 'tool';
+  url: string;
+  price: {
+    es: string;
+    en: string;
+  };
+  rating?: number;
+  thumbnail: string;
+  featured: boolean;
+}
+
+export interface ResourcesFilterOptions {
+  platform: string | null;
+  category: string | null;
+  search: string;
+}

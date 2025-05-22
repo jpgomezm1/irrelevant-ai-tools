@@ -26,48 +26,48 @@ const Hero: React.FC<HeroProps> = ({ language, onJoinWhatsApp }) => {
             <div className="inline-flex items-center mb-8 px-6 py-3 rounded-full border border-[#8B5FFF]/30 bg-gradient-to-r from-[#8B5FFF]/10 via-[#8B5FFF]/5 to-transparent backdrop-blur-xl">
               <div className="w-2 h-2 bg-[#8B5FFF] rounded-full mr-3 animate-pulse"></div>
               <span className="text-[#A78BFA] text-sm font-semibold tracking-wider uppercase">
-                {language === "es" ? "🚀 Powered by AI Magic" : "🚀 Powered by AI Magic"}
+                {language === "es" ? "🚀 Tu conexión con el futuro" : "🚀 Your connection to the future"}
               </span>
             </div>
             
             {/* Main Title */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[0.9] mb-8">
               <span className="block bg-gradient-to-r from-[#FFFFFF] via-[#A78BFA] to-[#8B5FFF] bg-clip-text text-transparent">
-                {language === "es" ? "Catálogo de" : "AI Tools"}
+                {language === "es" ? "Conectamos la IA" : "We connect AI"}
               </span>
               <span className="block bg-gradient-to-r from-[#8B5FFF] via-[#7C3AED] to-[#A78BFA] bg-clip-text text-transparent mt-2">
-                {language === "es" ? "Herramientas AI" : "Catalog"}
+                {language === "es" ? "con tu Empresa" : "with your Business"}
               </span>
               <span className="block text-[#FFFFFF] text-4xl md:text-5xl lg:text-6xl mt-4 font-light">
-                {language === "es" ? "para Empresas" : "for Business"}
+                {language === "es" ? "de forma práctica" : "in a practical way"}
               </span>
             </h1>
             
             {/* Enhanced Subtitle */}
             <p className="text-xl md:text-2xl text-[#9CA3AF] mb-12 leading-relaxed max-w-2xl lg:max-w-none">
               {language === "es" 
-                ? "Descubre herramientas de IA que transformarán tu negocio en piloto automático" 
-                : "Discover AI tools that will transform your business on autopilot"}
+                ? "El puente entre la tecnología que está cambiando el mundo y empresas reales que buscan resultados concretos. Sin tecnicismos, solo soluciones." 
+                : "The bridge between world-changing technology and real businesses seeking concrete results. No jargon, just solutions."}
             </p>
             
             {/* Key Features */}
             <div className="flex flex-wrap gap-4 mb-10 justify-center lg:justify-start">
               <div className="flex items-center px-4 py-2 bg-gradient-to-r from-[#8B5FFF]/10 to-[#7C3AED]/10 rounded-full border border-[#8B5FFF]/20">
-                <span className="text-[#8B5FFF] mr-2">⚡</span>
-                <span className="text-[#E5E7EB] text-sm font-medium">
-                  {language === "es" ? "Setup en minutos" : "Minutes to setup"}
-                </span>
-              </div>
-              <div className="flex items-center px-4 py-2 bg-gradient-to-r from-[#8B5FFF]/10 to-[#7C3AED]/10 rounded-full border border-[#8B5FFF]/20">
                 <span className="text-[#8B5FFF] mr-2">🎯</span>
                 <span className="text-[#E5E7EB] text-sm font-medium">
-                  {language === "es" ? "Sin conocimiento técnico" : "No tech skills needed"}
+                  {language === "es" ? "Soluciones probadas" : "Proven solutions"}
                 </span>
               </div>
               <div className="flex items-center px-4 py-2 bg-gradient-to-r from-[#8B5FFF]/10 to-[#7C3AED]/10 rounded-full border border-[#8B5FFF]/20">
-                <span className="text-[#8B5FFF] mr-2">💎</span>
+                <span className="text-[#8B5FFF] mr-2">⚡</span>
                 <span className="text-[#E5E7EB] text-sm font-medium">
-                  {language === "es" ? "Probado por expertos" : "Expert tested"}
+                  {language === "es" ? "Implementación rápida" : "Quick implementation"}
+                </span>
+              </div>
+              <div className="flex items-center px-4 py-2 bg-gradient-to-r from-[#8B5FFF]/10 to-[#7C3AED]/10 rounded-full border border-[#8B5FFF]/20">
+                <span className="text-[#8B5FFF] mr-2">📊</span>
+                <span className="text-[#E5E7EB] text-sm font-medium">
+                  {language === "es" ? "Resultados medibles" : "Measurable results"}
                 </span>
               </div>
             </div>
@@ -99,13 +99,19 @@ const Hero: React.FC<HeroProps> = ({ language, onJoinWhatsApp }) => {
                 <div className="flex items-center">
                   <div className="w-2 h-2 md:w-3 md:h-3 bg-gradient-to-r from-green-400 to-green-500 rounded-full mr-2 animate-pulse"></div>
                   <span className="whitespace-nowrap">
-                    {language === "es" ? "500+ empresarios activos" : "500+ active entrepreneurs"}
+                    {language === "es" ? "500+ empresarios conectados" : "500+ connected entrepreneurs"}
                   </span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-2 h-2 md:w-3 md:h-3 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full mr-2 animate-pulse delay-500"></div>
                   <span className="whitespace-nowrap">
                     {language === "es" ? "100% gratuito" : "100% free"}
+                  </span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-2 h-2 md:w-3 md:h-3 bg-gradient-to-r from-purple-400 to-purple-500 rounded-full mr-2 animate-pulse delay-1000"></div>
+                  <span className="whitespace-nowrap">
+                    {language === "es" ? "Actualizado diariamente" : "Updated daily"}
                   </span>
                 </div>
               </div>
@@ -132,7 +138,7 @@ const Hero: React.FC<HeroProps> = ({ language, onJoinWhatsApp }) => {
               <div className="relative bg-gradient-to-br from-[#8B5FFF]/10 via-transparent to-[#7C3AED]/10 backdrop-blur-2xl border border-[#8B5FFF]/20 rounded-full p-8 hover:scale-105 transition-transform duration-700">
                 <img 
                   src="https://storage.googleapis.com/cluvi/wizard.png" 
-                  alt="Mr. Irrelevant - AI Wizard"
+                  alt="Mr. Irrelevant - AI Business Connector"
                   className="w-full h-auto relative z-10 drop-shadow-2xl hover:drop-shadow-[0_0_30px_rgba(139,95,255,0.5)] transition-all duration-500"
                 />
                 
@@ -145,7 +151,7 @@ const Hero: React.FC<HeroProps> = ({ language, onJoinWhatsApp }) => {
               {/* Quote Bubble */}
               <div className="absolute -bottom-8 -right-8 bg-gradient-to-r from-[#8B5FFF]/90 to-[#7C3AED]/90 backdrop-blur-xl px-6 py-4 rounded-2xl border border-[#8B5FFF]/30 max-w-xs animate-float">
                 <p className="text-white text-sm font-medium">
-                  {language === "es" ? "¡Hagamos magia con tu negocio!" : "Let's make magic with your business!"}
+                  {language === "es" ? "¡Conectemos la IA con tu éxito!" : "Let's connect AI with your success!"}
                 </p>
                 <div className="absolute -top-2 left-8 w-4 h-4 bg-gradient-to-r from-[#8B5FFF] to-[#7C3AED] rotate-45"></div>
               </div>

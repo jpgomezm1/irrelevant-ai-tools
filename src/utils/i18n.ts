@@ -74,6 +74,37 @@ const translations = {
       featured: "Destacado",
       published: "Publicado el",
       author: "Por"
+    },
+    resources: {
+      title: "Recursos de Aprendizaje",
+      subtitle: "Playlists, cursos y comunidades que usamos para mantenernos actualizados",
+      youtube: {
+        title: "📹 Playlists de YouTube",
+        subtitle: "Contenido educativo seleccionado para empresarios"
+      },
+      spotify: {
+        title: "🎵 Playlists de Spotify", 
+        subtitle: "Música y podcasts para potenciar tu productividad"
+      },
+      others: {
+        title: "🎓 Otros Recursos",
+        subtitle: "Cursos, comunidades y herramientas recomendadas"
+      },
+      filters: {
+        all: "Todos",
+        beginner: "Principiante",
+        automation: "Automatización", 
+        marketing: "Marketing",
+        focus: "Concentración",
+        podcasts: "Podcasts",
+        motivation: "Motivación",
+        search: "Buscar recursos..."
+      },
+      duration: "Duración",
+      episodes: "episodios",
+      rating: "Rating",
+      viewPlaylist: "Ver Playlist",
+      viewResource: "Ver Recurso"
     }
   },
   en: {
@@ -116,6 +147,7 @@ const translations = {
       success: "Thank you for subscribing!",
       name: "Your name"
     },
+    
     whatsapp: {
       title: "Join our community",
       subtitle: "Connect with other entrepreneurs and receive daily AI tools tips",
@@ -151,6 +183,70 @@ const translations = {
       featured: "Featured",
       published: "Published on",
       author: "By"
+    },
+    resources: {
+      title: "Recursos de Aprendizaje",
+      subtitle: "Playlists, cursos y comunidades que usamos para mantenernos actualizados",
+      youtube: {
+        title: "📹 Playlists de YouTube",
+        subtitle: "Contenido educativo seleccionado para empresarios"
+      },
+      spotify: {
+        title: "🎵 Playlists de Spotify", 
+        subtitle: "Música y podcasts para potenciar tu productividad"
+      },
+      others: {
+        title: "🎓 Otros Recursos",
+        subtitle: "Cursos, comunidades y herramientas recomendadas"
+      },
+      filters: {
+        all: "Todos",
+        beginner: "Principiante",
+        automation: "Automatización", 
+        marketing: "Marketing",
+        focus: "Concentración",
+        podcasts: "Podcasts",
+        motivation: "Motivación",
+        search: "Buscar recursos..."
+      },
+      duration: "Duración",
+      episodes: "episodios",
+      rating: "Rating",
+      viewPlaylist: "Ver Playlist",
+      viewResource: "Ver Recurso"
+    },
+    
+    // Dentro del objeto 'en':
+    resources: {
+      title: "Learning Resources",
+      subtitle: "Playlists, courses and communities we use to stay updated",
+      youtube: {
+        title: "📹 YouTube Playlists",
+        subtitle: "Educational content selected for entrepreneurs"
+      },
+      spotify: {
+        title: "🎵 Spotify Playlists",
+        subtitle: "Music and podcasts to boost your productivity"
+      },
+      others: {
+        title: "🎓 Other Resources", 
+        subtitle: "Recommended courses, communities and tools"
+      },
+      filters: {
+        all: "All",
+        beginner: "Beginner",
+        automation: "Automation",
+        marketing: "Marketing", 
+        focus: "Focus",
+        podcasts: "Podcasts",
+        motivation: "Motivation",
+        search: "Search resources..."
+      },
+      duration: "Duration",
+      episodes: "episodes", 
+      rating: "Rating",
+      viewPlaylist: "View Playlist",
+      viewResource: "View Resource"
     }
   }
 };
