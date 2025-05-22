@@ -58,12 +58,12 @@ html, body {
 
 /* Button styles */
 .btn-primary {
-  @apply bg-primary text-text-primary font-button px-6 py-3 rounded-lg 
+  @apply bg-primary text-text-primary text-button px-6 py-3 rounded-lg 
          transition-all duration-300 hover:bg-primary-dark;
 }
 
 .btn-secondary {
-  @apply bg-transparent border border-primary text-primary font-button px-6 py-3 rounded-lg 
+  @apply bg-transparent border border-primary text-primary text-button px-6 py-3 rounded-lg 
          transition-all duration-300 hover:bg-primary/10;
 }
 
