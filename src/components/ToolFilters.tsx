@@ -1,8 +1,7 @@
-
 import React, { useState, useEffect } from "react";
 import { FilterOptions, Language } from "../types";
 import translations from "../utils/i18n";
-import { Search } from "lucide-react";
+import { Search, X } from "lucide-react";
 
 interface ToolFiltersProps {
   language: Language;
@@ -31,38 +30,63 @@ const ToolFilters: React.FC<ToolFiltersProps> = ({
     { id: "analytics", icon: "📊" },
   ];
 
+  const difficulties = [
+    { id: "beginner", icon: "🌱" },
+    { id: "intermediate", icon: "⚡" },
+    { id: "advanced", icon: "🚀" },
+  ];
+
   // Update filters when any selection changes
   useEffect(() => {
     onFilterChange({ category, difficulty, search });
-    // URL state update could be added here
   }, [category, difficulty, search, onFilterChange]);
+
+  const clearAllFilters = () => {
+    setSearch("");
+    setCategory(null);
+    setDifficulty(null);
+  };
+
+  const hasActiveFilters = search || category || difficulty;
   
   return (
-    <section id="catalog" className="bg-gradient-primary py-12">
+    <section id="catalog" className="py-16 bg-black">
       <div className="container mx-auto px-4">
-        {/* Search */}
+        {/* Search Bar */}
         <div className="relative mb-8 max-w-2xl mx-auto">
-          <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-            <Search size={20} className="text-text-tertiary" />
+          <div className="relative group">
+            <div className="relative bg-gray-800/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl overflow-hidden">
+              <div className="flex items-center">
+                <Search size={20} className="absolute left-6 text-gray-400 transition-colors duration-300 group-focus-within:text-purple-400" />
+                <input
+                  type="text"
+                  placeholder={language === "es" ? "Buscar herramientas..." : "Search tools..."}
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  className="w-full pl-14 pr-6 py-4 bg-transparent text-white placeholder-gray-400 focus:outline-none text-lg"
+                />
+                {search && (
+                  <button
+                    onClick={() => setSearch("")}
+                    className="absolute right-4 text-gray-400 hover:text-white p-2 rounded-full hover:bg-gray-700/50 transition-all duration-300"
+                  >
+                    <X size={16} />
+                  </button>
+                )}
+              </div>
+            </div>
           </div>
-          <input
-            type="text"
-            placeholder={t.filters.search}
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            className="input-field py-4 pl-12 w-full text-lg"
-          />
         </div>
-        
+
         {/* Category Filters */}
-        <div className="flex flex-wrap justify-center gap-3 mb-8">
+        <div className="flex flex-wrap justify-center gap-3 mb-6">
           <button
             onClick={() => setCategory(null)}
-            className={`${
+            className={`px-6 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 ${
               category === null
-                ? "bg-primary text-white"
-                : "bg-card-bg text-text-secondary"
-            } px-6 py-2 rounded-full transition-all duration-300`}
+                ? "bg-purple-600 text-white shadow-lg shadow-purple-500/30"
+                : "bg-gray-800/60 text-gray-300 border border-gray-700/50 hover:bg-gray-700/60 hover:text-white"
+            }`}
           >
             {t.filters.allCategories}
           </button>
@@ -71,14 +95,14 @@ const ToolFilters: React.FC<ToolFiltersProps> = ({
             <button
               key={cat.id}
               onClick={() => setCategory(cat.id === category ? null : cat.id)}
-              className={`${
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 flex items-center space-x-2 ${
                 category === cat.id
-                  ? "bg-primary text-white"
-                  : "bg-card-bg text-text-secondary"
-              } px-6 py-2 rounded-full transition-all duration-300 flex items-center`}
+                  ? "bg-purple-600 text-white shadow-lg shadow-purple-500/30"
+                  : "bg-gray-800/60 text-gray-300 border border-gray-700/50 hover:bg-gray-700/60 hover:text-white"
+              }`}
             >
-              <span className="mr-2">{cat.icon}</span>
-              {t.categories[cat.id as keyof typeof t.categories]}
+              <span>{cat.icon}</span>
+              <span>{t.categories[cat.id as keyof typeof t.categories]}</span>
             </button>
           ))}
         </div>
@@ -87,33 +111,55 @@ const ToolFilters: React.FC<ToolFiltersProps> = ({
         <div className="flex flex-wrap justify-center gap-3 mb-8">
           <button
             onClick={() => setDifficulty(null)}
-            className={`${
+            className={`px-6 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 ${
               difficulty === null
-                ? "bg-primary text-white"
-                : "bg-card-bg text-text-secondary"
-            } px-6 py-2 rounded-full transition-all duration-300`}
+                ? "bg-purple-600 text-white shadow-lg shadow-purple-500/30"
+                : "bg-gray-800/60 text-gray-300 border border-gray-700/50 hover:bg-gray-700/60 hover:text-white"
+            }`}
           >
             {t.difficulty.all}
           </button>
           
-          {["beginner", "intermediate", "advanced"].map((diff) => (
+          {difficulties.map((diff) => (
             <button
-              key={diff}
-              onClick={() => setDifficulty(diff === difficulty ? null : diff)}
-              className={`${
-                difficulty === diff
-                  ? "bg-primary text-white"
-                  : "bg-card-bg text-text-secondary"
-              } px-6 py-2 rounded-full transition-all duration-300`}
+              key={diff.id}
+              onClick={() => setDifficulty(diff.id === difficulty ? null : diff.id)}
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 flex items-center space-x-2 ${
+                difficulty === diff.id
+                  ? "bg-purple-600 text-white shadow-lg shadow-purple-500/30"
+                  : "bg-gray-800/60 text-gray-300 border border-gray-700/50 hover:bg-gray-700/60 hover:text-white"
+              }`}
             >
-              {t.difficulty[diff as keyof typeof t.difficulty]}
+              <span>{diff.icon}</span>
+              <span>{t.difficulty[diff.id as keyof typeof t.difficulty]}</span>
             </button>
           ))}
         </div>
+
+        {/* Clear Filters */}
+        {hasActiveFilters && (
+          <div className="text-center mb-6">
+            <button
+              onClick={clearAllFilters}
+              className="text-gray-400 hover:text-white text-sm flex items-center space-x-2 mx-auto transition-colors duration-300 hover:bg-gray-800/50 px-4 py-2 rounded-full"
+            >
+              <X size={14} />
+              <span>{language === "es" ? "Limpiar filtros" : "Clear filters"}</span>
+            </button>
+          </div>
+        )}
         
         {/* Results count */}
-        <div className="text-center text-text-secondary">
-          {t.filters.showing} <span className="text-primary font-semibold">{filteredCount}</span> {t.filters.tools}
+        <div className="bg-gray-800/40 backdrop-blur-xl border border-gray-700/40 rounded-2xl p-4 text-center">
+          <span className="text-gray-300">
+            {language === "es" ? "Mostrando" : "Showing"}{" "}
+          </span>
+          <span className="text-purple-400 font-semibold text-lg">
+            {filteredCount}
+          </span>
+          <span className="text-gray-300">
+            {" "}{language === "es" ? "de" : "of"} {totalTools} {language === "es" ? "herramientas" : "tools"}
+          </span>
         </div>
       </div>
     </section>
