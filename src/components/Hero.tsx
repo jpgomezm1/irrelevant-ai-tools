@@ -10,6 +10,11 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ language, onJoinWhatsApp }) => {
   const t = translations[language];
 
+  // Función para abrir WhatsApp directamente
+  const handleWhatsAppClick = () => {
+    window.open('https://chat.whatsapp.com/JMSMme18JN9B6zHdRC6ZGg', '_blank');
+  };
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Advanced Tech Background */}
@@ -87,7 +92,7 @@ const Hero: React.FC<HeroProps> = ({ language, onJoinWhatsApp }) => {
             </p>
             
             {/* Key Features */}
-            <div className="flex flex-wrap gap-4 mb-12 justify-center lg:justify-start">
+            <div className="flex flex-wrap gap-4 mb-10 justify-center lg:justify-start">
               <div className="flex items-center px-4 py-2 bg-gradient-to-r from-[#8B5FFF]/10 to-[#7C3AED]/10 rounded-full border border-[#8B5FFF]/20">
                 <span className="text-[#8B5FFF] mr-2">⚡</span>
                 <span className="text-[#E5E7EB] text-sm font-medium">
@@ -108,33 +113,41 @@ const Hero: React.FC<HeroProps> = ({ language, onJoinWhatsApp }) => {
               </div>
             </div>
             
-            {/* Enhanced CTA */}
-            <div className="space-y-6">
+            {/* Botón de WhatsApp Mejorado */}
+            <div className="space-y-4">
               <button 
-                onClick={onJoinWhatsApp}
-                className="group relative inline-flex items-center justify-center w-full lg:w-auto px-12 py-6 text-xl font-bold text-white bg-gradient-to-r from-[#8B5FFF] via-[#7C3AED] to-[#8B5FFF] bg-size-200 bg-pos-0 hover:bg-pos-100 rounded-2xl shadow-2xl shadow-[#8B5FFF]/30 hover:shadow-[#8B5FFF]/50 transform hover:-translate-y-3 hover:scale-105 transition-all duration-500 ease-out border border-[#8B5FFF]/30"
+                onClick={handleWhatsAppClick}
+                className="group relative inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-semibold text-white bg-gradient-to-r from-[#25D366] via-[#128C7E] to-[#25D366] bg-size-200 bg-pos-0 hover:bg-pos-100 rounded-xl shadow-xl shadow-[#25D366]/20 hover:shadow-[#25D366]/40 transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 ease-out border border-[#25D366]/30"
               >
-                <div className="absolute -inset-1 bg-gradient-to-r from-[#8B5FFF] via-[#7C3AED] to-[#8B5FFF] rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-[#25D366] via-[#128C7E] to-[#25D366] rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
                 <div className="relative flex items-center">
-                  <span className="mr-4 text-3xl">📱</span>
-                  <span>{t.hero.whatsappCta}</span>
-                  <div className="ml-4 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
-                    <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  <svg className="w-5 h-5 md:w-6 md:h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.63"/>
+                  </svg>
+                  <span className="whitespace-nowrap">
+                    {language === "es" ? "Únete a la comunidad" : "Join the community"}
+                  </span>
+                  <div className="ml-3 w-5 h-5 md:w-6 md:h-6 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
+                    <svg className="w-3 h-3 md:w-4 md:h-4 transform group-hover:translate-x-0.5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
                   </div>
                 </div>
               </button>
               
               {/* Trust Indicators */}
-              <div className="flex items-center justify-center lg:justify-start space-x-6 text-sm text-[#6B7280]">
+              <div className="flex items-center justify-center lg:justify-start space-x-4 md:space-x-6 text-xs md:text-sm text-[#6B7280]">
                 <div className="flex items-center">
-                  <div className="w-3 h-3 bg-gradient-to-r from-green-400 to-green-500 rounded-full mr-2 animate-pulse"></div>
-                  {language === "es" ? "500+ empresarios activos" : "500+ active entrepreneurs"}
+                  <div className="w-2 h-2 md:w-3 md:h-3 bg-gradient-to-r from-green-400 to-green-500 rounded-full mr-2 animate-pulse"></div>
+                  <span className="whitespace-nowrap">
+                    {language === "es" ? "500+ empresarios activos" : "500+ active entrepreneurs"}
+                  </span>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-3 h-3 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full mr-2 animate-pulse delay-500"></div>
-                  {language === "es" ? "100% gratuito" : "100% free"}
+                  <div className="w-2 h-2 md:w-3 md:h-3 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full mr-2 animate-pulse delay-500"></div>
+                  <span className="whitespace-nowrap">
+                    {language === "es" ? "100% gratuito" : "100% free"}
+                  </span>
                 </div>
               </div>
             </div>

@@ -1,4 +1,3 @@
-
 export interface ToolCard {
   id: string;
   name: string;
@@ -6,28 +5,36 @@ export interface ToolCard {
     es: string;
     en: string;
   };
-  category: 'content' | 'design' | 'sales' | 'automation' | 'analytics';
+  detailedDescription: {
+    es: string;
+    en: string;
+  };
+  useCases: {
+    es: string[];
+    en: string[];
+  };
+  resources?: {
+    es: {
+      title: string;
+      url: string;
+      type: 'video' | 'article' | 'course' | 'tutorial';
+      description?: string;
+    }[];
+    en: {
+      title: string;
+      url: string;
+      type: 'video' | 'article' | 'course' | 'tutorial';
+      description?: string;
+    }[];
+  };
+  category: string;
   price: {
     es: string;
     en: string;
   };
-  difficulty: 'beginner' | 'intermediate' | 'advanced';
+  difficulty: "beginner" | "intermediate" | "advanced";
   logo: string;
   slug: string;
   featured: boolean;
   url: string;
 }
-
-export interface HeaderProps {
-  currentLang: 'es' | 'en';
-  onLanguageChange: (lang: 'es' | 'en') => void;
-  onNewsletterClick: () => void;
-}
-
-export interface FilterOptions {
-  category: string | null;
-  difficulty: string | null;
-  search: string;
-}
-
-export type Language = 'es' | 'en';
