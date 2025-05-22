@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
@@ -66,45 +65,89 @@ const Index = () => {
   }, [language]);
   
   return (
-    <div className="min-h-screen bg-gradient-primary">
-      <Header
-        currentLang={language}
-        onLanguageChange={setLanguage}
-        onNewsletterClick={() => setIsNewsletterModalOpen(true)}
-      />
+    <div className="relative min-h-screen overflow-hidden">
+      {/* Fondo unificado para toda la página */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0B0D1A] via-[#1A1B2E] to-[#0F1219]"></div>
       
-      <Hero 
-        language={language}
-        onJoinWhatsApp={() => setIsWhatsAppModalOpen(true)}
-      />
+      {/* Animated Grid Pattern - Global */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 25px 25px, #8B5FFF 2px, transparent 0)`,
+          backgroundSize: '50px 50px',
+          animation: 'gridMove 20s linear infinite'
+        }}></div>
+      </div>
       
-      <ToolFilters
-        language={language}
-        onFilterChange={setFilters}
-        totalTools={tools.length}
-        filteredCount={filteredTools.length}
-      />
+      {/* Dynamic Neural Network Lines - Global */}
+      <svg className="absolute inset-0 w-full h-full opacity-30" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="lineGradientGlobal" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#8B5FFF" stopOpacity="0.8"/>
+            <stop offset="50%" stopColor="#A78BFA" stopOpacity="0.4"/>
+            <stop offset="100%" stopColor="#7C3AED" stopOpacity="0.2"/>
+          </linearGradient>
+        </defs>
+        <path d="M0,200 Q400,100 800,150 T1600,200" stroke="url(#lineGradientGlobal)" strokeWidth="2" fill="none" className="animate-pulse">
+          <animate attributeName="d" 
+            values="M0,200 Q400,100 800,150 T1600,200;M0,250 Q400,150 800,100 T1600,180;M0,200 Q400,100 800,150 T1600,200" 
+            dur="8s" repeatCount="indefinite"/>
+        </path>
+        <path d="M0,400 Q600,300 1200,350 T1800,400" stroke="url(#lineGradientGlobal)" strokeWidth="1.5" fill="none" className="animate-pulse delay-1000">
+          <animate attributeName="d" 
+            values="M0,400 Q600,300 1200,350 T1800,400;M0,350 Q600,450 1200,300 T1800,380;M0,400 Q600,300 1200,350 T1800,400" 
+            dur="10s" repeatCount="indefinite"/>
+        </path>
+      </svg>
       
-      <ToolGrid tools={filteredTools} language={language} />
+      {/* Floating Orbs - Global */}
+      <div className="absolute top-[15%] left-[10%] w-[500px] h-[500px] bg-gradient-radial from-[#8B5FFF]/20 via-[#8B5FFF]/5 to-transparent rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-[20%] right-[5%] w-[400px] h-[400px] bg-gradient-radial from-[#A78BFA]/15 via-[#A78BFA]/3 to-transparent rounded-full blur-3xl animate-float-delayed"></div>
+      <div className="absolute top-[50%] right-[20%] w-[300px] h-[300px] bg-gradient-radial from-[#7C3AED]/20 via-[#7C3AED]/5 to-transparent rounded-full blur-2xl animate-pulse"></div>
       
-      <footer className="py-8 border-t border-card-border">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-text-tertiary mb-4 md:mb-0">
-              © 2025 Irrelevant. {language === "es" ? "Todos los derechos reservados." : "All rights reserved."}
-            </p>
-            
-            <div className="flex space-x-6">
-              <a href="#" className="text-text-secondary hover:text-primary transition-colors">
-                {language === "es" ? "Política de Privacidad" : "Privacy Policy"}
-              </a>
-              <a href="#" className="text-text-secondary hover:text-primary transition-colors">
-                {language === "es" ? "Términos de Uso" : "Terms of Use"}
-              </a>
+      {/* Cyber Grid Overlay - Global */}
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#8B5FFF]/5 to-transparent"></div>
+      
+      {/* Contenido - Todo en relative z-10 para estar encima del fondo */}
+      <div className="relative z-10">
+        <Header
+          currentLang={language}
+          onLanguageChange={setLanguage}
+          onNewsletterClick={() => setIsNewsletterModalOpen(true)}
+        />
+        
+        <Hero 
+          language={language}
+          onJoinWhatsApp={() => setIsWhatsAppModalOpen(true)}
+        />
+        
+        <ToolFilters
+          language={language}
+          onFilterChange={setFilters}
+          totalTools={tools.length}
+          filteredCount={filteredTools.length}
+        />
+        
+        <ToolGrid tools={filteredTools} language={language} />
+        
+        <footer className="py-8 border-t border-white/10">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row justify-between items-center">
+              <p className="text-gray-400 mb-4 md:mb-0">
+                © 2025 Irrelevant. {language === "es" ? "Todos los derechos reservados." : "All rights reserved."}
+              </p>
+              
+              <div className="flex space-x-6">
+                <a href="#" className="text-gray-300 hover:text-[#8B5FFF] transition-colors">
+                  {language === "es" ? "Política de Privacidad" : "Privacy Policy"}
+                </a>
+                <a href="#" className="text-gray-300 hover:text-[#8B5FFF] transition-colors">
+                  {language === "es" ? "Términos de Uso" : "Terms of Use"}
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </footer>
+        </footer>
+      </div>
       
       <WhatsAppModal
         language={language}
@@ -117,6 +160,24 @@ const Index = () => {
         isOpen={isNewsletterModalOpen}
         onClose={() => setIsNewsletterModalOpen(false)}
       />
+
+      {/* CSS for animations */}
+      <style jsx>{`
+        @keyframes gridMove {
+          0% { transform: translate(0, 0); }
+          100% { transform: translate(50px, 50px); }
+        }
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+        }
+        @keyframes float-delayed {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-30px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-float-delayed { animation: float-delayed 8s ease-in-out infinite; }
+      `}</style>
     </div>
   );
 };
