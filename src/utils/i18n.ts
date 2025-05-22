@@ -1,4 +1,3 @@
-
 const translations = {
   es: {
     hero: {
@@ -53,6 +52,28 @@ const translations = {
     },
     cta: {
       tryFree: "Probar Gratis"
+    },
+    news: {
+      title: "Noticias y Tendencias AI",
+      subtitle: "Mantente al día con las últimas novedades en inteligencia artificial para empresas",
+      readTime: "min de lectura",
+      readMore: "Leer más",
+      backToNews: "Volver a noticias",
+      categories: {
+        all: "Todas las noticias",
+        "ai-tools": "Herramientas IA",
+        "industry-news": "Noticias del sector",
+        "tutorials": "Tutoriales",
+        "trends": "Tendencias"
+      },
+      filters: {
+        search: "Buscar noticias...",
+        showing: "Mostrando",
+        articles: "artículos"
+      },
+      featured: "Destacado",
+      published: "Publicado el",
+      author: "Por"
     }
   },
   en: {
@@ -108,6 +129,28 @@ const translations = {
     },
     cta: {
       tryFree: "Try Free"
+    },
+    news: {
+      title: "AI News and Trends",
+      subtitle: "Stay up to date with the latest news in artificial intelligence for businesses",
+      readTime: "min read",
+      readMore: "Read more",
+      backToNews: "Back to news",
+      categories: {
+        all: "All news",
+        "ai-tools": "AI Tools",
+        "industry-news": "Industry News",
+        "tutorials": "Tutorials",
+        "trends": "Trends"
+      },
+      filters: {
+        search: "Search news...",
+        showing: "Showing",
+        articles: "articles"
+      },
+      featured: "Featured",
+      published: "Published on",
+      author: "By"
     }
   }
 };

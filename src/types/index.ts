@@ -38,3 +38,49 @@ export interface ToolCard {
   featured: boolean;
   url: string;
 }
+
+export interface NewsArticle {
+  id: string;
+  title: {
+    es: string;
+    en: string;
+  };
+  summary: {
+    es: string;
+    en: string;
+  };
+  content: {
+    es: string;
+    en: string;
+  };
+  category: 'ai-tools' | 'industry-news' | 'tutorials' | 'trends';
+  publishDate: string;
+  readTime: number; // en minutos
+  featured: boolean;
+  image: string;
+  slug: string;
+  tags: string[];
+  author: {
+    name: string;
+    avatar: string;
+  };
+}
+
+export type Language = "es" | "en";
+
+export interface FilterOptions {
+  category: string | null;
+  difficulty: string | null;
+  search: string;
+}
+
+export interface NewsFilterOptions {
+  category: string | null;
+  search: string;
+}
+
+export interface HeaderProps {
+  currentLang: Language;
+  onLanguageChange: (lang: Language) => void;
+  onNewsletterClick: () => void;
+}

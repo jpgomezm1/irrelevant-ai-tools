@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { HeaderProps } from "../types";
 import translations from "../utils/i18n";
 import { Menu, X, Mail } from "lucide-react";
@@ -52,8 +53,8 @@ const Header: React.FC<HeaderProps> = ({
                 <div className="flex items-center justify-between h-16">
                   {/* Logo with enhanced styling */}
                   <div className="flex-1 md:flex-none">
-                    <a 
-                      href="/" 
+                    <Link 
+                      to="/" 
                       className="relative group flex items-center transition-all duration-500 hover:scale-105"
                     >
                       <div className="relative">
@@ -65,11 +66,20 @@ const Header: React.FC<HeaderProps> = ({
                           className="relative h-12 w-auto transition-all duration-500 group-hover:brightness-110 drop-shadow-lg"
                         />
                       </div>
-                    </a>
+                    </Link>
                   </div>
 
                   {/* Desktop Navigation */}
                   <div className="hidden md:flex items-center space-x-6">
+                    {/* News Link */}
+                    <Link
+                      to="/news"
+                      className="text-[#E5E7EB] hover:text-white font-medium transition-all duration-300 hover:scale-105 relative group"
+                    >
+                      <span className="relative z-10">{currentLang === "es" ? "Noticias" : "News"}</span>
+                      <div className="absolute inset-0 bg-purple-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -m-2"></div>
+                    </Link>
+
                     {/* Language Selector */}
                     <div className="relative group">
                       <div className="absolute -inset-1 bg-gradient-to-r from-purple-500/25 to-purple-600/25 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
@@ -164,16 +174,17 @@ const Header: React.FC<HeaderProps> = ({
             <div className="relative bg-gradient-to-r from-gray-900/80 via-black/90 to-gray-900/80 backdrop-blur-3xl border border-white/10 rounded-3xl">
               <div className="px-6 py-4">
                 <div className="flex justify-between items-center h-16">
-                  <a 
-                    href="/" 
+                  <Link 
+                    to="/" 
                     className="flex items-center"
+                    onClick={closeMenu}
                   >
                     <img 
                       src="https://storage.googleapis.com/cluvi/nuevo_irre-removebg-preview.png" 
                       alt="Irrelevant Logo" 
                       className="h-12 w-auto drop-shadow-lg"
                     />
-                  </a>
+                  </Link>
                   <button
                     onClick={closeMenu}
                     className="text-white p-3 rounded-2xl bg-white/5 backdrop-blur-2xl border border-white/10 transition-all duration-500 hover:bg-white/10 hover:rotate-180"
@@ -188,6 +199,20 @@ const Header: React.FC<HeaderProps> = ({
 
           {/* Mobile Navigation */}
           <div className="relative space-y-6 px-2">
+            {/* News Link Mobile */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#8B5FFF]/25 to-[#7C3AED]/25 rounded-3xl blur opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <Link
+                to="/news"
+                onClick={closeMenu}
+                className="relative w-full bg-gradient-to-r from-[#8B5FFF]/20 to-[#7C3AED]/20 text-white p-4 rounded-3xl font-bold text-lg transition-all duration-500 hover:scale-105 border border-[#8B5FFF]/30 shadow-xl shadow-[#8B5FFF]/20 overflow-hidden flex items-center justify-center space-x-3 block"
+              >
+                <span className="text-2xl">📰</span>
+                <span className="relative z-10">{currentLang === "es" ? "Noticias AI" : "AI News"}</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+              </Link>
+            </div>
+
             {/* Language Selector */}
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-purple-500/25 to-purple-600/25 rounded-3xl blur opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>

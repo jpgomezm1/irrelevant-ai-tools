@@ -7,6 +7,8 @@ import Index from "./pages/Index";
 import ToolDetailPage from "./pages/ToolDetailPage";
 import NotFound from "./pages/NotFound";
 import { LanguageProvider } from "./context/LanguageContext";
+import NewsPage from "./pages/NewsPage";
+import NewsDetailPage from "./pages/NewsDetailPage";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +22,8 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/tool/:slug" element={<ToolDetailPage />} />
+            <Route path="/news" element={<NewsPage />} />
+            <Route path="/news/:slug" element={<NewsDetailPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
