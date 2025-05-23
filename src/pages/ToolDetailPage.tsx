@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import {
   ArrowLeft,
@@ -10,7 +10,8 @@ import {
   BookOpen,
   Play,
   FileText,
-  Monitor
+  Monitor,
+  Award
 } from "lucide-react";
 import { Language, ToolCard as ToolCardType } from "../types";
 import tools from "../data/tools";
@@ -24,6 +25,11 @@ const ToolDetailPage: React.FC = () => {
   const { language, setLanguage } = useLanguage();
   const { slug } = useParams<{ slug: string }>();
   const [isNewsletterModalOpen, setIsNewsletterModalOpen] = useState(false);
+
+  // Siempre scrollear al top cuando abra o cambie de herramienta
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
 
   // Encontrar la herramienta actual
   const tool = tools.find((t) => t.slug === slug);
@@ -51,6 +57,28 @@ const ToolDetailPage: React.FC = () => {
     tutorial: Monitor
   };
 
+  // Configuración para los tags
+  const tagConfig = {
+    YC: {
+      icon: <Award size={16} className="mr-2" />,
+      text: "Y Combinator Backed",
+      gradient: "from-orange-400 to-orange-600",
+      textColor: "text-orange-500"
+    },
+    irrelevant: {
+      icon: <Zap size={16} className="mr-2" />,
+      text: "irrelevant Backed",
+      gradient: "from-purple-400 to-purple-600",
+      textColor: "text-purple-500"
+    },
+    Top: {
+      icon: <Star size={16} className="mr-2 fill-current" />,
+      text: "TOP",
+      gradient: "from-amber-400 to-orange-500",
+      textColor: "text-amber-500"
+    }
+  };
+
   if (!tool) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-[#0B0D1A] via-[#1A1B2E] to-[#0F1219]">
@@ -64,7 +92,7 @@ const ToolDetailPage: React.FC = () => {
             <h1 className="text-2xl font-bold text-white mb-4">
               {language === "es" ? "Herramienta no encontrada" : "Tool not found"}
             </h1>
-            <Link to="/" className="text-[#8B5FFF] hover:text-[#A78BFA]">
+            <Link to="/tools" className="text-[#8B5FFF] hover:text-[#A78BFA]">
               {language === "es" ? "Volver al catálogo" : "Back to catalog"}
             </Link>
           </div>
@@ -127,7 +155,7 @@ const ToolDetailPage: React.FC = () => {
         {/* Navegación de regreso */}
         <div className="container mx-auto px-6 md:px-8 py-8">
           <Link
-            to="/#catalog"
+            to="/tools"
             className="inline-flex items-center space-x-2 text-[#9CA3AF] hover:text-white transition-colors duration-300 mb-8"
           >
             <ArrowLeft size={20} />
@@ -148,15 +176,36 @@ const ToolDetailPage: React.FC = () => {
                 </span>
               </div>
 
-              {/* Título y featured */}
-              <div className="flex items-start justify-between mb-6">
-                <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white via-[#A78BFA] to-[#8B5FFF] bg-clip-text text-transparent">
-                  {tool.name}
-                </h1>
-                {tool.featured && (
-                  <div className="bg-gradient-to-r from-[#8B5FFF] to-[#7C3AED] px-3 py-1 text-xs rounded-full text-white font-semibold flex items-center space-x-1">
-                    <Star size={12} className="fill-current" />
-                    <span>{language === "es" ? "Destacado" : "Featured"}</span>
+              {/* Título y featured/tags */}
+              <div className="flex flex-col mb-6">
+                <div className="flex items-start justify-between mb-3">
+                  <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white via-[#A78BFA] to-[#8B5FFF] bg-clip-text text-transparent">
+                    {tool.name}
+                  </h1>
+                  
+                  {/* Featured badge (if not using tags) */}
+                  {tool.featured && !tool.tags?.includes('Top') && (
+                    <div className="bg-gradient-to-r from-[#8B5FFF] to-[#7C3AED] px-3 py-1 text-xs rounded-full text-white font-semibold flex items-center space-x-1">
+                      <Star size={12} className="fill-current" />
+                      <span>{language === "es" ? "Destacado" : "Featured"}</span>
+                    </div>
+                  )}
+                </div>
+                
+                {/* Tags badges */}
+                {tool.tags && tool.tags.length > 0 && (
+                  <div className="flex flex-wrap gap-2 mb-2">
+                    {tool.tags.map((tag) => (
+                      tagConfig[tag] && (
+                        <div 
+                          key={tag} 
+                          className={`bg-gradient-to-r ${tagConfig[tag].gradient} px-3 py-1.5 text-sm rounded-lg text-white font-semibold flex items-center shadow-lg`}
+                        >
+                          {tagConfig[tag].icon}
+                          <span>{tagConfig[tag].text}</span>
+                        </div>
+                      )
+                    ))}
                   </div>
                 )}
               </div>
@@ -200,7 +249,9 @@ const ToolDetailPage: React.FC = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#8B5FFF] to-[#7C3AED] text-white font-semibold rounded-2xl shadow-xl shadow-[#8B5FFF]/30 hover:shadow-[#8B5FFF]/50 transform hover:-translate-y-1 hover:scale-105 transition-all duration-300"
                 >
-                  <span className="mr-3">{language === "es" ? "Probar Gratis" : "Try Free"}</span>
+                  <span className="mr-3">
+                    {language === "es" ? "Probar Gratis" : "Try Free"}
+                  </span>
                   <ExternalLink size={20} />
                 </a>
 
@@ -212,7 +263,7 @@ const ToolDetailPage: React.FC = () => {
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-[#25D366] via-[#128C7E] to-[#25D366] rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-300" />
                   <div className="relative flex items-center">
                     <svg className="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.63"/>
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.150-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.390-1.475-.883-.788-1.480-1.761-1.653-2.059-.173-.297-.018-.458.130-.606.134-.133.298-.347.446-.520.149-.174.198-.298.298-.497.099-.198.050-.371-.025-.520-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.500-.669-.510-.173-.008-.371-.010-.570-.010-.198 0-.520.074-.792.372-.272.297-1.040 1.016-1.040 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.200 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.360.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.570-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.510-5.260c.001-5.450 4.436-9.884 9.888-9.884 2.640 0 5.122 1.030 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.450-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.050 0C5.495 0 .160 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.630"/>
                     </svg>
                     <span className="whitespace-nowrap">
                       {language === "es" ? "Únete a la comunidad" : "Join the community"}

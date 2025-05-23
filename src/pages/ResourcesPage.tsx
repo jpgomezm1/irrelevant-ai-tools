@@ -72,20 +72,20 @@ const ResourcesPage = () => {
   const getCategories = () => {
     if (activeTab === 'youtube' || activeTab === 'spotify') {
       return [
-        { id: "beginner", label: t.resources.filters.beginner },
-        { id: "automation", label: t.resources.filters.automation },
-        { id: "marketing", label: t.resources.filters.marketing },
-        { id: "focus", label: t.resources.filters.focus },
-        { id: "podcasts", label: t.resources.filters.podcasts },
-        { id: "motivation", label: t.resources.filters.motivation }
+        { id: "AI", label: "AI", icon: "🤖" },
+        { id: "Technology", label: language === "es" ? "Tecnología" : "Technology", icon: "💻" },
+        { id: "Entrepreneurship", label: language === "es" ? "Emprendimiento" : "Entrepreneurship", icon: "🚀" },
+        { id: "Product", label: language === "es" ? "Producto" : "Product", icon: "📦" },
+        { id: "Sales", label: language === "es" ? "Ventas" : "Sales", icon: "💰" },
+        { id: "Marketing", label: "Marketing", icon: "📢" }
       ];
     } else {
       return [
-        { id: "course", label: language === "es" ? "Cursos" : "Courses" },
-        { id: "community", label: language === "es" ? "Comunidades" : "Communities" },
-        { id: "newsletter", label: "Newsletters" },
-        { id: "book", label: language === "es" ? "Libros" : "Books" },
-        { id: "tool", label: language === "es" ? "Herramientas" : "Tools" }
+        { id: "course", label: language === "es" ? "Cursos" : "Courses", icon: "🎓" },
+        { id: "community", label: language === "es" ? "Comunidades" : "Communities", icon: "👥" },
+        { id: "newsletter", label: "Newsletters", icon: "📧" },
+        { id: "book", label: language === "es" ? "Libros" : "Books", icon: "📚" },
+        { id: "tool", label: language === "es" ? "Herramientas" : "Tools", icon: "🔧" }
       ];
     }
   };
@@ -299,13 +299,14 @@ const ResourcesPage = () => {
                       ...prev, 
                       category: cat.id === filters.category ? null : cat.id 
                     }))}
-                    className={`px-3 md:px-4 py-2 rounded-xl font-medium transition-all duration-300 text-sm ${
+                    className={`px-3 md:px-4 py-2 rounded-xl font-medium transition-all duration-300 flex items-center justify-center space-x-1.5 text-sm ${
                       filters.category === cat.id
                         ? "bg-gradient-to-r from-[#8B5FFF] to-[#7C3AED] text-white"
                         : "bg-[#8B5FFF]/10 text-[#E5E7EB] border border-[#8B5FFF]/20 hover:bg-[#8B5FFF]/20 hover:text-white backdrop-blur-xl"
                     }`}
                   >
-                    {cat.label}
+                    {cat.icon && <span>{cat.icon}</span>}
+                    <span>{cat.label}</span>
                   </button>
                 ))}
               </div>

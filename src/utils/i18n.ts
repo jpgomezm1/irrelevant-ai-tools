@@ -19,11 +19,22 @@ const translations = {
       tools: "herramientas"
     },
     categories: {
-      content: "Contenido",
-      design: "Diseño", 
-      sales: "Ventas",
+      ai_agents: "Agentes de IA",
+      analytics: "Análisis",
+      apps: "Aplicaciones",
       automation: "Automatización",
-      analytics: "Análisis"
+      content: "Contenido",
+      dairy: "Dairy",
+      design: "Diseño",
+      legal: "Legal",
+      marketing: "Marketing",
+      meetings: "Reuniones",
+      network: "Red",
+      other: "Otros",
+      productivity: "Productividad",
+      sales: "Ventas",
+      technical: "Técnico",
+      voice: "Voz"
     },
     difficulty: {
       beginner: "Principiante",
@@ -98,13 +109,27 @@ const translations = {
         focus: "Concentración",
         podcasts: "Podcasts",
         motivation: "Motivación",
-        search: "Buscar recursos..."
+        search: "Buscar recursos...",
+        // Nuevas categorías
+        ai: "Inteligencia Artificial",
+        technology: "Tecnología",
+        entrepreneurship: "Emprendimiento",
+        product: "Producto",
+        sales: "Ventas"
       },
       duration: "Duración",
       episodes: "episodios",
       rating: "Rating",
       viewPlaylist: "Ver Playlist",
       viewResource: "Ver Recurso"
+    },
+    tags: {
+      YC: "Y Combinator Backed",
+      irrelevant: "irrelevant Backed",
+      Top: "TOP"
+    },
+    specialCollections: {
+      title: "Colecciones Especiales"
     }
   },
   en: {
@@ -127,11 +152,22 @@ const translations = {
       tools: "tools"
     },
     categories: {
-      content: "Content",
-      design: "Design",
-      sales: "Sales", 
+      ai_agents: "AI Agents",
+      analytics: "Analytics",
+      apps: "Applications",
       automation: "Automation",
-      analytics: "Analytics"
+      content: "Content",
+      dairy: "Dairy",
+      design: "Design",
+      legal: "Legal",
+      marketing: "Marketing",
+      meetings: "Meetings",
+      network: "Network",
+      other: "Other",
+      productivity: "Productivity",
+      sales: "Sales",
+      technical: "Technical",
+      voice: "Voice"
     },
     difficulty: {
       beginner: "Beginner",
@@ -185,39 +221,6 @@ const translations = {
       author: "By"
     },
     resources: {
-      title: "Recursos de Aprendizaje",
-      subtitle: "Playlists, cursos y comunidades que usamos para mantenernos actualizados",
-      youtube: {
-        title: "📹 Playlists de YouTube",
-        subtitle: "Contenido educativo seleccionado para empresarios"
-      },
-      spotify: {
-        title: "🎵 Playlists de Spotify", 
-        subtitle: "Música y podcasts para potenciar tu productividad"
-      },
-      others: {
-        title: "🎓 Otros Recursos",
-        subtitle: "Cursos, comunidades y herramientas recomendadas"
-      },
-      filters: {
-        all: "Todos",
-        beginner: "Principiante",
-        automation: "Automatización", 
-        marketing: "Marketing",
-        focus: "Concentración",
-        podcasts: "Podcasts",
-        motivation: "Motivación",
-        search: "Buscar recursos..."
-      },
-      duration: "Duración",
-      episodes: "episodios",
-      rating: "Rating",
-      viewPlaylist: "Ver Playlist",
-      viewResource: "Ver Recurso"
-    },
-    
-    // Dentro del objeto 'en':
-    resources: {
       title: "Learning Resources",
       subtitle: "Playlists, courses and communities we use to stay updated",
       youtube: {
@@ -240,13 +243,27 @@ const translations = {
         focus: "Focus",
         podcasts: "Podcasts",
         motivation: "Motivation",
-        search: "Search resources..."
+        search: "Search resources...",
+        // Nuevas categorías
+        ai: "AI",
+        technology: "Technology",
+        entrepreneurship: "Entrepreneurship",
+        product: "Product",
+        sales: "Sales"
       },
       duration: "Duration",
       episodes: "episodes", 
       rating: "Rating",
       viewPlaylist: "View Playlist",
       viewResource: "View Resource"
+    },
+    tags: {
+      YC: "Y Combinator Backed",
+      irrelevant: "irrelevant Backed",
+      Top: "TOP"
+    },
+    specialCollections: {
+      title: "Special Collections"
     }
   }
 };
@@ -261,8 +278,15 @@ export const getDifficultyLabel = (
 };
 
 export const getCategoryLabel = (
-  category: 'content' | 'design' | 'sales' | 'automation' | 'analytics', 
+  category: string, 
   lang: 'es' | 'en'
 ): string => {
-  return translations[lang].categories[category];
+  return translations[lang].categories[category] || category;
+};
+
+export const getTagLabel = (
+  tag: string,
+  lang: 'es' | 'en'
+): string => {
+  return translations[lang].tags[tag] || tag;
 };

@@ -80,14 +80,14 @@ const Header: React.FC<HeaderProps> = ({
                       <div className="absolute inset-0 bg-purple-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -m-2"></div>
                     </Link>
 
-                    {/* News Link */}
-                    <Link
+                    {/* News Link - Commented out */}
+                    {/* <Link
                       to="/news"
                       className="text-[#E5E7EB] hover:text-white font-medium transition-all duration-300 hover:scale-105 relative group"
                     >
                       <span className="relative z-10">{currentLang === "es" ? "Noticias" : "News"}</span>
                       <div className="absolute inset-0 bg-purple-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -m-2"></div>
-                    </Link>
+                    </Link> */}
 
                     {/* Resources Link */}
                     <Link
@@ -231,8 +231,8 @@ const Header: React.FC<HeaderProps> = ({
               </Link>
             </div>
 
-            {/* News Link Mobile */}
-            <div className="relative group">
+            {/* News Link Mobile - Commented out */}
+            {/* <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-[#8B5FFF]/25 to-[#7C3AED]/25 rounded-3xl blur opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
               <Link
                 to="/news"
@@ -243,7 +243,7 @@ const Header: React.FC<HeaderProps> = ({
                 <span className="relative z-10">{currentLang === "es" ? "Noticias AI" : "AI News"}</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
               </Link>
-            </div>
+            </div> */}
 
             {/* Resources Link Mobile */}
             <div className="relative group">

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FilterOptions, Language } from "../types";
 import translations from "../utils/i18n";
-import { Search, X, Filter, ChevronDown } from "lucide-react";
+import { Search, X, Filter, ChevronDown, Award, Zap, Star } from "lucide-react";
 
 interface ToolFiltersProps {
   language: Language;
@@ -21,14 +21,25 @@ const ToolFilters: React.FC<ToolFiltersProps> = ({
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState<string | null>(null);
   const [difficulty, setDifficulty] = useState<string | null>(null);
+  const [tag, setTag] = useState<string | null>(null);
   const [showFilters, setShowFilters] = useState(false);
   
   const categories = [
-    { id: "content", icon: "📝" },
-    { id: "design", icon: "🎨" },
-    { id: "sales", icon: "💼" },
-    { id: "automation", icon: "⚙️" },
+    { id: "ai_agents", icon: "🤖" },
     { id: "analytics", icon: "📊" },
+    { id: "apps", icon: "📱" },
+    { id: "automation", icon: "⚙️" },
+    { id: "content", icon: "📝" },
+    { id: "dairy", icon: "🥛" },
+    { id: "legal", icon: "⚖️" },
+    { id: "marketing", icon: "📢" },
+    { id: "meetings", icon: "👥" },
+    { id: "network", icon: "🌐" },
+    { id: "other", icon: "🔍" },
+    { id: "productivity", icon: "⏱️" },
+    { id: "sales", icon: "💼" },
+    { id: "technical", icon: "🔧" },
+    { id: "voice", icon: "🎤" },
   ];
 
   const difficulties = [
@@ -36,20 +47,27 @@ const ToolFilters: React.FC<ToolFiltersProps> = ({
     { id: "intermediate", icon: "⚡" },
     { id: "advanced", icon: "🚀" },
   ];
+  
+  const tags = [
+    { id: "YC", icon: <Award size={14} />, gradient: "from-orange-400 to-orange-600" },
+    { id: "irrelevant", icon: <Zap size={14} />, gradient: "from-purple-400 to-purple-600" },
+    { id: "Top", icon: <Star size={14} />, gradient: "from-amber-400 to-orange-500" }
+  ];
 
   // Update filters when any selection changes
   useEffect(() => {
-    onFilterChange({ category, difficulty, search });
-  }, [category, difficulty, search, onFilterChange]);
+    onFilterChange({ category, difficulty, search, tag });
+  }, [category, difficulty, search, tag, onFilterChange]);
 
   const clearAllFilters = () => {
     setSearch("");
     setCategory(null);
     setDifficulty(null);
+    setTag(null);
   };
 
-  const hasActiveFilters = search || category || difficulty;
-  const activeFiltersCount = (search ? 1 : 0) + (category ? 1 : 0) + (difficulty ? 1 : 0);
+  const hasActiveFilters = search || category || difficulty || tag;
+  const activeFiltersCount = (search ? 1 : 0) + (category ? 1 : 0) + (difficulty ? 1 : 0) + (tag ? 1 : 0);
   
   return (
     <section id="catalog" className="relative py-12 overflow-hidden">
@@ -116,37 +134,83 @@ const ToolFilters: React.FC<ToolFiltersProps> = ({
         {/* Filters Container */}
         <div className={`md:block ${showFilters ? 'block' : 'hidden'} space-y-6`}>
           
-          {/* Category Filters - Responsive Grid */}
+          {/* Special Tags Filters - Nueva sección */}
           <div>
             <h3 className="text-white font-semibold mb-3 text-sm md:text-base">
-              {language === "es" ? "Categorías" : "Categories"}
+              {language === "es" ? "Colecciones Especiales" : "Special Collections"}
             </h3>
-            <div className="grid grid-cols-2 md:flex md:flex-wrap md:justify-center gap-2 md:gap-3">
-              <button
-                onClick={() => setCategory(null)}
-                className={`px-3 md:px-4 py-2 rounded-xl font-medium transition-all duration-300 text-sm ${
-                  category === null
-                    ? "bg-gradient-to-r from-[#8B5FFF] to-[#7C3AED] text-white"
-                    : "bg-[#8B5FFF]/10 text-[#E5E7EB] border border-[#8B5FFF]/20 hover:bg-[#8B5FFF]/20 hover:text-white backdrop-blur-xl"
-                }`}
-              >
-                {t.filters.allCategories}
-              </button>
-              
-              {categories.map((cat) => (
+            <div className="md:flex md:flex-wrap md:justify-center gap-2 md:gap-3 overflow-x-auto pb-2">
+              <div className="grid grid-cols-2 md:flex md:flex-wrap md:justify-center gap-2 md:gap-3 min-w-full md:min-w-0">
                 <button
-                  key={cat.id}
-                  onClick={() => setCategory(cat.id === category ? null : cat.id)}
-                  className={`px-3 md:px-4 py-2 rounded-xl font-medium transition-all duration-300 flex items-center justify-center space-x-1.5 text-sm ${
-                    category === cat.id
+                  onClick={() => setTag(null)}
+                  className={`px-3 md:px-4 py-2 rounded-xl font-medium transition-all duration-300 text-sm ${
+                    tag === null
                       ? "bg-gradient-to-r from-[#8B5FFF] to-[#7C3AED] text-white"
                       : "bg-[#8B5FFF]/10 text-[#E5E7EB] border border-[#8B5FFF]/20 hover:bg-[#8B5FFF]/20 hover:text-white backdrop-blur-xl"
                   }`}
                 >
-                  <span>{cat.icon}</span>
-                  <span className="hidden sm:inline">{t.categories[cat.id as keyof typeof t.categories]}</span>
+                  {language === "es" ? "Todas" : "All"}
                 </button>
-              ))}
+                
+                {tags.map((tagItem) => (
+                  <button
+                    key={tagItem.id}
+                    onClick={() => setTag(tagItem.id === tag ? null : tagItem.id)}
+                    className={`px-3 md:px-4 py-2 rounded-xl font-medium transition-all duration-300 flex items-center justify-center space-x-1.5 text-sm ${
+                      tag === tagItem.id
+                        ? `bg-gradient-to-r ${tagItem.gradient} text-white`
+                        : "bg-[#8B5FFF]/10 text-[#E5E7EB] border border-[#8B5FFF]/20 hover:bg-[#8B5FFF]/20 hover:text-white backdrop-blur-xl"
+                    }`}
+                  >
+                    <span className="text-current">{tagItem.icon}</span>
+                    <span>
+                      {tagItem.id === "irrelevant" 
+                        ? "irrelevant" 
+                        : tagItem.id === "YC" 
+                          ? "Y Combinator" 
+                          : language === "es" ? "TOP" : "TOP"}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+          
+          {/* Category Filters - Responsive Grid with Scrollable Container */}
+          <div>
+            <h3 className="text-white font-semibold mb-3 text-sm md:text-base">
+              {language === "es" ? "Categorías" : "Categories"}
+            </h3>
+            <div className="md:flex md:flex-wrap md:justify-center gap-2 md:gap-3 overflow-x-auto pb-2">
+              <div className="grid grid-cols-2 md:flex md:flex-wrap md:justify-center gap-2 md:gap-3 min-w-full md:min-w-0">
+                <button
+                  onClick={() => setCategory(null)}
+                  className={`px-3 md:px-4 py-2 rounded-xl font-medium transition-all duration-300 text-sm ${
+                    category === null
+                      ? "bg-gradient-to-r from-[#8B5FFF] to-[#7C3AED] text-white"
+                      : "bg-[#8B5FFF]/10 text-[#E5E7EB] border border-[#8B5FFF]/20 hover:bg-[#8B5FFF]/20 hover:text-white backdrop-blur-xl"
+                  }`}
+                >
+                  {t.filters.allCategories}
+                </button>
+                
+                {categories.map((cat) => (
+                  <button
+                    key={cat.id}
+                    onClick={() => setCategory(cat.id === category ? null : cat.id)}
+                    className={`px-3 md:px-4 py-2 rounded-xl font-medium transition-all duration-300 flex items-center justify-center space-x-1.5 text-sm ${
+                      category === cat.id
+                        ? "bg-gradient-to-r from-[#8B5FFF] to-[#7C3AED] text-white"
+                        : "bg-[#8B5FFF]/10 text-[#E5E7EB] border border-[#8B5FFF]/20 hover:bg-[#8B5FFF]/20 hover:text-white backdrop-blur-xl"
+                    }`}
+                  >
+                    <span>{cat.icon}</span>
+                    <span className="hidden sm:inline">
+                      {t.categories[cat.id as keyof typeof t.categories] || cat.id.replace('_', ' ')}
+                    </span>
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
           

@@ -1,6 +1,7 @@
 export interface ToolCard {
   id: string;
   name: string;
+  tags?: string[]; // Nueva propiedad para etiquetas especiales como "irrelevant", "YC", "Top"
   description: {
     es: string;
     en: string;
@@ -72,6 +73,8 @@ export interface FilterOptions {
   category: string | null;
   difficulty: string | null;
   search: string;
+  tag?: string | null;
+  smartResults?: ToolCard[]; 
 }
 
 export interface NewsFilterOptions {
@@ -128,4 +131,11 @@ export interface ResourcesFilterOptions {
   platform: string | null;
   category: string | null;
   search: string;
+}
+
+export interface FilterOptions {
+  category: string | null;
+  difficulty: string | null;
+  search: string;
+  smartResults?: ToolCard[]; // Nueva propiedad
 }

@@ -17,6 +17,7 @@ const ToolsPage = () => {
     category: null,
     difficulty: null,
     search: "",
+    tag: null
   });
   
   const [filteredTools, setFilteredTools] = useState<ToolCard[]>(tools);
@@ -33,6 +34,11 @@ const ToolsPage = () => {
     // Filter by difficulty
     if (filters.difficulty) {
       result = result.filter((tool) => tool.difficulty === filters.difficulty);
+    }
+    
+    // Filter by tag
+    if (filters.tag) {
+      result = result.filter((tool) => tool.tags && tool.tags.includes(filters.tag));
     }
     
     // Filter by search term

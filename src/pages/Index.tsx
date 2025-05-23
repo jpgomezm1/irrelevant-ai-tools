@@ -391,7 +391,7 @@ const Index = () => {
 
               <div className="flex justify-center space-x-6">
                 <a
-                  href="https://instagram.com/stayirrelevant"
+                  href="https://www.instagram.com/irrelevantclub.co?igsh=MWZycnlhMTN1MTMzeA=="
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative"
@@ -402,7 +402,7 @@ const Index = () => {
                   </div>
                 </a>
                 <a
-                  href="https://tiktok.com/@stayirrelevant"
+                  href="https://www.tiktok.com/@irrelevantclub.co?is_from_webapp=1&sender_device=pc"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative"
@@ -413,7 +413,7 @@ const Index = () => {
                   </div>
                 </a>
                 <a
-                  href="https://linkedin.com/company/stayirrelevant"
+                  href="https://www.linkedin.com/company/irrelevant-club/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative"

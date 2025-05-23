@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ToolCard as ToolCardType, Language } from "../types";
 import { getDifficultyLabel, getCategoryLabel } from "../utils/i18n";
-import { ExternalLink, Star, Sparkles, ArrowRight } from "lucide-react";
+import { ExternalLink, Star, Sparkles, ArrowRight, Award, Zap } from "lucide-react";
 
 interface ToolCardProps {
   tool: ToolCardType;
@@ -26,14 +26,48 @@ const ToolCard: React.FC<ToolCardProps> = ({ tool, language }) => {
   };
 
   const categoryIconMap = {
-    content: "📝",
-    design: "🎨", 
-    sales: "💼",
-    automation: "⚙️",
+    ai_agents: "🤖",
     analytics: "📊",
+    apps: "📱",
+    automation: "⚙️",
+    automations: "🔄",
+    content: "📝",
+    dairy: "🥛",
+    design: "🎨",
+    legal: "⚖️",
+    marketing: "📢",
+    meetings: "👥",
+    network: "🌐",
+    other: "🔍",
+    productivity: "⏱️",
+    sales: "💼",
+    technical: "🔧",
+    voice: "🎤",
+  };
+  
+  // Configuración para los badges de tags
+  const tagConfig = {
+    YC: {
+      icon: <Award size={10} className="fill-current" />,
+      gradient: "from-orange-400 to-orange-600",
+      text: "YC"
+    },
+    irrelevant: {
+      icon: <Zap size={10} className="fill-current" />,
+      gradient: "from-purple-400 to-purple-600",
+      text: language === "es" ? "irrelevant" : "irrelevant"
+    },
+    Top: {
+      icon: <Star size={10} className="fill-current" />,
+      gradient: "from-amber-400 to-orange-500",
+      text: language === "es" ? "TOP" : "TOP"
+    }
   };
   
   const difficulty = difficultyConfig[tool.difficulty];
+  
+  // Fallback para categorías que no estén en el mapa
+  const categoryIcon = categoryIconMap[tool.category] || "🔍";
   
   return (
     <Link to={`/tool/${tool.slug}`} className="group relative block">
@@ -44,15 +78,29 @@ const ToolCard: React.FC<ToolCardProps> = ({ tool, language }) => {
         
         {/* Header */}
         <div className="relative p-6">
-          {/* Featured badge - más pequeño y elegante */}
-          {tool.featured && (
-            <div className="absolute top-4 right-4 z-10">
+          {/* Tags badges - posicionados a la derecha */}
+          <div className="absolute top-4 right-4 z-10 flex flex-col space-y-2">
+            {/* Featured badge (mantenido para compatibilidad) */}
+            {tool.featured && !tool.tags?.includes("Top") && (
               <div className="bg-gradient-to-r from-amber-400 to-orange-500 px-2 py-1 text-xs rounded-lg text-black font-bold flex items-center space-x-1 shadow-lg">
                 <Star size={10} className="fill-current" />
                 <span>TOP</span>
               </div>
-            </div>
-          )}
+            )}
+            
+            {/* Mostrar badges para los tags si existen */}
+            {tool.tags?.map((tag) => (
+              tagConfig[tag] && (
+                <div 
+                  key={tag}
+                  className={`bg-gradient-to-r ${tagConfig[tag].gradient} px-2 py-1 text-xs rounded-lg text-black font-bold flex items-center space-x-1 shadow-lg`}
+                >
+                  {tagConfig[tag].icon}
+                  <span>{tagConfig[tag].text}</span>
+                </div>
+              )
+            ))}
+          </div>
           
           {/* Logo y contenido principal */}
           <div className="flex items-start space-x-4">
@@ -70,9 +118,9 @@ const ToolCard: React.FC<ToolCardProps> = ({ tool, language }) => {
                 {tool.name}
               </h3>
               <div className="flex items-center space-x-2 mb-3">
-                <span className="text-sm">{categoryIconMap[tool.category]}</span>
+                <span className="text-sm">{categoryIcon}</span>
                 <span className="text-[#9CA3AF] text-sm font-medium">
-                  {getCategoryLabel(tool.category, language)}
+                  {getCategoryLabel(tool.category, language) || tool.category.replace('_', ' ')}
                 </span>
               </div>
               

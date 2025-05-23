@@ -3,10 +3,96 @@ import { ToolCard } from "../types";
 const tools: ToolCard[] = [
   {
     id: "1",
-    name: "ChatGPT",
+    name: "irrelevant",
+    tags: ["Top"],
     description: {
-      es: "Crea contenido y automatiza atención al cliente",
-      en: "Create content and automate customer support"
+      es: "Automatiza tareas repetitivas y libera tiempo valioso para tu negocio",
+      en: "Automate repetitive tasks and free up valuable time for your business"
+    },
+    detailedDescription: {
+      es: "irrelevant es una agencia de automatización e inteligencia artificial que desarrolla soluciones a medida para pequeñas y medianas empresas en LATAM. Ayuda a optimizar procesos operativos, ahorrar tiempo y tomar decisiones más inteligentes, sin necesidad de conocimientos técnicos.",
+      en: "irrelevant is an automation and AI agency that builds custom solutions for small and medium-sized businesses in LATAM. It helps optimize operations, save time, and make smarter decisions—no technical skills required."
+    },
+    useCases: {
+      es: [
+        "Automatización de procesos manuales con IA",
+        "Generación automática de documentos (certificados, reportes, etc.)",
+        "Extracción y análisis de datos desde WhatsApp o correos",
+        "Clasificación de leads según intención de compra",
+        "Integración de flujos con herramientas como Google Sheets, Zapier o Make",
+        "Auditoría AI gratuita para detectar tareas automatizables"
+      ],
+      en: [
+        "AI-powered automation of manual processes",
+        "Automatic document generation (certificates, reports, etc.)",
+        "Data extraction and analysis from WhatsApp or emails",
+        "Lead classification based on purchase intent",
+        "Workflow integration with tools like Google Sheets, Zapier, or Make",
+        "Free AI audit to identify automatable tasks"
+      ]
+    },
+    resources: {
+      es: [
+        {
+          title: "Ejemplos reales de automatizaciones con IA",
+          url: "https://www.instagram.com/lucca.co_/",
+          type: "video",
+          description: "Casos reales donde irrelevant ha optimizado procesos usando IA"
+        },
+        {
+          title: "Landing oficial de soluciones irrelevant",
+          url: "https://stayirrelevant.com",
+          type: "article",
+          description: "Descubre cómo irrelevant automatiza tareas irrelevantes para que puedas enfocarte en lo importante"
+        },
+        {
+          title: "Guía para PYMES: ¿Qué tareas puedes automatizar ya?",
+          url: "https://irrelevant.notion.site",
+          type: "course",
+          description: "Una hoja de ruta clara para que las empresas no técnicas empiecen con IA"
+        }
+      ],
+      en: [
+        {
+          title: "Real examples of AI automations",
+          url: "https://www.instagram.com/lucca.co_/",
+          type: "video",
+          description: "Real-world use cases where irrelevant optimized processes using AI"
+        },
+        {
+          title: "Official automation solutions landing",
+          url: "https://stayirrelevant.com",
+          type: "article",
+          description: "Discover how irrelevant automates irrelevant tasks so you can focus on growth"
+        },
+        {
+          title: "SMB Guide: What tasks can you automate today?",
+          url: "https://irrelevant.notion.site",
+          type: "course",
+          description: "A clear roadmap for non-technical businesses to get started with AI"
+        }
+      ]
+    },
+    category: "automation",
+    price: {
+      es: "Desde $0 hasta proyectos personalizados",
+      en: "From $0 to custom project pricing"
+    },
+    difficulty: "beginner",
+    logo: "https://storage.googleapis.com/cluvi/agent007.png",
+    slug: "irrelevant",
+    featured: true,
+    url: "https://stayirrelevant.com"
+  },
+
+
+  {
+    id: "2",
+    name: "ChatGPT",
+    tags: ["Top"],
+    description: {
+      es: "Modelo de lenguaje avanzado que entiende y genera texto de forma natural",
+      en: "Advanced language model that understands and generates human-like text"
     },
     detailedDescription: {
       es: "ChatGPT es una inteligencia artificial conversacional desarrollada por OpenAI que puede ayudar a las empresas a automatizar tareas de comunicación, crear contenido de calidad y mejorar la experiencia del cliente.",
@@ -72,10 +158,10 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "content",
+    category: "dairy",
     price: {
-      es: "Gratis + $20/mes",
-      en: "Free + $20/month"
+      es: "Desde $20/mes",
+      en: "From $20/month"
     },
     difficulty: "beginner",
     logo: "https://seeklogo.com/images/C/chatgpt-logo-02AFA704B5-seeklogo.com.png",
@@ -84,11 +170,11 @@ const tools: ToolCard[] = [
     url: "https://chat.openai.com"
   },
   {
-    id: "2",
-    name: "Jasper",
+    id: "3",
+    name: "Jasper AI",
     description: {
-      es: "Genera textos de marketing de alta calidad",
-      en: "Generate high-quality marketing texts"
+      es: "Genera textos de marketing de alta calidad para cualquier plataforma",
+      en: "Generate high-quality marketing texts for any platform"
     },
     detailedDescription: {
       es: "Jasper es una plataforma de IA especializada en marketing que ayuda a las empresas a crear contenido persuasivo y de alta conversión para todas sus necesidades de marketing digital.",
@@ -154,23 +240,23 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "content",
+    category: "marketing",
     price: {
       es: "$49/mes",
       en: "$49/month"
     },
     difficulty: "intermediate",
-    logo: "https://www.jasper.ai/images/logos/jasper-secondary.svg",
+    logo: "https://storage.googleapis.com/cluvi/Images%20Web%20irrelevant/TOOLS/jasper-seeklogo.png",
     slug: "jasper",
     featured: true,
     url: "https://jasper.ai"
   },
   {
-    id: "3",
+    id: "4",
     name: "Copy.ai",
     description: {
-      es: "Escribe emails y posts que conviertan",
-      en: "Write converting emails and posts"
+      es: "Plataforma de IA para crear contenido y automatizar flujos de trabajo comerciales",
+      en: "AI platform for content creation and business workflow automation"
     },
     detailedDescription: {
       es: "Copy.ai es una herramienta de inteligencia artificial diseñada para ayudar a empresarios y marketers a crear contenido que convierta, desde emails hasta posts de redes sociales.",
@@ -236,19 +322,19 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "content",
+    category: "marketing",
     price: {
       es: "Gratis + $36/mes",
       en: "Free + $36/month"
     },
     difficulty: "beginner",
-    logo: "https://assets-global.website-files.com/628288c5cd3e8411b90a36a4/62a1d2b2d61c0de0602d24aa_Sqaure%20copy.svg",
+    logo: "https://storage.googleapis.com/cluvi/Images%20Web%20irrelevant/TOOLS/644156df288f8ecdcca32e6b.png",
     slug: "copy-ai",
     featured: false,
     url: "https://copy.ai"
   },
   {
-    id: "4",
+    id: "5",
     name: "Napkin AI",
     description: {
       es: "Convierte texto en diagramas visuales impactantes",
@@ -318,7 +404,7 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "content",
+    category: "productivity",
     price: {
       es: "Gratis (Beta)",
       en: "Free (Beta)"
@@ -330,7 +416,7 @@ const tools: ToolCard[] = [
     url: "https://www.napkin.ai"
   },
   {
-    id: "5",
+    id: "6",
     name: "Rows AI",
     description: {
       es: "Automatiza reportes, análisis y visualizaciones desde una hoja de cálculo con IA integrada",
@@ -400,19 +486,19 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "data",
+    category: "productivity",
     price: {
       es: "Gratis (limitado) / Desde $59/mes",
       en: "Free (limited) / From $59/month"
     },
     difficulty: "intermediate",
-    logo: "https://rows.com/favicon.ico",
+    logo: "https://storage.googleapis.com/cluvi/Images%20Web%20irrelevant/TOOLS/rows.png",
     slug: "rows-ai",
     featured: false,
     url: "https://rows.com"
   },
   {
-    id: "6",
+    id: "7",
     name: "Letterly",
     description: {
       es: "Convierte tu voz en texto estructurado y pulido con IA, ideal para notas, correos y contenido",
@@ -482,7 +568,7 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "productivity",
+    category: "voice",
     price: {
       es: "Gratis / Desde $9/mes o $70/año",
       en: "Free / From $9/month or $70/year"
@@ -494,7 +580,8 @@ const tools: ToolCard[] = [
     url: "https://letterly.app"
   },
   {
-    id: "7",
+    id: "8",
+    tags: ["Top"],
     name: "Replit",
     description: {
       es: "Crea, despliega y colabora en aplicaciones desde el navegador con IA integrada",
@@ -564,23 +651,23 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "development",
+    category: "apps",
     price: {
       es: "Gratis / Desde $20/mes",
       en: "Free / From $20/month"
     },
     difficulty: "intermediate",
-    logo: "https://replit.com/public/images/favicon.ico",
+    logo: "https://storage.googleapis.com/cluvi/Images%20Web%20irrelevant/TOOLS/replit.png",
     slug: "replit",
     featured: true,
     url: "https://replit.com"
   },
   {
-    id: "8",
-    name: "BoltAI",
+    id: "9",
+    name: "Bolt AI",
     description: {
-      es: "Cliente nativo de IA para macOS que integra múltiples modelos y asistentes personalizados en cualquier aplicación",
-      en: "Native AI client for macOS integrating multiple models and custom assistants into any app"
+      es: "Crea y despliega aplicaciones web completas desde tu navegador usando solo prompts en lenguaje natural",
+      en: "Build and deploy full-stack web apps from your browser using natural language prompts"
     },
     detailedDescription: {
       es: "BoltAI es una aplicación nativa de alto rendimiento para macOS que permite integrar inteligencia artificial en cualquier flujo de trabajo. Compatible con modelos como OpenAI, Anthropic, Mistral, Perplexity y más, ofrece funciones como comandos en línea, asistentes personalizados, generación de imágenes y análisis de código. Su diseño centrado en la privacidad y su integración profunda con el sistema lo convierten en una herramienta ideal para desarrolladores, creadores de contenido y profesionales que buscan potenciar su productividad con IA.",
@@ -646,19 +733,19 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "productivity",
+    category: "apps",
     price: {
       es: "Licencia perpetua desde $69 USD",
       en: "Perpetual license from $69 USD"
     },
     difficulty: "intermediate",
-    logo: "https://boltai.com/favicon.ico",
+    logo: "https://storage.googleapis.com/cluvi/Images%20Web%20irrelevant/TOOLS/bolt.jpg",
     slug: "boltai",
     featured: false,
-    url: "https://boltai.com/"
+    url: "https://bolt.new/"
   },
   {
-    id: "9",
+    id: "10",
     name: "Fireflies.ai",
     description: {
       es: "Transcribe, resume y analiza reuniones automáticamente con IA, integrándose con tus herramientas favoritas",
@@ -728,7 +815,7 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "productivity",
+    category: "marketing",
     price: {
       es: "Gratis / Planes desde $10/mes",
       en: "Free / Plans from $10/month"
@@ -740,11 +827,12 @@ const tools: ToolCard[] = [
     url: "https://fireflies.ai"
   },
   {
-    id: "10",
+    id: "11",
+    tags: ["Top", "irrelevant"],
     name: "NotebookLM",
     description: {
-      es: "Asistente de investigación con IA que transforma tus documentos en resúmenes, podcasts y respuestas personalizadas",
-      en: "AI research assistant that transforms your documents into summaries, podcasts, and personalized answers"
+      es: "Asistente de IA que lee tus documentos o cualquier fuente en respuestas personalizadas",
+      en: "AI assistant that transforms your documents or any source into personalized answers"
     },
     detailedDescription: {
       es: "NotebookLM es una herramienta de Google impulsada por IA que convierte tus documentos en un asistente de investigación personalizado. Puedes cargar PDFs, Google Docs, enlaces web o videos de YouTube, y la IA generará resúmenes, responderá preguntas y creará podcasts conversacionales. Con funciones como Audio Overviews y Video Overviews, permite comprender y estudiar contenidos complejos de manera más accesible. Disponible en versión web y como aplicación móvil para Android e iOS.",
@@ -812,18 +900,19 @@ const tools: ToolCard[] = [
     },
     category: "productivity",
     price: {
-      es: "Gratis / NotebookLM Plus desde $19.99/mes",
-      en: "Free / NotebookLM Plus from $19.99/month"
+      es: "Gratis",
+      en: "Free"
     },
     difficulty: "intermediate",
-    logo: "https://notebooklm.google/favicon.ico",
+    logo: "https://storage.googleapis.com/cluvi/Images%20Web%20irrelevant/TOOLS/notelm.png",
     slug: "notebooklm",
     featured: false,
     url: "https://notebooklm.google/"
   },
   {
-    id: "11",
+    id: "12",
     name: "Notion",
+    tags: ["irrelevant"],
     description: {
       es: "Organiza tus ideas, proyectos y documentos en un solo lugar con IA integrada",
       en: "Organize your ideas, projects, and documents in one place with integrated AI"
@@ -894,8 +983,8 @@ const tools: ToolCard[] = [
     },
     category: "productivity",
     price: {
-      es: "Gratis / Planes desde $8/mes; Notion AI desde $8/mes adicionales",
-      en: "Free / Plans from $8/month; Notion AI from $8/month additional"
+      es: "Gratis / Planes desde $8/mes",
+      en: "Free / Plans from $8/month"
     },
     difficulty: "beginner",
     logo: "https://www.notion.so/images/favicon.ico",
@@ -904,8 +993,9 @@ const tools: ToolCard[] = [
     url: "https://www.notion.so"
   },
   {
-    id: "12",
+    id: "13",
     name: "Claude",
+    tags: ["irrelevant"],
     description: {
       es: "Asistente de IA avanzado para redacción, programación, análisis y automatización de tareas complejas",
       en: "Advanced AI assistant for writing, coding, analysis, and complex task automation"
@@ -974,19 +1064,20 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "productivity",
+    category: "dairy",
     price: {
-      es: "Gratis / Pro desde $20/mes / Max desde $100/mes",
-      en: "Free / Pro from $20/month / Max from $100/month"
+      es: "Desde $20/mes",
+      en: "From $20/month"
     },
     difficulty: "intermediate",
-    logo: "https://www.anthropic.com/images/claude-logo.png",
+    logo: "https://storage.googleapis.com/cluvi/Images%20Web%20irrelevant/TOOLS/claude.png",
     slug: "claude",
     featured: true,
     url: "https://claude.ai"
   },
   {
-    id: "13",
+    id: "14",
+    tags: ["Top"],
     name: "Lovable",
     description: {
       es: "Crea aplicaciones web completas a partir de descripciones en lenguaje natural, sin necesidad de programar",
@@ -1056,7 +1147,7 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "development",
+    category: "apps",
     price: {
       es: "Gratis (limitado) / Desde $20/mes",
       en: "Free (limited) / From $20/month"
@@ -1068,7 +1159,7 @@ const tools: ToolCard[] = [
     url: "https://lovable.dev"
   },
   {
-    id: "14",
+    id: "15",
     name: "Relevance AI",
     description: {
       es: "Construye equipos de agentes de IA sin código para automatizar tareas complejas.",
@@ -1138,23 +1229,24 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "automation",
+    category: "ai_agents",
     price: {
-      es: "Gratis (plan básico) / Planes empresariales personalizados",
-      en: "Free (basic plan) / Custom enterprise plans"
+      es: "Planes empresariales personalizados",
+      en: "Custom enterprise plans"
     },
     difficulty: "intermediate",
-    logo: "https://relevanceai.com/favicon.ico",
+    logo: "https://storage.googleapis.com/cluvi/Images%20Web%20irrelevant/TOOLS/relevance.png",
     slug: "relevance-ai",
     featured: false,
     url: "https://relevanceai.com"
   },
   {
-    id: "15",
+    id: "16",
+    tags: ["irrelevant"],
     name: "Clay",
     description: {
-      es: "Automatiza la prospección y el enriquecimiento de datos con IA para escalar campañas de ventas personalizadas",
-      en: "Automate prospecting and data enrichment with AI to scale personalized sales campaigns"
+      es: "Automatiza la prospección y el enriquecimiento de datos con IA",
+      en: "Automate prospecting and data enrichment with AI"
     },
     detailedDescription: {
       es: "Clay es una plataforma de automatización de ventas impulsada por inteligencia artificial que permite a los equipos de crecimiento construir listas de prospectos, enriquecer datos desde más de 100 fuentes y generar mensajes personalizados a escala. Con funciones como enriquecimiento en cascada, agentes de investigación de IA y generación de copias personalizadas, Clay agiliza los flujos de trabajo de ventas y marketing, integrándose con herramientas como Salesforce, HubSpot y más.",
@@ -1226,13 +1318,13 @@ const tools: ToolCard[] = [
       en: "From $149/month"
     },
     difficulty: "advanced",
-    logo: "https://www.clay.com/favicon.ico",
+    logo: "https://storage.googleapis.com/cluvi/Images%20Web%20irrelevant/TOOLS/clay.webp",
     slug: "clay",
     featured: false,
     url: "https://www.clay.com"
   },
   {
-    id: "16",
+    id: "17",
     name: "Fillout",
     description: {
       es: "Crea formularios, encuestas y quizzes personalizados en minutos con asistencia de IA",
@@ -1302,10 +1394,10 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "productivity",
+    category: "marketing",
     price: {
-      es: "Gratis (hasta 1000 envíos/mes) / Planes premium disponibles",
-      en: "Free (up to 1000 submissions/month) / Premium plans available"
+      es: "Gratis (hasta 1000 envíos/mes)",
+      en: "Free (up to 1000 submissions/month)"
     },
     difficulty: "beginner",
     logo: "https://www.fillout.com/favicon.ico",
@@ -1314,7 +1406,7 @@ const tools: ToolCard[] = [
     url: "https://www.fillout.com"
   },
   {
-    id: "17",
+    id: "18",
     name: "Airtable",
     description: {
       es: "Organiza y automatiza tus flujos de trabajo con una base de datos visual potenciada por IA",
@@ -1384,19 +1476,19 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "productivity",
+    category: "apps",
     price: {
       es: "Gratis / Planes desde $10/mes",
       en: "Free / Plans from $10/month"
     },
     difficulty: "intermediate",
-    logo: "https://cdn.worldvectorlogo.com/logos/airtable-1.svg",
+    logo: "https://storage.googleapis.com/cluvi/Images%20Web%20irrelevant/TOOLS/airtable.png",
     slug: "airtable",
     featured: false,
     url: "https://airtable.com"
   },
   {
-    id: "18",
+    id: "19",
     name: "n8n",
     description: {
       es: "Automatiza flujos de trabajo complejos con una plataforma visual de código abierto y capacidades de IA",
@@ -1468,8 +1560,8 @@ const tools: ToolCard[] = [
     },
     category: "automation",
     price: {
-      es: "Gratis (código abierto) / Desde $20/mes en la nube",
-      en: "Free (open-source) / From $20/month in the cloud"
+      es: "Desde $20/mes en la nube",
+      en: "From $20/month in the cloud"
     },
     difficulty: "intermediate",
     logo: "https://n8n.io/favicon.ico",
@@ -1478,7 +1570,8 @@ const tools: ToolCard[] = [
     url: "https://n8n.io"
   },
   {
-    id: "19",
+    id: "20",
+    tags: ["Top"],
     name: "Gumloop",
     description: {
       es: "Automatiza flujos de trabajo complejos con IA mediante una interfaz visual sin necesidad de programar",
@@ -1550,8 +1643,8 @@ const tools: ToolCard[] = [
     },
     category: "automation",
     price: {
-      es: "Gratis con opciones premium desde $97/mes",
-      en: "Free with premium options starting at $97/month"
+      es: "Desde $97/mes",
+      en: "Options starting at $97/month"
     },
     difficulty: "intermediate",
     logo: "https://www.gumloop.com/favicon.ico",
@@ -1560,7 +1653,7 @@ const tools: ToolCard[] = [
     url: "https://www.gumloop.com/"
   },
   {
-    id: "20",
+    id: "21",
     name: "Make",
     description: {
       es: "Automatiza flujos de trabajo visualmente conectando apps y servicios sin necesidad de programar",
@@ -1642,11 +1735,11 @@ const tools: ToolCard[] = [
     url: "https://www.make.com"
   },
   {
-    id: "21",
+    id: "22",
     name: "Calendly",
     description: {
-      es: "Automatiza la programación de reuniones eliminando los correos de ida y vuelta, con integraciones y flujos de trabajo inteligentes",
-      en: "Automate meeting scheduling by eliminating back-and-forth emails, with smart integrations and workflows"
+      es: "Automatiza la programación de reuniones, con integraciones y flujos de trabajo inteligentes",
+      en: "Automate meeting scheduling, with smart integrations and workflows"
     },
     detailedDescription: {
       es: "Calendly es una plataforma de programación de reuniones que permite a individuos y equipos compartir su disponibilidad mediante enlaces personalizados. Los usuarios pueden configurar diferentes tipos de eventos, establecer reglas de disponibilidad, añadir buffers entre reuniones y automatizar recordatorios por correo electrónico o SMS. Se integra con herramientas como Google Calendar, Outlook, Zoom, Microsoft Teams, Slack, Salesforce, Stripe y más, facilitando la programación eficiente y reduciendo las ausencias.",
@@ -1712,7 +1805,7 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "productivity",
+    category: "meetings",
     price: {
       es: "Gratis / Desde $10/mes por usuario",
       en: "Free / From $10/month per user"
@@ -1724,7 +1817,7 @@ const tools: ToolCard[] = [
     url: "https://calendly.com"
   },
   {
-    id: "22",
+    id: "23",
     name: "Julius AI",
     description: {
       es: "Analiza y visualiza datos complejos con IA conversacional, sin necesidad de programar",
@@ -1796,8 +1889,8 @@ const tools: ToolCard[] = [
     },
     category: "analytics",
     price: {
-      es: "Gratis (15 consultas/mes) / Desde $20/mes",
-      en: "Free (15 queries/month) / From $20/month"
+      es: "Desde $20/mes",
+      en: "From $20/month"
     },
     difficulty: "beginner",
     logo: "https://julius.ai/favicon.ico",
@@ -1806,11 +1899,11 @@ const tools: ToolCard[] = [
     url: "https://julius.ai"
   },
   {
-    id: "23",
+    id: "24",
     name: "Snov.io",
     description: {
-      es: "Plataforma todo-en-uno para generación de leads, verificación de emails y automatización de ventas multicanal",
-      en: "All-in-one platform for lead generation, email verification, and multichannel sales automation"
+      es: "Plataforma para generación de leads, verificación de emails y automatización de ventas",
+      en: "Platform for lead generation, email verification, and multichannel sales automation"
     },
     detailedDescription: {
       es: "Snov.io es una plataforma integral de automatización de ventas que permite a equipos de marketing y ventas generar leads, verificar correos electrónicos y ejecutar campañas multicanal personalizadas. Ofrece herramientas como buscador y verificador de emails, campañas de goteo, automatización de LinkedIn, calentamiento de correos y un CRM integrado. Con más de 5.000 integraciones disponibles, Snov.io ayuda a optimizar el proceso de prospección y aumentar las tasas de conversión.",
@@ -1878,8 +1971,8 @@ const tools: ToolCard[] = [
     },
     category: "sales",
     price: {
-      es: "Gratis / Desde $30/mes",
-      en: "Free / From $30/month"
+      es: "Desde $30/mes",
+      en: "From $30/month"
     },
     difficulty: "intermediate",
     logo: "https://snov.io/favicon.ico",
@@ -1888,11 +1981,12 @@ const tools: ToolCard[] = [
     url: "https://snov.io"
   },
   {
-    id: "24",
+    id: "25",
+    tags: ["irrelevant"],
     name: "Read AI",
     description: {
-      es: "Asistente de reuniones con IA que transcribe, resume y analiza conversaciones en tiempo real, mejorando la productividad y colaboración",
-      en: "AI meeting assistant that transcribes, summarizes, and analyzes conversations in real-time, enhancing productivity and collaboration"
+      es: "Asistente de reuniones con IA que transcribe, resume y analiza conversaciones en tiempo real",
+      en: "AI meeting assistant that transcribes, summarizes, and analyzes conversations in real-time"
     },
     detailedDescription: {
       es: "Read AI es una plataforma impulsada por inteligencia artificial diseñada para optimizar las reuniones. Se integra con herramientas como Zoom, Google Meet y Microsoft Teams para grabar, transcribir y resumir conversaciones automáticamente. Además, ofrece análisis detallados de participación, métricas de compromiso y coaching personalizado para mejorar la comunicación. Con su función Search Copilot, permite buscar información clave en reuniones, correos y chats, unificando datos para una toma de decisiones más informada.",
@@ -1958,19 +2052,19 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "productivity",
+    category: "meetings",
     price: {
-      es: "Gratis (5 reuniones/mes) / Desde $15/mes para funciones avanzadas",
-      en: "Free (5 meetings/month) / From $15/month for advanced features"
+      es: "Desde $15/mes",
+      en: "From $15/month"
     },
     difficulty: "beginner",
-    logo: "https://www.read.ai/favicon.ico",
+    logo: "https://storage.googleapis.com/cluvi/Images%20Web%20irrelevant/TOOLS/readai.webp",
     slug: "read-ai",
     featured: false,
     url: "https://www.read.ai"
   },
   {
-    id: "24",
+    id: "26",
     name: "Dripify",
     description: {
       es: "Automatiza la prospección en LinkedIn con campañas multicanal y análisis avanzados",
@@ -2038,7 +2132,7 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "automation",
+    category: "sales",
     price: {
       es: "Desde $39/mes",
       en: "From $39/month"
@@ -2050,10 +2144,11 @@ const tools: ToolCard[] = [
     url: "https://dripify.io/"
   },
   {
-    id: "25",
+    id: "27",
+    tags: ["Top"],
     name: "PhantomBuster",
     description: {
-      es: "Automatiza tareas en la web como extracción de datos y generación de leads sin necesidad de programación",
+      es: "Automatiza tareas en la web como extracción de datos y generación de leads",
       en: "Automate web tasks like data extraction and lead generation without coding"
     },
     detailedDescription: {
@@ -2120,21 +2215,21 @@ const tools: ToolCard[] = [
     },
     category: "automation",
     price: {
-      es: "Gratis con limitaciones / Planes desde $59/mes",
-      en: "Free with limitations / Plans from $59/month"
+      es: "Planes desde $59/mes",
+      en: "Plans from $59/month"
     },
     difficulty: "intermediate",
-    logo: "https://phantombuster.com/favicon.ico",
+    logo: "https://vidadigital.in/wp-content/uploads/2022/11/Phantombuster-logo-square-scaled.jpg",
     slug: "phantombuster",
     featured: false,
     url: "https://phantombuster.com/"
   },
   {
-    id: "25",
+    id: "28",
     name: "Magic Loops",
     description: {
-      es: "Automatiza tareas y crea APIs usando lenguaje natural y bloques de código, sin necesidad de programación avanzada",
-      en: "Automate tasks and build APIs using natural language and code blocks, no advanced programming required"
+      es: "Automatiza tareas y crea APIs usando lenguaje natural y bloques de código",
+      en: "Automate tasks and build APIs using natural language and code blocks"
     },
     detailedDescription: {
       es: "Magic Loops es una plataforma que combina inteligencia artificial generativa con código para permitir a cualquier usuario, incluso sin experiencia técnica, automatizar tareas repetitivas y crear flujos de trabajo personalizados. Al describir una tarea en lenguaje natural, la herramienta genera un 'loop' que puede incluir bloques de código, integraciones con APIs y modelos de lenguaje. Estos loops pueden ejecutarse en horarios programados o activarse mediante eventos como correos electrónicos o webhooks, facilitando la automatización de procesos en diversas aplicaciones.",
@@ -2200,8 +2295,8 @@ const tools: ToolCard[] = [
     },
     category: "automation",
     price: {
-      es: "Gratis + desde $9/mes",
-      en: "Free + from $9/month"
+      es: "Desde $9/mes",
+      en: "From $9/month"
     },
     difficulty: "beginner",
     logo: "https://magicloops.dev/favicon.ico",
@@ -2210,11 +2305,11 @@ const tools: ToolCard[] = [
     url: "https://magicloops.dev"
   },
   {
-    id: "26",
+    id: "29",
     name: "Apify",
     description: {
-      es: "Automatiza tareas web y extrae datos a escala con una plataforma de scraping y RPA basada en la nube",
-      en: "Automate web tasks and extract data at scale with a cloud-based scraping and RPA platform"
+      es: "Automatiza tareas web y extrae datos a escala con una plataforma de scraping",
+      en: "Automate web tasks and extract data at scale with a cloud-based scraping"
     },
     detailedDescription: {
       es: "Apify es una plataforma de automatización web y extracción de datos que permite a desarrolladores y empresas convertir cualquier sitio web en una API. Con su ecosistema de más de 4,500 'Actors' preconstruidos, los usuarios pueden automatizar tareas como la recopilación de datos de productos, monitoreo de precios y análisis de redes sociales. Apify ofrece herramientas para crear flujos de trabajo personalizados, integraciones con APIs y una infraestructura escalable para manejar grandes volúmenes de datos.",
@@ -2280,8 +2375,8 @@ const tools: ToolCard[] = [
     },
     category: "automation",
     price: {
-      es: "Gratis con opciones de pago según uso",
-      en: "Free with pay-as-you-go options"
+      es: "Pago por uso",
+      en: "Pay-as-you-go"
     },
     difficulty: "intermediate",
     logo: "https://apify.com/favicon.ico",
@@ -2290,7 +2385,7 @@ const tools: ToolCard[] = [
     url: "https://apify.com"
   },
   {
-    id: "27",
+    id: "30",
     name: "Gamma AI",
     description: {
       es: "Crea presentaciones, documentos y páginas web atractivas en minutos con asistencia de inteligencia artificial",
@@ -2358,23 +2453,23 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "content",
+    category: "productivity",
     price: {
       es: "Gratis con opciones premium",
       en: "Free with premium options"
     },
     difficulty: "beginner",
-    logo: "https://gamma.app/favicon.ico",
+    logo: "https://aimode.co/wp-content/uploads/2025/03/Gamma-App-Logo.webp",
     slug: "gamma-ai",
     featured: false,
     url: "https://gamma.app"
   },
   {
-    id: "26",
+    id: "31",
     name: "Prompt Genie",
     description: {
-      es: "Optimiza tus indicaciones para modelos de IA como ChatGPT, Claude y Gemini, generando 'SUPER Prompts' más claros y efectivos",
-      en: "Optimize your prompts for AI models like ChatGPT, Claude, and Gemini by generating clearer and more effective 'SUPER Prompts'"
+      es: "Optimiza tus prompts para modelos de IA como ChatGPT",
+      en: "Optimize your prompts for AI models like ChatGPT"
     },
     detailedDescription: {
       es: "Prompt Genie es una herramienta impulsada por inteligencia artificial que transforma indicaciones básicas en 'SUPER Prompts' detallados y optimizados, mejorando la calidad de las respuestas de modelos como ChatGPT, Claude y Gemini. Ofrece una extensión de Chrome que se integra directamente en la interfaz de ChatGPT, permitiendo refinar las indicaciones en tiempo real sin necesidad de una clave API. Además, permite guardar y organizar tus mejores indicaciones para su reutilización futura.",
@@ -2440,21 +2535,21 @@ const tools: ToolCard[] = [
     },
     category: "productivity",
     price: {
-      es: "Gratis con 7 prompts iniciales, luego 1 por día; Plan anual desde $8.33/mes",
-      en: "Free with 7 initial prompts, then 1 per day; Annual plan from $8.33/month"
+      es: "Plan anual desde $8.33/mes",
+      en: "Annual plan from $8.33/month"
     },
     difficulty: "beginner",
-    logo: "https://www.prompt-genie.com/favicon.ico",
+    logo: "https://10web.io/wp-content/uploads/2024/08/Prompt_Genie_logo.png",
     slug: "prompt-genie",
     featured: false,
     url: "https://www.prompt-genie.com"
   },
   {
-    id: "27",
+    id: "32",
     name: "Coda",
     description: {
-      es: "Fusiona documentos, hojas de cálculo y aplicaciones en un solo espacio de trabajo colaborativo con inteligencia artificial",
-      en: "Merge docs, spreadsheets, and apps into a single collaborative workspace powered by AI"
+      es: "Fusiona documentos, hojas de cálculo en un solo espacio con IA",
+      en: "Merge docs, spreadsheets, and apps into a single workspace powered by AI"
     },
     detailedDescription: {
       es: "Coda es una plataforma todo-en-uno que combina la flexibilidad de los documentos, la estructura de las hojas de cálculo y la potencia de las aplicaciones, todo en un solo espacio de trabajo colaborativo. Con la integración de inteligencia artificial, Coda permite automatizar tareas, generar contenido y conectar datos de diversas fuentes, facilitando la creación de soluciones personalizadas para equipos de cualquier tamaño.",
@@ -2520,21 +2615,21 @@ const tools: ToolCard[] = [
     },
     category: "productivity",
     price: {
-      es: "Gratis con funciones básicas; planes desde $10/mes",
-      en: "Free with basic features; plans starting at $10/month"
+      es: "Planes desde $10/mes",
+      en: "Plans starting at $10/month"
     },
     difficulty: "intermediate",
-    logo: "https://coda.io/static/images/favicon.ico",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Coda.io_Logo.svg/800px-Coda.io_Logo.svg.png",
     slug: "coda",
     featured: false,
     url: "https://coda.io"
   },
   {
-    id: "28",
+    id: "33",
     name: "ManyChat",
     description: {
-      es: "Automatiza conversaciones en Instagram, WhatsApp y Messenger para aumentar ventas y engagement",
-      en: "Automate conversations on Instagram, WhatsApp, and Messenger to boost sales and engagement"
+      es: "Automatiza conversaciones en Instagram y WhatsApp para aumentar ventas y engagement",
+      en: "Automate conversations on Instagram and WhatsApp to boost sales and engagement"
     },
     detailedDescription: {
       es: "ManyChat es una plataforma de automatización de marketing conversacional que permite crear chatbots y flujos de mensajes interactivos en canales como Instagram, WhatsApp, Facebook Messenger y SMS. Con su constructor visual de flujos, puedes diseñar experiencias personalizadas para tus clientes, automatizar respuestas a comentarios y mensajes directos, y recopilar información valiosa para tus campañas de marketing.",
@@ -2600,21 +2695,22 @@ const tools: ToolCard[] = [
     },
     category: "marketing",
     price: {
-      es: "Gratis con funciones limitadas; planes desde $15/mes",
-      en: "Free with limited features; plans starting at $15/month"
+      es: "Planes desde $15/mes",
+      en: "Plans starting at $15/month"
     },
     difficulty: "beginner",
-    logo: "https://manychat.com/favicon.ico",
+    logo: "https://wpforms.com/wp-content/uploads/cache/integrations/11feaa2e60afe044c942216f1600ee9f.png",
     slug: "manychat",
     featured: false,
     url: "https://manychat.com"
   },
   {
-    id: "28",
+    id: "34",
+    tags: ["irrelevant"],
     name: "ClickUp",
     description: {
-      es: "Centraliza tareas, documentos, chat y automatizaciones en una plataforma de gestión de proyectos todo-en-uno con inteligencia artificial",
-      en: "Centralize tasks, docs, chat, and automations in an all-in-one project management platform powered by AI"
+      es: "Centraliza tareas, documentos y automatizaciones en una plataforma de gestión de proyectos con AI",
+      en: "Centralize tasks, docs, and automations in an project management platform powered by AI"
     },
     detailedDescription: {
       es: "ClickUp es una plataforma de productividad y gestión de proyectos que integra tareas, documentos, chat, pizarras, automatizaciones y más en un solo lugar. Su enfoque modular permite personalizar flujos de trabajo mediante ClickApps, vistas personalizadas (lista, tablero, Gantt, calendario, etc.) y automatizaciones sin código. Con la incorporación de ClickUp Brain, su asistente de inteligencia artificial, los equipos pueden generar contenido, resumir información y automatizar tareas repetitivas, mejorando la eficiencia y colaboración.",
@@ -2680,17 +2776,17 @@ const tools: ToolCard[] = [
     },
     category: "productivity",
     price: {
-      es: "Gratis con funciones limitadas; planes desde $10/usuario/mes",
-      en: "Free with limited features; plans starting at $10/user/month"
+      es: "Gratis / Planes desde $10",
+      en: "Free / lans starting at $10"
     },
     difficulty: "intermediate",
-    logo: "https://clickup.com/favicon.ico",
+    logo: "https://1000logos.net/wp-content/uploads/2022/06/ClickUp-Emblem.png",
     slug: "clickup",
     featured: false,
     url: "https://clickup.com"
   },
   {
-    id: "29",
+    id: "35",
     name: "SmartSuite",
     description: {
       es: "Plataforma colaborativa para gestionar proyectos, tareas y procesos empresariales en un solo lugar",
@@ -2764,17 +2860,18 @@ const tools: ToolCard[] = [
       en: "From $10/user/month"
     },
     difficulty: "intermediate",
-    logo: "https://www.smartsuite.com/favicon.ico",
+    logo: "https://www.rosemet.com/wp-content/uploads/2024/07/SmartSuite-Icon.png",
     slug: "smartsuite",
     featured: false,
     url: "https://www.smartsuite.com/"
   },
   {
-    id: "30",
+    id: "36",
+    tags: ["irrelevant"],
     name: "HubSpot",
     description: {
-      es: "Plataforma CRM todo-en-uno para marketing, ventas y servicio al cliente impulsada por inteligencia artificial",
-      en: "All-in-one CRM platform for marketing, sales, and customer service powered by artificial intelligence"
+      es: "Plataforma CRM para marketing, ventas y servicio al cliente impulsada por IA",
+      en: "CRM platform for marketing, sales, and customer service powered by AI"
     },
     detailedDescription: {
       es: "HubSpot es una plataforma para clientes impulsada por IA que ofrece todo el software, integraciones y recursos que necesitas para conectar tu marketing, ventas y servicio al cliente. La plataforma conectada de HubSpot te permite hacer crecer tu negocio de manera más efectiva al centrarte en lo que más importa: tus clientes.",
@@ -2838,10 +2935,10 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "marketing",
+    category: "sales",
     price: {
-      es: "Gratis con funciones limitadas; planes desde $50/mes",
-      en: "Free with limited features; plans starting at $50/month"
+      es: "Gratis / Planes desde $50/mes",
+      en: "Free / Plans starting at $50/month"
     },
     difficulty: "intermediate",
     logo: "https://www.hubspot.com/favicon.ico",
@@ -2850,7 +2947,7 @@ const tools: ToolCard[] = [
     url: "https://www.hubspot.com/"
   },
   {
-    id: "31",
+    id: "37",
     name: "ADPList",
     description: {
       es: "Conecta con mentores globales en diseño, tecnología y negocios para impulsar tu carrera profesional",
@@ -2918,7 +3015,7 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "career",
+    category: "network",
     price: {
       es: "Gratis",
       en: "Free"
@@ -2930,7 +3027,7 @@ const tools: ToolCard[] = [
     url: "https://adplist.org"
   },
   {
-    id: "32",
+    id: "38",
     name: "LinkedIn",
     description: {
       es: "Red profesional líder para conectar, buscar empleo y fortalecer tu marca personal en el ámbito laboral",
@@ -2998,7 +3095,7 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "career",
+    category: "network",
     price: {
       es: "Gratis con opciones premium desde $39.99/mes",
       en: "Free with premium options starting at $39.99/month"
@@ -3010,11 +3107,11 @@ const tools: ToolCard[] = [
     url: "https://www.linkedin.com"
   },
   {
-    id: "33",
+    id: "39",
     name: "Metricool",
     description: {
-      es: "Gestiona, analiza y automatiza tus redes sociales y campañas publicitarias desde una sola plataforma con inteligencia artificial",
-      en: "Manage, analyze, and automate your social media and ad campaigns from a single platform powered by AI"
+      es: "Gestiona, analiza y automatiza tus redes sociales y campañas publicitarias desde una sola plataforma",
+      en: "Manage, analyze, and automate your social media and ad campaigns from a single platform"
     },
     detailedDescription: {
       es: "Metricool es una plataforma todo-en-uno que permite a profesionales, agencias y marcas gestionar sus redes sociales y campañas publicitarias desde un único lugar. Ofrece funcionalidades como planificación de contenido, análisis de métricas, generación de informes personalizados, seguimiento de competidores y gestión de anuncios en plataformas como Google Ads y Facebook Ads. Además, cuenta con un asistente de inteligencia artificial que ayuda a optimizar textos para publicaciones y mejorar la estrategia de contenidos.",
@@ -3080,21 +3177,21 @@ const tools: ToolCard[] = [
     },
     category: "marketing",
     price: {
-      es: "Gratis con funciones limitadas; planes desde $12/mes",
-      en: "Free with limited features; plans starting at $12/month"
+      es: "Planes desde $12/mes",
+      en: "Plans starting at $12/month"
     },
     difficulty: "beginner",
-    logo: "https://metricool.com/favicon.ico",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Logo-metricool.png/1200px-Logo-metricool.png",
     slug: "metricool",
     featured: false,
     url: "https://metricool.com"
   },
   {
-    id: "34",
+    id: "40",
     name: "Kommo",
     description: {
-      es: "CRM de ventas conversacionales que integra mensajería instantánea, automatizaciones y bots para potenciar tus ventas",
-      en: "Conversational sales CRM integrating instant messaging, automations, and bots to boost your sales"
+      es: "CRM de ventas que integra mensajería instantánea, automatizaciones y bots para potenciar tus ventas",
+      en: "Sales CRM integrating instant messaging, automations, and bots to boost your sales"
     },
     detailedDescription: {
       es: "Kommo es un CRM enfocado en ventas conversacionales que permite a las empresas gestionar sus interacciones con clientes a través de aplicaciones de mensajería como WhatsApp, Instagram y Facebook Messenger. Ofrece funcionalidades como automatización de tareas mediante bots, gestión de embudos de ventas, integración con múltiples canales de comunicación y un panel de control unificado para todas las conversaciones. Su enfoque en la mensajería instantánea facilita una comunicación más directa y efectiva con los clientes.",
@@ -3170,11 +3267,11 @@ const tools: ToolCard[] = [
     url: "https://www.kommo.com"
   },
   {
-    id: "35",
+    id: "41",
     name: "Leadsales",
     description: {
-      es: "CRM conversacional que centraliza tus chats de WhatsApp, Instagram y Facebook para gestionar ventas de forma organizada y colaborativa",
-      en: "Conversational CRM that centralizes your WhatsApp, Instagram, and Facebook chats to manage sales in an organized and collaborative way"
+      es: "CRM que centraliza tus chats de WhatsApp, Instagram y Facebook",
+      en: "CRM that centralizes your WhatsApp, Instagram, and Facebook chats"
     },
     detailedDescription: {
       es: "Leadsales es un CRM mexicano diseñado para pequeñas y medianas empresas que venden a través de canales como WhatsApp, Facebook e Instagram. Permite organizar conversaciones en embudos visuales tipo kanban, asignar chats automáticamente a miembros del equipo, programar mensajes y realizar seguimientos efectivos. Su interfaz sencilla y enfoque en ventas conversacionales lo hacen ideal para equipos que buscan escalar sin complicaciones técnicas.",
@@ -3238,10 +3335,10 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "crm",
+    category: "sales",
     price: {
-      es: "Desde $83.99 USD/mes para 3 usuarios; prueba de 7 días por $7 USD",
-      en: "From $83.99 USD/month for 3 users; 7-day trial for $7 USD"
+      es: "Desde $83.99 USD/mes",
+      en: "From $83.99 USD/month"
     },
     difficulty: "beginner",
     logo: "https://leadsales.io/favicon.ico",
@@ -3250,11 +3347,11 @@ const tools: ToolCard[] = [
     url: "https://leadsales.io"
   },
   {
-    id: "36",
+    id: "42",
     name: "Chatbase",
     description: {
-      es: "Crea agentes de IA personalizados para tu sitio web entrenados con tus propios datos, sin necesidad de codificación",
-      en: "Build custom AI agents for your website trained on your own data, no coding required"
+      es: "Crea agentes de IA personalizados para tu sitio web entrenados con tus propios datos",
+      en: "Build custom AI agents for your website trained on your own data"
     },
     detailedDescription: {
       es: "Chatbase es una plataforma que permite crear agentes de IA conversacionales entrenados con contenido personalizado, como documentos, enlaces web o bases de datos. Estos agentes pueden integrarse fácilmente en sitios web mediante widgets o APIs, ofreciendo soporte automatizado y respuestas precisas a los usuarios. La plataforma es ideal para empresas que buscan mejorar la atención al cliente y automatizar consultas frecuentes.",
@@ -3320,8 +3417,8 @@ const tools: ToolCard[] = [
     },
     category: "automation",
     price: {
-      es: "Gratis con funciones limitadas; planes desde $40/mes",
-      en: "Free with limited features; plans starting at $40/month"
+      es: "Planes desde $40/mes",
+      en: "Plans starting at $40/month"
     },
     difficulty: "beginner",
     logo: "https://www.chatbase.co/favicon.ico",
@@ -3330,7 +3427,7 @@ const tools: ToolCard[] = [
     url: "https://www.chatbase.co/"
   },
   {
-    id: "33",
+    id: "43",
     name: "DeepSeek",
     description: {
       es: "Modelo de lenguaje avanzado que ofrece capacidades de razonamiento comparables a los líderes del mercado, de forma gratuita",
@@ -3398,19 +3495,20 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "ai",
+    category: "dairy",
     price: {
       es: "Gratis",
       en: "Free"
     },
     difficulty: "intermediate",
-    logo: "https://deep-seek.chat/favicon.ico",
+    logo: "https://brandlogos.net/wp-content/uploads/2025/02/deepseek_logo_icon-logo_brandlogos.net_s5bgc.png",
     slug: "deepseek",
     featured: false,
     url: "https://deep-seek.chat/"
   },
   {
-    id: "33",
+    id: "44",
+    tags: ["Top"],
     name: "ElevenLabs",
     description: {
       es: "Genera voces realistas y clones personalizados en más de 30 idiomas con inteligencia artificial avanzada",
@@ -3478,7 +3576,7 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "content",
+    category: "voice",
     price: {
       es: "Plan gratuito con 10,000 créditos/mes; planes de pago desde $5/mes",
       en: "Free plan with 10,000 credits/month; paid plans starting at $5/month"
@@ -3490,7 +3588,8 @@ const tools: ToolCard[] = [
     url: "https://elevenlabs.io"
   },
   {
-    id: "34",
+    id: "45",
+    tags: ["Top"],
     name: "HeyGen",
     description: {
       es: "Genera videos profesionales con avatares de IA en más de 175 idiomas, sin necesidad de cámara ni edición",
@@ -3560,8 +3659,8 @@ const tools: ToolCard[] = [
     },
     category: "content",
     price: {
-      es: "Plan gratuito disponible; planes de pago desde $24/mes",
-      en: "Free plan available; paid plans starting at $24/month"
+      es: "Planes desde $24/mes",
+      en: "Pplans starting at $24/month"
     },
     difficulty: "beginner",
     logo: "https://www.heygen.com/favicon.ico",
@@ -3570,7 +3669,7 @@ const tools: ToolCard[] = [
     url: "https://www.heygen.com"
   },
   {
-    id: "35",
+    id: "46",
     name: "DupDub",
     description: {
       es: "Plataforma integral de creación de contenido con IA: voz en off, avatares, traducción de videos y más",
@@ -3640,8 +3739,8 @@ const tools: ToolCard[] = [
     },
     category: "content",
     price: {
-      es: "Plan gratuito disponible; planes de pago desde $11/mes",
-      en: "Free plan available; paid plans starting at $11/month"
+      es: "Planes desde $11/mes",
+      en: "Plans starting at $11/month"
     },
     difficulty: "beginner",
     logo: "https://www.dupdub.com/favicon.ico",
@@ -3650,7 +3749,7 @@ const tools: ToolCard[] = [
     url: "https://www.dupdub.com"
   },
   {
-    id: "34",
+    id: "47",
     name: "Synthesia",
     description: {
       es: "Crea videos profesionales con avatares de IA en más de 140 idiomas, sin necesidad de cámaras ni actores",
@@ -3720,17 +3819,17 @@ const tools: ToolCard[] = [
     },
     category: "content",
     price: {
-      es: "Plan gratuito con 3 minutos de video al mes; planes de pago desde $29/mes",
-      en: "Free plan with 3 minutes of video per month; paid plans starting at $29/month"
+      es: "Planes desde $29/mes",
+      en: "Plans starting at $29/month"
     },
     difficulty: "intermediate",
-    logo: "https://www.synthesia.io/favicon.ico",
+    logo: "https://logowik.com/content/uploads/images/synthesia8926.jpg",
     slug: "synthesia",
     featured: false,
     url: "https://www.synthesia.io"
   },
   {
-    id: "35",
+    id: "48",
     name: "Flux 1.1",
     description: {
       es: "Genera imágenes de alta calidad a partir de texto con velocidad y precisión mejoradas",
@@ -3800,8 +3899,8 @@ const tools: ToolCard[] = [
     },
     category: "content",
     price: {
-      es: "Plan gratuito con funciones limitadas; planes de pago disponibles",
-      en: "Free plan with limited features; paid plans available"
+      es: "Plan gratuito con funciones limitadas",
+      en: "Free plan with limited features"
     },
     difficulty: "intermediate",
     logo: "https://flux-ai.io/favicon.ico",
@@ -3810,7 +3909,7 @@ const tools: ToolCard[] = [
     url: "https://flux-ai.io/"
   },
   {
-    id: "36",
+    id: "49",
     name: "MidJourney",
     description: {
       es: "Genera arte digital de alta calidad a partir de descripciones textuales utilizando IA avanzada",
@@ -3880,17 +3979,17 @@ const tools: ToolCard[] = [
     },
     category: "content",
     price: {
-      es: "Planes desde $10/mes; requiere cuenta de Discord",
-      en: "Plans starting at $10/month; requires Discord account"
+      es: "Planes desde $10/mes",
+      en: "Plans starting at $10/month"
     },
     difficulty: "intermediate",
-    logo: "https://www.midjourney.com/favicon.ico",
+    logo: "https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/light/midjourney.png",
     slug: "midjourney",
     featured: false,
     url: "https://www.midjourney.com/"
   },
   {
-    id: "38",
+    id: "50",
     name: "Leonardo AI",
     description: {
       es: "Plataforma de IA generativa para crear imágenes y videos de alta calidad a partir de texto o imágenes",
@@ -3960,8 +4059,8 @@ const tools: ToolCard[] = [
     },
     category: "content",
     price: {
-      es: "Plan gratuito con funciones limitadas; planes de pago desde $10/mes",
-      en: "Free plan with limited features; paid plans starting at $10/month"
+      es: "Planes desde $10/mes",
+      en: "Plans starting at $10/month"
     },
     difficulty: "intermediate",
     logo: "https://leonardo.ai/favicon.ico",
@@ -3970,7 +4069,7 @@ const tools: ToolCard[] = [
     url: "https://leonardo.ai/"
   },
   {
-    id: "39",
+    id: "51",
     name: "Kling AI",
     description: {
       es: "Generador de videos con IA que transforma texto e imágenes en clips animados de alta calidad",
@@ -4040,17 +4139,18 @@ const tools: ToolCard[] = [
     },
     category: "content",
     price: {
-      es: "Plan gratuito con funciones limitadas; planes de pago desde $10/mes",
-      en: "Free plan with limited features; paid plans starting at $10/month"
+      es: "Planes desde $10/mes",
+      en: "Plans starting at $10/month"
     },
     difficulty: "intermediate",
-    logo: "https://kling.ai/favicon.ico",
+    logo: "https://www.fahimai.com/wp-content/uploads/2024/11/Kling-AI-CTA.png",
     slug: "kling-ai",
     featured: false,
     url: "https://kling.ai/"
   },
   {
-    id: "40",
+    id: "52",
+    tags: ["irrelevant"],
     name: "Sora AI",
     description: {
       es: "Genera videos realistas de hasta 60 segundos a partir de texto, imágenes o clips existentes",
@@ -4120,8 +4220,8 @@ const tools: ToolCard[] = [
     },
     category: "content",
     price: {
-      es: "Incluido en ChatGPT Plus ($20/mes) y Pro ($200/mes)",
-      en: "Included in ChatGPT Plus ($20/month) and Pro ($200/month)"
+      es: "Incluido en ChatGPT Plus y Pro",
+      en: "Included in ChatGPT Plus and Pro"
     },
     difficulty: "intermediate",
     logo: "https://openai.com/favicon.ico",
@@ -4130,8 +4230,8 @@ const tools: ToolCard[] = [
     url: "https://openai.com/sora/"
   },
   {
-    id: "41",
-    name: "Luma AI (Dream Machine)",
+    id: "53",
+    name: "Luma AI",
     description: {
       es: "Genera videos realistas de 5 segundos a partir de texto o imágenes con movimiento fluido y coherente",
       en: "Generate realistic 5-second videos from text or images with smooth and coherent motion"
@@ -4200,21 +4300,22 @@ const tools: ToolCard[] = [
     },
     category: "content",
     price: {
-      es: "30 videos gratuitos; planes de pago disponibles",
-      en: "30 free videos; paid plans available"
+      es: "30 videos gratuitos",
+      en: "30 free videos"
     },
     difficulty: "intermediate",
-    logo: "https://lumalabs.ai/favicon.ico",
+    logo: "https://logos-world.net/wp-content/uploads/2024/11/Luma-Labs-Logo.png",
     slug: "luma-ai-dream-machine",
     featured: false,
     url: "https://lumalabs.ai/dream-machine"
   },
   {
-    id: "42",
+    id: "54",
+    tags: ["Top"],
     name: "Pika AI",
     description: {
-      es: "Genera videos cortos y dinámicos a partir de texto o imágenes con herramientas intuitivas y efectos avanzados",
-      en: "Generate short, dynamic videos from text or images with intuitive tools and advanced effects"
+      es: "Genera videos cortos y dinámicos a partir de texto o imágenes con efectos avanzados",
+      en: "Generate short, dynamic videos from text or images with advanced effects"
     },
     detailedDescription: {
       es: "Pika AI es una plataforma de generación de videos impulsada por inteligencia artificial desarrollada por Pika Labs. Permite a los usuarios crear videos de hasta 10 segundos en resolución 1080p a partir de descripciones textuales o imágenes. La versión más reciente, Pika 2.2, introduce 'Pikaframes', un sistema de transición de fotogramas clave que permite transiciones suaves y controladas. Además, ofrece funciones como 'Pikaswaps' para reemplazar elementos en videos y 'Selfie With Your Younger Self' para crear interacciones entre versiones actuales y pasadas del usuario.",
@@ -4280,21 +4381,21 @@ const tools: ToolCard[] = [
     },
     category: "content",
     price: {
-      es: "Plan gratuito con funciones limitadas; planes de pago disponibles",
-      en: "Free plan with limited features; paid plans available"
+      es: "Plan gratuito con funciones limitadas",
+      en: "Free plan with limited features"
     },
     difficulty: "beginner",
-    logo: "https://pikalabs.ai/favicon.ico",
+    logo: "https://www.fahimai.com/wp-content/uploads/2024/08/CTA-27.png",
     slug: "pika-ai",
     featured: false,
     url: "https://pikalabsai.org/"
   },
   {
-    id: "43",
+    id: "55",
     name: "Runway",
     description: {
-      es: "Plataforma de generación de videos con IA que transforma texto, imágenes o videos en clips realistas de hasta 16 segundos",
-      en: "AI video generation platform that transforms text, images, or videos into realistic clips up to 16 seconds"
+      es: "Plataforma de generación de videos con IA que transforma texto, imágenes o videos en clips realistas",
+      en: "AI video generation platform that transforms text, images, or videos into realistic clips"
     },
     detailedDescription: {
       es: "Runway es una plataforma de inteligencia artificial generativa que permite crear videos realistas a partir de texto, imágenes o videos existentes. Su modelo más reciente, Gen-4, ofrece capacidades avanzadas para mantener la coherencia de personajes y escenas a lo largo de múltiples tomas, abordando un desafío común en los videos generados por IA. Runway ha sido utilizado en producciones cinematográficas y musicales, y ha establecido asociaciones con estudios como Lionsgate para integrar sus modelos en la industria del cine.",
@@ -4360,17 +4461,17 @@ const tools: ToolCard[] = [
     },
     category: "content",
     price: {
-      es: "Prueba gratuita disponible; planes de pago desde $12/mes",
-      en: "Free trial available; paid plans starting at $12/month"
+      es: "Planes desde $12/mes",
+      en: "Plans starting at $12/month"
     },
     difficulty: "intermediate",
-    logo: "https://runwayml.com/favicon.ico",
+    logo: "https://pngdownloads.wordpress.com/wp-content/uploads/2024/04/runway-ai-black-symbol-logo-png.jpg",
     slug: "runway",
     featured: false,
     url: "https://runwayml.com/"
   },
   {
-    id: "44",
+    id: "56",
     name: "Voiceflow",
     description: {
       es: "Plataforma sin código para diseñar, prototipar y desplegar agentes conversacionales de voz y chat",
@@ -4438,23 +4539,24 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "automation",
+    category: "voice",
     price: {
-      es: "Plan gratuito disponible; planes de pago desde $60/mes",
-      en: "Free plan available; paid plans starting at $60/month"
+      es: "Planes desde $60/mes",
+      en: "Plans starting at $60/month"
     },
     difficulty: "intermediate",
-    logo: "https://www.voiceflow.com/favicon.ico",
+    logo: "https://pbs.twimg.com/profile_images/1770088656230916096/bny49PuI_400x400.jpg",
     slug: "voiceflow",
     featured: false,
     url: "https://www.voiceflow.com/"
   },
   {
-    id: "45",
+    id: "57",
+    tags: ["irrelevant"],
     name: "Vapi",
     description: {
-      es: "Plataforma para crear, probar y desplegar agentes de voz con IA mediante una API altamente configurable",
-      en: "Platform to build, test, and deploy AI voice agents through a highly configurable API"
+      es: "Plataforma para crear, probar y desplegar agentes de voz con IA",
+      en: "Platform to build, test, and deploy AI voice agents"
     },
     detailedDescription: {
       es: "Vapi es una plataforma orientada a desarrolladores para crear asistentes de voz impulsados por inteligencia artificial que manejan llamadas telefónicas con intervención humana mínima. Permite construir y desplegar agentes de voz de IA que pueden responder o realizar llamadas, utilizando una base de conocimientos sobre tu negocio o productos para proporcionar respuestas informadas en tiempo real. Vapi ofrece una interfaz de construcción intuitiva para crear tus propios agentes de soporte al cliente.",
@@ -4518,10 +4620,10 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "automation",
+    category: "voice",
     price: {
-      es: "Planes personalizados según el uso y necesidades empresariales",
-      en: "Custom plans based on usage and business needs"
+      es: "Pago por uso",
+      en: "Pay per Use"
     },
     difficulty: "advanced",
     logo: "https://vapi.ai/favicon.ico",
@@ -4530,11 +4632,11 @@ const tools: ToolCard[] = [
     url: "https://vapi.ai/"
   },
   {
-    id: "46",
+    id: "58",
     name: "Bland AI",
     description: {
-      es: "Automatiza llamadas telefónicas con agentes de voz que suenan humanos, disponibles 24/7 y personalizables para ventas, soporte y más",
-      en: "Automate phone calls with human-sounding voice agents, available 24/7 and customizable for sales, support, and more"
+      es: "Automatiza llamadas con agentes de voz que suenan humanos, disponibles 24/7 y personalizables para ventas y más",
+      en: "Automate calls with human-sounding voice agents, available 24/7 and customizable for sales and more"
     },
     detailedDescription: {
       es: "Bland AI es una plataforma que permite automatizar llamadas telefónicas mediante agentes de voz impulsados por inteligencia artificial que suenan naturales y pueden hablar cualquier idioma. Estos agentes pueden manejar tareas como ventas, programación de citas y soporte al cliente, operando las 24 horas del día. La plataforma ofrece herramientas como 'Conversational Pathways' para controlar el flujo de las conversaciones y la integración con webhooks para acciones en tiempo real.",
@@ -4598,23 +4700,23 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "automation",
+    category: "voice",
     price: {
       es: "$0.09 por minuto de llamada",
       en: "$0.09 per call minute"
     },
     difficulty: "intermediate",
-    logo: "https://www.bland.ai/favicon.ico",
+    logo: "https://ph-files.imgix.net/bc16937c-807e-4c49-b9aa-74971c697e31.png?auto=format",
     slug: "bland-ai",
     featured: false,
     url: "https://www.bland.ai/"
   },
   {
-    id: "47",
+    id: "59",
     name: "Softr",
     description: {
-      es: "Crea aplicaciones web, portales de clientes y herramientas internas sin necesidad de programar, utilizando datos de Airtable, Google Sheets y más",
-      en: "Build web apps, client portals, and internal tools without coding, using data from Airtable, Google Sheets, and more"
+      es: "Crea aplicaciones web sin necesidad de programar, utilizando datos de Airtable, Google Sheets y más",
+      en: "Build web apps without coding, using data from Airtable, Google Sheets, and more"
     },
     detailedDescription: {
       es: "Softr es una plataforma sin código que permite a usuarios sin experiencia técnica construir aplicaciones web personalizadas mediante una interfaz de arrastrar y soltar. Ofrece integraciones con diversas fuentes de datos como Airtable, Google Sheets y Notion, y proporciona componentes preconstruidos como listas, formularios y gráficos. Softr también incluye funcionalidades como autenticación de usuarios, procesamiento de pagos y automatización de flujos de trabajo.",
@@ -4678,10 +4780,10 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "automation",
+    category: "apps",
     price: {
-      es: "Plan gratuito disponible; planes de pago desde $49/mes",
-      en: "Free plan available; paid plans starting at $49/month"
+      es: "Planes desde $49/mes",
+      en: "Plans starting at $49/month"
     },
     difficulty: "beginner",
     logo: "https://www.softr.io/favicon.ico",
@@ -4690,7 +4792,8 @@ const tools: ToolCard[] = [
     url: "https://www.softr.io/"
   },
   {
-    id: "48",
+    id: "60",
+    tags: ["irrelevant"],
     name: "Warp",
     description: {
       es: "Terminal moderna con IA integrada, que ofrece sugerencias de comandos, generación de código y flujos reutilizables",
@@ -4758,19 +4861,19 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "development",
+    category: "technical",
     price: {
-      es: "Gratuito con funciones premium disponibles",
-      en: "Free with premium features available"
+      es: "Gratis",
+      en: "Free"
     },
     difficulty: "intermediate",
-    logo: "https://www.warp.dev/favicon.ico",
+    logo: "https://logowik.com/content/uploads/images/warp-terminal6403.logowik.com.webp",
     slug: "warp",
     featured: false,
     url: "https://www.warp.dev/"
   },
   {
-    id: "49",
+    id: "61",
     name: "Raycast",
     description: {
       es: "Lanzador de aplicaciones y asistente de productividad para macOS con extensiones y funciones de IA",
@@ -4838,23 +4941,23 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "productivity",
+    category: "technical",
     price: {
-      es: "Gratuito con funciones premium disponibles",
-      en: "Free with premium features available"
+      es: "Gratis",
+      en: "Free"
     },
     difficulty: "beginner",
-    logo: "https://www.raycast.com/favicon.ico",
+    logo: "https://www.raycast.com/favicon-production.png",
     slug: "raycast",
     featured: false,
     url: "https://www.raycast.com/"
   },
   {
-    id: "50",
+    id: "62",
     name: "Belo",
     description: {
-      es: "Billetera digital que permite enviar, recibir y convertir dinero en múltiples monedas, incluyendo criptomonedas, ideal para freelancers y viajeros",
-      en: "Digital wallet enabling sending, receiving, and converting money in multiple currencies, including cryptocurrencies, ideal for freelancers and travelers"
+      es: "Billetera digital que permite enviar y recibir dinero en múltiples monedas ideal para freelancers",
+      en: "Digital wallet enabling sending and receiving money in multiple currencies ideal for freelancers"
     },
     detailedDescription: {
       es: "Belo es una billetera digital argentina diseñada para facilitar pagos internacionales, ahorros automatizados y gestión de múltiples monedas, incluyendo pesos argentinos, dólares, euros, reales y criptomonedas como BTC, ETH, DAI y USDT. La aplicación permite recibir pagos desde plataformas como PayPal, Wise, Deel, Upwork y más. Además, ofrece una tarjeta Mastercard (física y virtual) para realizar pagos en tiendas, y permite pagar servicios como electricidad, agua, gas y matrículas universitarias. También incluye funciones de ahorro automatizado con generación de rendimientos en diferentes monedas.",
@@ -4918,22 +5021,22 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "finance",
+    category: "other",
     price: {
-      es: "Aplicación gratuita; posibles comisiones por transacciones y conversiones",
-      en: "Free application; potential fees for transactions and conversions"
+      es: "Pago por comisiones",
+      en: "Pay fees"
     },
     difficulty: "beginner",
-    logo: "https://www.belo.app/favicon.ico",
+    logo: "https://newtopia.vc/wp-content/uploads/2022/04/belo.png",
     slug: "belo",
     featured: false,
     url: "https://www.belo.app/"
   },
   {
-    id: "51",
+    id: "63",
     name: "Trae.ai",
     description: {
-      es: "Entorno de desarrollo integrado con IA que ofrece asistencia en tiempo real para escribir, depurar y optimizar código",
+      es: "Entorno de desarrollo con IA que ofrece asistencia en tiempo real para escribir, depurar y optimizar código",
       en: "AI-integrated development environment offering real-time assistance for writing, debugging, and optimizing code"
     },
     detailedDescription: {
@@ -4998,19 +5101,19 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "development",
+    category: "technical",
     price: {
-      es: "Gratuito con acceso a modelos de IA avanzados sin costo",
-      en: "Free with access to advanced AI models at no cost"
+      es: "Gratis",
+      en: "Free"
     },
     difficulty: "intermediate",
-    logo: "https://www.trae.ai/favicon.ico",
+    logo: "https://miro.medium.com/v2/resize:fit:1400/0*B-dWKnx-oFPKpQoc.png",
     slug: "trae-ai",
     featured: false,
     url: "https://www.trae.ai/"
   },
   {
-    id: "52",
+    id: "64",
     name: "Insomnia",
     description: {
       es: "Cliente REST y plataforma de desarrollo de APIs que permite diseñar, probar y depurar APIs de forma colaborativa",
@@ -5078,10 +5181,10 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "development",
+    category: "technical",
     price: {
-      es: "Gratuito con opciones de colaboración avanzadas en planes de pago",
-      en: "Free with advanced collaboration options in paid plans"
+      es: "Gratis",
+      en: "Free"
     },
     difficulty: "intermediate",
     logo: "https://insomnia.rest/favicon.ico",
@@ -5090,8 +5193,9 @@ const tools: ToolCard[] = [
     url: "https://insomnia.rest/"
   },
   {
-    id: "53",
+    id: "65",
     name: "Cursor",
+    tags: ["irrelevant"],
     description: {
       es: "Editor de código impulsado por IA que permite escribir, depurar y refactorizar código utilizando comandos en lenguaje natural",
       en: "AI-powered code editor enabling writing, debugging, and refactoring code using natural language commands"
@@ -5158,10 +5262,10 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "development",
+    category: "apps",
     price: {
-      es: "Plan gratuito disponible; plan Pro desde $20/mes con funciones avanzadas",
-      en: "Free plan available; Pro plan starting at $20/month with advanced features"
+      es: "Plan Pro desde $20/mes",
+      en: "Pro plan starting at $20/month"
     },
     difficulty: "intermediate",
     logo: "https://www.cursor.com/favicon.ico",
@@ -5170,11 +5274,12 @@ const tools: ToolCard[] = [
     url: "https://www.cursor.com/"
   },
   {
-    id: "54",
+    id: "66",
     name: "Supabase",
+    tags: ["Top"],
     description: {
-      es: "Plataforma de backend como servicio que ofrece una alternativa de código abierto a Firebase, con base de datos PostgreSQL y funcionalidades en tiempo real",
-      en: "Backend-as-a-service platform offering an open-source alternative to Firebase, featuring PostgreSQL database and real-time capabilities"
+      es: "Plataforma de backend como servicio, con base de datos PostgreSQL y funcionalidades en tiempo real",
+      en: "Backend-as-a-service platform offering, featuring PostgreSQL database and real-time capabilities"
     },
     detailedDescription: {
       es: "Supabase es una plataforma de desarrollo de backend que proporciona una alternativa de código abierto a Firebase. Ofrece una base de datos PostgreSQL con capacidades en tiempo real, autenticación, almacenamiento y funciones de servidor. Supabase también integra soporte para vectores mediante la extensión pgvector, permitiendo almacenar y consultar embeddings para aplicaciones de inteligencia artificial. Además, se integra con herramientas como LangChain y LlamaIndex para facilitar la creación de aplicaciones basadas en LLMs.",
@@ -5238,20 +5343,21 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "development",
+    category: "technical",
     price: {
-      es: "Plan gratuito disponible; planes de pago desde $25/mes",
-      en: "Free plan available; paid plans starting at $25/month"
+      es: "Planes desde $25/mes",
+      en: "Plans starting at $25/month"
     },
     difficulty: "intermediate",
-    logo: "https://supabase.com/favicon.ico",
+    logo: "https://cdn.prod.website-files.com/66842e04d18971242a294872/669e87d174d190a8ba60b861_supabase-TAiY.png",
     slug: "supabase",
     featured: false,
     url: "https://supabase.com/"
   },
   {
-    id: "55",
+    id: "67",
     name: "Pinecone",
+    tags: ["irrelevant"],
     description: {
       es: "Base de datos vectorial gestionada en la nube, optimizada para búsquedas semánticas y aplicaciones de inteligencia artificial",
       en: "Managed cloud vector database optimized for semantic search and AI applications"
@@ -5318,10 +5424,10 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "development",
+    category: "technical",
     price: {
-      es: "Plan gratuito disponible; precios según uso en planes de pago",
-      en: "Free plan available; usage-based pricing in paid plans"
+      es: "Pago por uso",
+      en: "Pay per use"
     },
     difficulty: "intermediate",
     logo: "https://www.pinecone.io/favicon.ico",
@@ -5330,11 +5436,12 @@ const tools: ToolCard[] = [
     url: "https://www.pinecone.io/"
   },
   {
-    id: "56",
+    id: "68",
     name: "Hugging Face",
+    tags: ["Top"],
     description: {
-      es: "Plataforma colaborativa de código abierto para compartir modelos de IA, conjuntos de datos y aplicaciones, conocida como el 'GitHub del aprendizaje automático'",
-      en: "Open-source collaborative platform for sharing AI models, datasets, and applications, known as the 'GitHub of machine learning'"
+      es: "Plataforma para compartir modelos de IA, conjuntos de datos y aplicaciones, conocida como el 'GitHub del aprendizaje automático'",
+      en: "Open-source platform for sharing AI models, datasets, and applications, known as the 'GitHub of machine learning'"
     },
     detailedDescription: {
       es: "Hugging Face es una plataforma franco-estadounidense que permite a investigadores y desarrolladores compartir modelos de aprendizaje automático, conjuntos de datos y aplicaciones interactivas. Su ecosistema incluye bibliotecas como Transformers, Datasets y Gradio, facilitando tareas de procesamiento de lenguaje natural, visión por computadora y más. La plataforma alberga más de 1.5 millones de modelos y 340,000 conjuntos de datos, fomentando la colaboración y la innovación en la comunidad de IA.",
@@ -5398,10 +5505,10 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "development",
+    category: "technical",
     price: {
-      es: "Acceso gratuito con opciones premium para empresas",
-      en: "Free access with premium options for enterprises"
+      es: "Gratis",
+      en: "Free"
     },
     difficulty: "intermediate",
     logo: "https://huggingface.co/front/assets/huggingface_logo.svg",
@@ -5410,10 +5517,10 @@ const tools: ToolCard[] = [
     url: "https://huggingface.co/"
   },
   {
-    id: "57",
+    id: "69",
     name: "Zapier",
     description: {
-      es: "Plataforma de automatización sin código que conecta más de 8,000 aplicaciones para optimizar flujos de trabajo",
+      es: "Plataforma de automatización que conecta más de 8,000 aplicaciones para optimizar flujos de trabajo",
       en: "No-code automation platform connecting over 8,000 apps to streamline workflows"
     },
     detailedDescription: {
@@ -5478,19 +5585,19 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "productivity",
+    category: "automation",
     price: {
-      es: "Plan gratuito disponible; planes de pago desde $19.99/mes",
-      en: "Free plan available; paid plans starting at $19.99/month"
+      es: "Planes desde $19.99/mes",
+      en: "Plans starting at $19.99/month"
     },
     difficulty: "beginner",
-    logo: "https://cdn.zapier.com/static/images/favicon.ico",
+    logo: "https://todointeligenciaartificial.com/wp-content/uploads/2023/09/zapier.png",
     slug: "zapier",
     featured: false,
     url: "https://zapier.com/"
   },
   {
-    id: "58",
+    id: "70",
     name: "Groq",
     description: {
       es: "Inferencia de IA ultrarrápida con hardware especializado",
@@ -5558,20 +5665,21 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "infrastructure",
+    category: "technical",
     price: {
       es: "Desde $0.05 por millón de tokens",
       en: "From $0.05 per million tokens"
     },
     difficulty: "intermediate",
-    logo: "https://groq.com/wp-content/uploads/2023/03/groq-logo.svg",
+    logo: "https://www.ciscoinvestments.com/assets/logos/groq-logo.png",
     slug: "groq",
     featured: true,
     url: "https://groq.com"
   },
   {
-    id: "59",
+    id: "71",
     name: "Gitingest",
+    tags: ["Top"],
     description: {
       es: "Convierte repositorios de Git en texto optimizado para IA",
       en: "Convert Git repositories into AI-optimized text"
@@ -5638,19 +5746,19 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "developer-tools",
+    category: "technical",
     price: {
       es: "Gratis",
       en: "Free"
     },
     difficulty: "beginner",
-    logo: "https://gitingest.com/favicon.ico",
+    logo: "https://cdn.devdojo.com/images/january2023/shape-1.png",
     slug: "gitingest",
     featured: false,
     url: "https://gitingest.com"
   },
   {
-    id: "59",
+    id: "72",
     name: "Graphy",
     description: {
       es: "Crea gráficos profesionales en segundos",
@@ -5714,20 +5822,21 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "data-visualization",
+    category: "analytics",
     price: {
       es: "Gratis",
       en: "Free"
     },
     difficulty: "beginner",
-    logo: "https://graphy.app/favicon.ico",
+    logo: "https://storage.googleapis.com/cluvi/Images%20Web%20irrelevant/TOOLS/images.png",
     slug: "graphy",
     featured: false,
     url: "https://graphy.app/"
   },
   {
-    id: "60",
+    id: "73",
     name: "Repurpose.io",
+    tags: ["Top"],
     description: {
       es: "Automatiza la reutilización de contenido en redes sociales",
       en: "Automate content repurposing across social media"
@@ -5798,13 +5907,13 @@ const tools: ToolCard[] = [
       en: "From $29.08/month"
     },
     difficulty: "intermediate",
-    logo: "https://repurpose.io/favicon.ico",
+    logo: "https://i0.wp.com/repurpose.io/wp-content/uploads/2024/07/repurpose-logo-competitors-page.png?fit=240%2C240&ssl=1",
     slug: "repurpose-io",
     featured: true,
     url: "https://repurpose.io/"
   },
   {
-    id: "60",
+    id: "74",
     name: "Crew AI",
     description: {
       es: "Orquesta agentes de IA para automatizar tareas complejas",
@@ -5872,19 +5981,19 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "automation",
+    category: "ai_agents",
     price: {
       es: "Gratis",
       en: "Free"
     },
     difficulty: "intermediate",
-    logo: "https://raw.githubusercontent.com/crewAIInc/crewAI/main/assets/logo.png",
+    logo: "https://miro.medium.com/v2/resize:fit:1400/1*4LTbuktCcTYv7F_vuN-8sA.png",
     slug: "crew-ai",
     featured: false,
     url: "https://www.crewai.com/"
   },
   {
-    id: "61",
+    id: "75",
     name: "Abacus.AI",
     description: {
       es: "Plataforma de IA para automatizar procesos empresariales",
@@ -5952,19 +6061,19 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "automation",
+    category: "ai_agents",
     price: {
       es: "Desde $10/mes",
       en: "From $10/month"
     },
     difficulty: "intermediate",
-    logo: "https://abacus.ai/logo.png",
+    logo: "https://blog.abacus.ai/wp-content/uploads/2022/05/LOGO-LIGHT@10x.png",
     slug: "abacus-ai",
     featured: false,
     url: "https://abacus.ai/"
   },
   {
-    id: "62",
+    id: "76",
     name: "SmolAgents",
     description: {
       es: "Agentes de IA minimalistas que ejecutan código Python",
@@ -6032,20 +6141,21 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "automation",
+    category: "ai_agents",
     price: {
       es: "Gratis",
       en: "Free"
     },
     difficulty: "intermediate",
-    logo: "https://raw.githubusercontent.com/huggingface/smolagents/main/docs/source/en/_static/smolagents_logo.png",
+    logo: "https://smolagents.org/wp-content/uploads/2025/01/cropped-Slice-91.png",
     slug: "smolagents",
     featured: false,
     url: "https://smolagents.org/"
   },
   {
-    id: "63",
+    id: "77",
     name: "DocuSign",
+    tags: ["Top"],
     description: {
       es: "Firma electrónica legal y gestión inteligente de acuerdos",
       en: "Legal electronic signature and intelligent agreement management"
@@ -6112,19 +6222,19 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "automation",
+    category: "legal",
     price: {
       es: "Desde $10/mes",
       en: "From $10/month"
     },
     difficulty: "beginner",
-    logo: "https://logos-world.net/wp-content/uploads/2020/11/DocuSign-Logo.png",
+    logo: "https://brandlogos.net/wp-content/uploads/2024/04/docusign-logo_brandlogos.net_5wujv.png",
     slug: "docusign",
     featured: false,
     url: "https://www.docusign.com/"
   },
   {
-    id: "64",
+    id: "78",
     name: "Buffer",
     description: {
       es: "Gestiona y programa tus redes sociales con facilidad",
@@ -6192,19 +6302,19 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "automation",
+    category: "content",
     price: {
       es: "Gratis / Desde $6/mes por canal",
       en: "Free / From $6/month per channel"
     },
     difficulty: "beginner",
-    logo: "https://buffer.com/static/logo.svg",
+    logo: "https://www.cdnlogo.com/logos/b/15/buffer.svg",
     slug: "buffer",
     featured: false,
     url: "https://buffer.com"
   },
   {
-    id: "65",
+    id: "79",
     name: "Blotato AI",
     description: {
       es: "Crea contenido viral y videos sin rostro con IA",
@@ -6278,13 +6388,13 @@ const tools: ToolCard[] = [
       en: "From $29/month"
     },
     difficulty: "intermediate",
-    logo: "https://www.blotato.com/logo.png",
+    logo: "https://my.blotato.com/manatee-logo.png",
     slug: "blotato-ai",
     featured: false,
     url: "https://www.blotato.com"
   },
   {
-    id: "66",
+    id: "80",
     name: "Midjourney",
     description: {
       es: "Genera imágenes artísticas con IA a partir de texto",
@@ -6358,13 +6468,13 @@ const tools: ToolCard[] = [
       en: "From $10/month"
     },
     difficulty: "intermediate",
-    logo: "https://www.midjourney.com/logo.png",
+    logo: "https://pngdownloads.wordpress.com/wp-content/uploads/2023/05/midjourney-logo-png.jpg",
     slug: "midjourney",
     featured: false,
     url: "https://www.midjourney.com"
   },
   {
-    id: "67",
+    id: "81",
     name: "Pic Copilot",
     description: {
       es: "Optimiza imágenes de productos con IA para eCommerce",
@@ -6426,13 +6536,13 @@ const tools: ToolCard[] = [
       en: "Free / Plans from $3.99/month"
     },
     difficulty: "beginner",
-    logo: "https://www.piccopilot.com/logo.png",
+    logo: "https://brandlogos.net/wp-content/uploads/2023/09/microsoft_copilot-logo_brandlogos.net_zaqzr.png",
     slug: "pic-copilot",
     featured: false,
     url: "https://www.piccopilot.com/"
   },
   {
-    id: "68",
+    id: "82",
     name: "TopView 2.0",
     description: {
       es: "Genera videos de productos con avatares IA",
@@ -6494,13 +6604,13 @@ const tools: ToolCard[] = [
       en: "Plans from $9.99/month"
     },
     difficulty: "beginner",
-    logo: "https://www.topview.ai/logo.png",
+    logo: "https://storage.googleapis.com/aiagents_1/agent-logos/1727578900727-c9a262645bbb4526.jpeg",
     slug: "topview-2",
     featured: false,
     url: "https://www.topview.ai/"
   },
   {
-    id: "69",
+    id: "83",
     name: "Krea AI",
     description: {
       es: "Genera y edita imágenes y videos con IA en tiempo real",
@@ -6562,13 +6672,13 @@ const tools: ToolCard[] = [
       en: "Free / Plans from $12/month"
     },
     difficulty: "intermediate",
-    logo: "https://www.krea.ai/logo.png",
+    logo: "https://cdn-1.webcatalog.io/catalog/krea-ai/krea-ai-icon-unplated.png?v=1714781416774",
     slug: "krea-ai",
     featured: false,
     url: "https://www.krea.ai/"
   },
   {
-    id: "70",
+    id: "84",
     name: "OpenMagic",
     description: {
       es: "Crea contenido 3D, CGI y VFX con IA en pocos clics",
@@ -6630,13 +6740,13 @@ const tools: ToolCard[] = [
       en: "Plans from $10/month"
     },
     difficulty: "beginner",
-    logo: "https://omagic.ai/logo.png",
+    logo: "https://pbs.twimg.com/profile_images/1888331438648434688/hOlijepH_400x400.jpg",
     slug: "openmagic",
     featured: false,
     url: "https://omagic.ai/"
   },
   {
-    id: "71",
+    id: "85",
     name: "Jotform",
     description: {
       es: "Creador de formularios en línea fácil y potente",
@@ -6692,19 +6802,19 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "automation",
+    category: "marketing",
     price: {
       es: "Gratis / Planes desde $24/mes",
       en: "Free / Plans from $24/month"
     },
     difficulty: "beginner",
-    logo: "https://www.jotform.com/logo.png",
+    logo: "https://cdn.prod.website-files.com/657639ebfb91510f45654149/67f6a20c5f03bd9672de2d83_symbol.png",
     slug: "jotform",
     featured: false,
     url: "https://www.jotform.com/"
   },
   {
-    id: "72",
+    id: "86",
     name: "CodeGuide",
     description: {
       es: "Asistente de codificación con IA para desarrolladores",
@@ -6760,19 +6870,19 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "development",
+    category: "technical",
     price: {
       es: "Gratis",
       en: "Free"
     },
     difficulty: "intermediate",
-    logo: "https://www.codeguide.dev/logo.png",
+    logo: "https://hansfelix.github.io/code-guide/code-guide-logo.png",
     slug: "codeguide",
     featured: false,
     url: "https://www.codeguide.dev/"
   },
   {
-    id: "73",
+    id: "87",
     name: "DigitalOcean",
     description: {
       es: "Infraestructura en la nube sencilla y escalable para desarrolladores",
@@ -6840,20 +6950,21 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "infrastructure",
+    category: "technical",
     price: {
       es: "Desde $4/mes",
       en: "From $4/month"
     },
     difficulty: "intermediate",
-    logo: "https://www.digitalocean.com/assets/media/logos-badges/png/DO_Logo_Vertical_Blue.png",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/DigitalOcean_logo.svg/1200px-DigitalOcean_logo.svg.png",
     slug: "digitalocean",
     featured: false,
     url: "https://www.digitalocean.com/"
   },
   {
-    id: "74",
+    id: "88",
     name: "EasyPanel",
+    tags: ["irrelevant"],
     description: {
       es: "Panel de control moderno para gestionar servidores y aplicaciones",
       en: "Modern control panel to manage servers and applications"
@@ -6920,20 +7031,21 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "infrastructure",
+    category: "technical",
     price: {
       es: "Gratis / Planes desde $10.9/mes",
       en: "Free / Plans from $10.9/month"
     },
     difficulty: "beginner",
-    logo: "https://easypanel.io/logo.png",
+    logo: "https://easypanel.io/img/logomark.svg",
     slug: "easypanel",
     featured: false,
     url: "https://easypanel.io/"
   },
   {
-    id: "75",
+    id: "89",
     name: "Scribe Tutorials",
+    tags: ["Top"],
     description: {
       es: "Crea tutoriales paso a paso automáticamente",
       en: "Automatically create step-by-step tutorials"
@@ -7006,13 +7118,13 @@ const tools: ToolCard[] = [
       en: "Free / Plans from $23/month"
     },
     difficulty: "beginner",
-    logo: "https://scribehow.com/logo.png",
+    logo: "https://cdn-1.webcatalog.io/catalog/scribe/scribe-icon-unplated.png?v=1719896783685",
     slug: "scribe-tutorials",
     featured: false,
     url: "https://scribehow.com/"
   },
   {
-    id: "76",
+    id: "90",
     name: "CopyCoder AI",
     description: {
       es: "Convierte diseños en código con IA",
@@ -7068,19 +7180,19 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "development",
+    category: "apps",
     price: {
       es: "Gratis / Plan Pro desde $15/mes",
       en: "Free / Pro Plan from $15/month"
     },
     difficulty: "beginner",
-    logo: "https://copycoder.ai/logo.png",
+    logo: "https://pbs.twimg.com/profile_images/1858982207953453056/aYuLFN87_400x400.jpg",
     slug: "copycoder-ai",
     featured: false,
     url: "https://copycoder.ai/"
   },
   {
-    id: "77",
+    id: "91",
     name: "Databutton",
     description: {
       es: "Desarrolla aplicaciones con IA sin necesidad de codificar",
@@ -7136,19 +7248,19 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "development",
+    category: "apps",
     price: {
       es: "Desde $20/mes",
       en: "From $20/month"
     },
     difficulty: "beginner",
-    logo: "https://databutton.com/logo.png",
+    logo: "https://images.ctfassets.net/dmu1essxro7q/7xLDNq2zEsCmAWJa76rt4X/3677df4fe1801a69be776b7754cd7793/Logo_after_quote_image.jpg",
     slug: "databutton",
     featured: false,
     url: "https://databutton.com/"
   },
   {
-    id: "78",
+    id: "92",
     name: "Softgen AI",
     description: {
       es: "Construye aplicaciones web completas con IA sin necesidad de codificar",
@@ -7204,19 +7316,19 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "development",
+    category: "apps",
     price: {
       es: "Desde $25/mes",
       en: "From $25/month"
     },
     difficulty: "beginner",
-    logo: "https://softgen.ai/logo.png",
+    logo: "https://www.fahimai.com/wp-content/uploads/2025/03/SoftGen-CTA.png",
     slug: "softgen-ai",
     featured: false,
     url: "https://softgen.ai/"
   },
   {
-    id: "79",
+    id: "93",
     name: "Instantly",
     description: {
       es: "Automatiza campañas de email frío con IA",
@@ -7278,13 +7390,13 @@ const tools: ToolCard[] = [
       en: "From $37/month"
     },
     difficulty: "intermediate",
-    logo: "https://instantly.ai/logo.png",
+    logo: "https://files.nachonacho.com/users/cl12m0wwr136122epmu7ds49cn8/nn_1681334252401_Untitled.jpg",
     slug: "instantly",
     featured: false,
     url: "https://instantly.ai/"
   },
   {
-    id: "80",
+    id: "94",
     name: "Sintra",
     description: {
       es: "Asistentes virtuales impulsados por IA para tareas empresariales",
@@ -7340,20 +7452,21 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "productivity",
+    category: "ai_agents",
     price: {
       es: "Planes desde $29/mes",
       en: "Plans from $29/month"
     },
     difficulty: "beginner",
-    logo: "https://sintra.ai/logo.png",
+    logo: "https://media.licdn.com/dms/image/v2/D4E0BAQExnxY5O0n1ZQ/company-logo_200_200/company-logo_200_200/0/1722979291326/sintradotai_logo?e=2147483647&v=beta&t=VYTLwP_b56UNDNzbwW9zUMbXEUbs_ic_amNTGD2UNFA",
     slug: "sintra",
     featured: false,
     url: "https://sintra.ai/"
   },
   {
-    id: "81",
+    id: "95",
     name: "Loops Mail",
+    tags: ["irrelevant"],
     description: {
       es: "Plataforma de email marketing moderna para empresas SaaS",
       en: "Modern email marketing platform for SaaS companies"
@@ -7414,13 +7527,13 @@ const tools: ToolCard[] = [
       en: "Free / Plans from $49/month"
     },
     difficulty: "beginner",
-    logo: "https://loops.so/logo.png",
+    logo: "https://cdn.prod.website-files.com/5f15081919fdf673994ab5fd/63ed8c1aea87777ba649b02c_Loops%20Logo.svg",
     slug: "loops-mail",
     featured: false,
     url: "https://loops.so/"
   },
   {
-    id: "82",
+    id: "96",
     name: "Tolt",
     description: {
       es: "Lanza y gestiona programas de afiliados para SaaS",
@@ -7482,13 +7595,13 @@ const tools: ToolCard[] = [
       en: "From $49/month"
     },
     difficulty: "beginner",
-    logo: "https://tolt.io/logo.png",
+    logo: "https://pbs.twimg.com/profile_images/1836720055473618944/3GntqvaN_400x400.jpg",
     slug: "tolt",
     featured: false,
     url: "https://tolt.io/"
   },
   {
-    id: "83",
+    id: "97",
     name: "Screen Studio",
     description: {
       es: "Grabador de pantalla profesional para macOS",
@@ -7550,81 +7663,14 @@ const tools: ToolCard[] = [
       en: "From $89 one-time payment"
     },
     difficulty: "beginner",
-    logo: "https://screen.studio/logo.png",
+    logo: "https://screen.studio/_next/static/media/logo-transparent.681d19be.png",
     slug: "screen-studio",
     featured: false,
     url: "https://screen.studio/"
   },
+ 
   {
-    id: "84",
-    name: "Vapi",
-    description: {
-      es: "Crea agentes de voz con IA para llamadas telefónicas",
-      en: "Build AI voice agents for phone calls"
-    },
-    detailedDescription: {
-      es: "Vapi es una plataforma que permite a los desarrolladores crear, probar y desplegar agentes de voz impulsados por IA para manejar llamadas telefónicas. Ofrece una API flexible, soporte multilingüe y herramientas para integrar modelos personalizados de transcripción y texto a voz.",
-      en: "Vapi is a platform that enables developers to build, test, and deploy AI-powered voice agents to handle phone calls. It offers a flexible API, multilingual support, and tools to integrate custom transcription and text-to-speech models."
-    },
-    useCases: {
-      es: [
-        "Automatizar atención al cliente por teléfono",
-        "Realizar llamadas de ventas automatizadas",
-        "Programar citas mediante asistentes de voz",
-        "Integrar agentes de voz en aplicaciones existentes",
-        "Desarrollar prototipos de asistentes conversacionales"
-      ],
-      en: [
-        "Automate customer service via phone",
-        "Conduct automated sales calls",
-        "Schedule appointments through voice assistants",
-        "Integrate voice agents into existing applications",
-        "Develop prototypes of conversational assistants"
-      ]
-    },
-    resources: {
-      es: [
-        {
-          title: "Sitio oficial de Vapi",
-          url: "https://vapi.ai/",
-          type: "article",
-          description: "Descubre cómo Vapi puede ayudarte a crear agentes de voz con IA para llamadas telefónicas."
-        },
-        {
-          title: "Video: Cómo construir un asistente de voz con Vapi",
-          url: "https://www.youtube.com/watch?v=rc4PlH9BRbA",
-          type: "video",
-          description: "Aprende a utilizar Vapi para desarrollar asistentes de voz personalizados."
-        }
-      ],
-      en: [
-        {
-          title: "Vapi Official Website",
-          url: "https://vapi.ai/",
-          type: "article",
-          description: "Learn how Vapi can help you build AI voice agents for phone calls."
-        },
-        {
-          title: "Video: How to Build a Voice Assistant with Vapi",
-          url: "https://www.youtube.com/watch?v=rc4PlH9BRbA",
-          type: "video",
-          description: "Learn how to use Vapi to develop custom voice assistants."
-        }
-      ]
-    },
-    category: "communication",
-    price: {
-      es: "Desde $20/mes",
-      en: "From $20/month"
-    },
-    difficulty: "intermediate",
-    logo: "https://vapi.ai/logo.png",
-    slug: "vapi",
-    featured: false,
-    url: "https://vapi.ai/"
-  },
-  {
-    id: "85",
+    id: "99",
     name: "SerpAPI",
     description: {
       es: "Accede a resultados de búsqueda en tiempo real desde múltiples motores",
@@ -7692,179 +7738,20 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "data",
+    category: "technical",
     price: {
       es: "Gratis hasta 100 búsquedas/mes, planes desde $50/mes",
       en: "Free up to 100 searches/month, plans from $50/month"
     },
     difficulty: "intermediate",
-    logo: "https://serpapi.com/logo.png",
+    logo: "https://serpapi.com/blog/content/images/2022/12/serpapi-square-logo.png",
     slug: "serpapi",
     featured: false,
     url: "https://serpapi.com/"
   },
+  
   {
-    id: "86",
-    name: "Kling AI",
-    description: {
-      es: "Genera videos realistas a partir de texto o imágenes",
-      en: "Generate realistic videos from text or images"
-    },
-    detailedDescription: {
-      es: "Kling AI es una herramienta de generación de video que transforma texto o imágenes en videos de alta calidad. Utiliza modelos avanzados de atención espacio-temporal 3D y transformadores de difusión para crear contenido visual dinámico, ideal para creadores de contenido, educadores y profesionales del marketing.",
-      en: "Kling AI is a video generation tool that transforms text or images into high-quality videos. It leverages advanced 3D spatio-temporal attention models and diffusion transformers to create dynamic visual content, ideal for content creators, educators, and marketing professionals."
-    },
-    useCases: {
-      es: [
-        "Creación de videos publicitarios",
-        "Generación de contenido educativo animado",
-        "Producción de videos para redes sociales",
-        "Visualización de conceptos para presentaciones",
-        "Animación de memes y contenido viral"
-      ],
-      en: [
-        "Creating promotional videos",
-        "Generating animated educational content",
-        "Producing social media videos",
-        "Visualizing concepts for presentations",
-        "Animating memes and viral content"
-      ]
-    },
-    resources: {
-      es: [
-        {
-          title: "Aplicación Kling AI en Google Play",
-          url: "https://play.google.com/store/apps/details?id=kling.ai.video.chat",
-          type: "article",
-          description: "Descarga la aplicación oficial de Kling AI para dispositivos Android."
-        },
-        {
-          title: "Video: Cómo crear videos cinematográficos con Kling AI",
-          url: "https://www.youtube.com/watch?v=Mrq34YqIlV0",
-          type: "video",
-          description: "Tutorial sobre la creación de videos de alta calidad con Kling AI."
-        },
-        {
-          title: "Guía: Cómo usar Kling AI",
-          url: "https://www.fahimai.com/how-to-use-kling",
-          type: "article",
-          description: "Instrucciones paso a paso para utilizar Kling AI de manera efectiva."
-        }
-      ],
-      en: [
-        {
-          title: "Kling AI App on Google Play",
-          url: "https://play.google.com/store/apps/details?id=kling.ai.video.chat",
-          type: "article",
-          description: "Download the official Kling AI app for Android devices."
-        },
-        {
-          title: "Video: How to Create Cinematic AI Videos with Kling AI",
-          url: "https://www.youtube.com/watch?v=Mrq34YqIlV0",
-          type: "video",
-          description: "Tutorial on creating high-quality videos using Kling AI."
-        },
-        {
-          title: "Guide: How to Use Kling AI",
-          url: "https://www.fahimai.com/how-to-use-kling",
-          type: "article",
-          description: "Step-by-step instructions for effectively using Kling AI."
-        }
-      ]
-    },
-    category: "video",
-    price: {
-      es: "Gratis con funciones limitadas, planes desde $10/mes",
-      en: "Free with limited features, plans from $10/month"
-    },
-    difficulty: "beginner",
-    logo: "https://kling.ai/logo.png",
-    slug: "kling-ai",
-    featured: false,
-    url: "https://kling.ai/"
-  },
-  {
-    id: "86",
-    name: "BuilderBot",
-    description: {
-      es: "Crea chatbots para WhatsApp y Telegram con IA en minutos",
-      en: "Build WhatsApp and Telegram chatbots with AI in minutes"
-    },
-    detailedDescription: {
-      es: "BuilderBot es un framework de código abierto que permite crear chatbots inteligentes para canales como WhatsApp, Telegram y otros. Utiliza comandos de voz y texto para generar entornos virtuales y automatizar conversaciones, integrando asistentes de IA como OpenAI para ofrecer respuestas contextuales y personalizadas.",
-      en: "BuilderBot is an open-source framework that enables the creation of intelligent chatbots for channels like WhatsApp, Telegram, and others. It uses voice and text commands to generate virtual environments and automate conversations, integrating AI assistants like OpenAI to provide contextual and personalized responses."
-    },
-    useCases: {
-      es: [
-        "Automatización de atención al cliente en WhatsApp",
-        "Creación de flujos conversacionales personalizados",
-        "Integración con asistentes de IA como OpenAI",
-        "Despliegue rápido de bots en múltiples plataformas",
-        "Gestión de interacciones con clientes en tiempo real"
-      ],
-      en: [
-        "Customer service automation on WhatsApp",
-        "Creation of personalized conversational flows",
-        "Integration with AI assistants like OpenAI",
-        "Rapid deployment of bots across multiple platforms",
-        "Real-time customer interaction management"
-      ]
-    },
-    resources: {
-      es: [
-        {
-          title: "Sitio oficial de BuilderBot",
-          url: "https://www.builderbot.app/",
-          type: "article",
-          description: "Explora las funcionalidades de BuilderBot y cómo crear chatbots inteligentes."
-        },
-        {
-          title: "Repositorio de GitHub de BuilderBot",
-          url: "https://github.com/codigoencasa/builderbot",
-          type: "article",
-          description: "Accede al código fuente y documentación de BuilderBot en GitHub."
-        },
-        {
-          title: "Video: Demostración de BuilderBot",
-          url: "https://www.youtube.com/watch?v=62RJv514ijQ",
-          type: "video",
-          description: "Mira una demostración de cómo funciona BuilderBot en la práctica."
-        }
-      ],
-      en: [
-        {
-          title: "BuilderBot Official Website",
-          url: "https://www.builderbot.app/",
-          type: "article",
-          description: "Explore BuilderBot's features and learn how to create intelligent chatbots."
-        },
-        {
-          title: "BuilderBot GitHub Repository",
-          url: "https://github.com/codigoencasa/builderbot",
-          type: "article",
-          description: "Access BuilderBot's source code and documentation on GitHub."
-        },
-        {
-          title: "Video: BuilderBot Demo",
-          url: "https://www.youtube.com/watch?v=62RJv514ijQ",
-          type: "video",
-          description: "Watch a demonstration of how BuilderBot works in practice."
-        }
-      ]
-    },
-    category: "automation",
-    price: {
-      es: "Gratis y de código abierto",
-      en: "Free and open-source"
-    },
-    difficulty: "intermediate",
-    logo: "https://builderbot.app/logo.png",
-    slug: "builderbot",
-    featured: false,
-    url: "https://www.builderbot.app/"
-  },
-  {
-    id: "87",
+    id: "102",
     name: "NocoDB",
     description: {
       es: "Convierte cualquier base de datos en una hoja de cálculo colaborativa",
@@ -7932,19 +7819,20 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "database",
+    category: "apps",
     price: {
       es: "Gratis y de código abierto",
       en: "Free and open-source"
     },
     difficulty: "intermediate",
-    logo: "https://nocodb.com/logo.png",
+    logo: "https://cdn.prod.website-files.com/604a3ad5df4bbcc3722cc5e8/671265f8368f3e87340d8424_64be60ab9c2f0d6accde5c84_NocoDB%2520Logo.png",
     slug: "nocodb",
     featured: false,
     url: "https://nocodb.com/"
   },
   {
-    id: "88",
+    id: "103",
+    tags: ["irrelevant"],
     name: "Neon",
     description: {
       es: "Base de datos PostgreSQL serverless para agentes de IA",
@@ -8008,7 +7896,7 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "developer",
+    category: "technical",
     price: {
       es: "Gratis con opciones de pago",
       en: "Free with paid options"
@@ -8020,8 +7908,9 @@ const tools: ToolCard[] = [
     url: "https://neon.tech/ai"
   },
   {
-    id: "89",
+    id: "104",
     name: "Composio",
+    tags: ["Top"],
     description: {
       es: "Integra agentes de IA con más de 250 herramientas",
       en: "Integrate AI agents with over 250 tools"
@@ -8084,19 +7973,19 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "automation",
+    category: "technical",
     price: {
       es: "Freemium",
       en: "Freemium"
     },
     difficulty: "advanced",
-    logo: "https://composio.dev/favicon.ico",
+    logo: "https://mintlify.s3.us-west-1.amazonaws.com/composio-27/logo/light.svg",
     slug: "composio",
     featured: false,
     url: "https://composio.dev/"
   },
   {
-    id: "90",
+    id: "105",
     name: "BuilderBot",
     description: {
       es: "Crea chatbots para WhatsApp y Telegram sin límites",
@@ -8160,7 +8049,7 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "chatbot",
+    category: "ai_agents",
     price: {
       es: "Gratis",
       en: "Free"
@@ -8172,86 +8061,9 @@ const tools: ToolCard[] = [
     url: "https://www.builderbot.app/"
   },
   {
-    id: "91",
-    name: "Relevance AI",
-    description: {
-      es: "Crea agentes de IA sin código para automatizar tareas empresariales",
-      en: "Build no-code AI agents to automate business tasks"
-    },
-    detailedDescription: {
-      es: "Relevance AI es una plataforma de bajo o ningún código que permite construir agentes de IA y equipos de múltiples agentes que completan tareas de forma autónoma, similar a empleados humanos. Los agentes están impulsados por modelos de lenguaje grandes (LLMs) y equipados con herramientas. Pueden razonar, tomar decisiones y seguir instrucciones para realizar el trabajo.",
-      en: "Relevance AI is a low/no-code platform where you can build AI agents and multi-agent teams that autonomously complete tasks, much like human employees. Agents are powered by Large Language Models (LLMs) and equipped with tools. They can reason, make decisions, and follow instructions to get work done."
-    },
-    useCases: {
-      es: [
-        "Automatización de tareas de atención al cliente",
-        "Análisis de datos no estructurados",
-        "Optimización de procesos empresariales",
-        "Creación de equipos de agentes de IA sin necesidad de programación"
-      ],
-      en: [
-        "Automating customer support tasks",
-        "Analyzing unstructured data",
-        "Optimizing business processes",
-        "Building AI agent teams without coding"
-      ]
-    },
-    resources: {
-      es: [
-        {
-          title: "Documentación oficial de Relevance AI",
-          url: "https://relevanceai.com/docs/get-started/introduction",
-          type: "article",
-          description: "Guía para comenzar con Relevance AI"
-        },
-        {
-          title: "Casos de uso en atención al cliente",
-          url: "https://relevanceai.com/blog/ai-agent-use-cases-in-customer-support-revolutionizing-customer-experience",
-          type: "article",
-          description: "Cómo los agentes de IA mejoran la experiencia del cliente"
-        },
-        {
-          title: "Análisis y perspectivas con Relevance AI",
-          url: "https://relevanceai.com/for-analytics-insights",
-          type: "article",
-          description: "Uso de Relevance AI para obtener insights de datos"
-        }
-      ],
-      en: [
-        {
-          title: "Relevance AI Official Documentation",
-          url: "https://relevanceai.com/docs/get-started/introduction",
-          type: "article",
-          description: "Guide to getting started with Relevance AI"
-        },
-        {
-          title: "AI Agent Use Cases in Customer Support",
-          url: "https://relevanceai.com/blog/ai-agent-use-cases-in-customer-support-revolutionizing-customer-experience",
-          type: "article",
-          description: "How AI agents improve customer experience"
-        },
-        {
-          title: "Analytics & Insights with Relevance AI",
-          url: "https://relevanceai.com/for-analytics-insights",
-          type: "article",
-          description: "Using Relevance AI to gain data insights"
-        }
-      ]
-    },
-    category: "automation",
-    price: {
-      es: "Gratis con opciones de pago",
-      en: "Free with paid options"
-    },
-    difficulty: "intermediate",
-    logo: "https://relevanceai.com/favicon.ico",
-    slug: "relevance-ai",
-    featured: false,
-    url: "https://relevanceai.com/"
-  },
-  {
-    id: "92",
+    id: "107",
     name: "Stack AI",
+    tags: ["YC"],
     description: {
       es: "Plataforma sin código para crear agentes de IA empresariales",
       en: "No-code platform to build enterprise AI agents"
@@ -8316,7 +8128,7 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "automation",
+    category: "ai_agents",
     price: {
       es: "Freemium",
       en: "Freemium"
@@ -8328,8 +8140,9 @@ const tools: ToolCard[] = [
     url: "https://www.stack-ai.com/"
   },
   {
-    id: "93",
+    id: "108",
     name: "Taskade",
+    tags: ["YC"],
     description: {
       es: "Plataforma de productividad con agentes de IA personalizados",
       en: "Productivity platform with custom AI agents"
@@ -8406,8 +8219,9 @@ const tools: ToolCard[] = [
     url: "https://www.taskade.com/"
   },
   {
-    id: "91",
+    id: "109",
     name: "FlowiseAI",
+    tags: ["YC"],
     description: {
       es: "Crea chatbots y flujos LLM sin código",
       en: "Build chatbots and LLM workflows without code"
@@ -8482,7 +8296,7 @@ const tools: ToolCard[] = [
     url: "https://flowiseai.com"
   },
   {
-    id: "92",
+    id: "110",
     name: "MindStudio",
     description: {
       es: "Crea agentes de IA personalizados sin programar",
@@ -8552,14 +8366,15 @@ const tools: ToolCard[] = [
       en: "Free with paid options"
     },
     difficulty: "beginner",
-    logo: "https://www.mindstudio.ai/favicon.ico",
+    logo: "https://media.licdn.com/dms/image/v2/D560BAQHJWyoFxDx2vQ/company-logo_200_200/company-logo_200_200/0/1704388316703/youai_ai_logo?e=2147483647&v=beta&t=2u4H4OT-wjxp9NB44WQVO4AaE429XmlLjBGIKUJLOSs",
     slug: "mindstudio",
     featured: false,
     url: "https://www.mindstudio.ai/"
   },
   {
-    id: "93",
+    id: "111",
     name: "VectorShift",
+    tags: ["YC"],
     description: {
       es: "Automatiza flujos de trabajo con IA sin código",
       en: "Automate workflows with AI without code"
@@ -8622,19 +8437,20 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "automation",
+    category: "ai_agents",
     price: {
       es: "Gratis con opciones de pago",
       en: "Free with paid options"
     },
     difficulty: "beginner",
-    logo: "https://vectorshift.ai/favicon.ico",
+    logo: "https://bookface-images.s3.amazonaws.com/logos/76bb61759ffa17ef0d921fea6f331e1ab42b93f1.png?1684534984",
     slug: "vectorshift",
     featured: false,
     url: "https://vectorshift.ai/"
   },
   {
-    id: "94",
+    id: "112",
+    tags: ["Top"],
     name: "Icon",
     description: {
       es: "Crea anuncios de alto rendimiento con IA",
@@ -8692,13 +8508,13 @@ const tools: ToolCard[] = [
       en: "From $399/month"
     },
     difficulty: "intermediate",
-    logo: "https://icon.com/favicon.ico",
+    logo: "https://icon-cdn.com/cdn-cgi/image/width=128,quality=100/https://icon-cdn.com/iconlogoUSETHISONE.svg",
     slug: "icon",
     featured: false,
     url: "https://icon.com/"
   },
   {
-    id: "95",
+    id: "113",
     name: "Pippit AI",
     description: {
       es: "Genera videos e imágenes de marketing con IA",
@@ -8756,13 +8572,13 @@ const tools: ToolCard[] = [
       en: "Free with paid options"
     },
     difficulty: "beginner",
-    logo: "https://pippit.capcut.com/favicon.ico",
+    logo: "https://ph-files.imgix.net/c4a15a13-0057-47cb-915f-7c2ce8af6b62.png?auto=format",
     slug: "pippit-ai",
     featured: false,
     url: "https://pippit.capcut.com/"
   },
   {
-    id: "96",
+    id: "114",
     name: "Cassidy AI",
     description: {
       es: "Automatiza tareas empresariales con asistentes de IA",
@@ -8820,14 +8636,15 @@ const tools: ToolCard[] = [
       en: "Free trial available"
     },
     difficulty: "intermediate",
-    logo: "https://www.cassidyai.com/favicon.ico",
+    logo: "https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/kanojdolx1l2f2loqhj7",
     slug: "cassidy-ai",
     featured: false,
     url: "https://www.cassidyai.com/"
   },
   {
-    id: "95",
+    id: "115",
     name: "Algolia",
+    tags: ["YC"],
     description: {
       es: "Plataforma de búsqueda y descubrimiento impulsada por IA",
       en: "AI-powered search and discovery platform"
@@ -8890,20 +8707,21 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "developer",
+    category: "technical",
     price: {
       es: "Gratis con opciones de pago",
       en: "Free with paid options"
     },
     difficulty: "intermediate",
-    logo: "https://www.algolia.com/favicon.ico",
+    logo: "https://mms.businesswire.com/media/20240604818572/en/1665158/22/Algolia_Logo_NEW_2022.jpg",
     slug: "algolia",
     featured: false,
     url: "https://www.algolia.com/"
   },
   {
-    id: "94",
+    id: "116",
     name: "Toggl Track",
+    tags: ["Top"],
     description: {
       es: "Seguimiento de tiempo sencillo y potente para equipos y freelancers",
       en: "Simple and powerful time tracking for teams and freelancers"
@@ -8972,13 +8790,13 @@ const tools: ToolCard[] = [
       en: "Free with paid options"
     },
     difficulty: "beginner",
-    logo: "https://toggl.com/favicon.ico",
+    logo: "https://remoteok.com/cdn-cgi/image/format=auto,fit=contain,width=300,height=300,quality=80/https://remoteok.com/assets/img/jobs//7fa068135d1188abb87c269c59f256981622561917.png?",
     slug: "toggl-track",
     featured: false,
     url: "https://toggl.com/"
   },
   {
-    id: "96",
+    id: "117",
     name: "Maton AI",
     description: {
       es: "Conecta tu IA con herramientas SaaS en minutos",
@@ -9042,7 +8860,7 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "automation",
+    category: "ai_agents",
     price: {
       es: "Gratis con opciones de pago",
       en: "Free with paid options"
@@ -9054,7 +8872,7 @@ const tools: ToolCard[] = [
     url: "https://maton.ai/"
   },
   {
-    id: "97",
+    id: "118",
     name: "GetMagical",
     description: {
       es: "Automatiza formularios y mensajes con IA sin código",
@@ -9118,19 +8936,19 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "automation",
+    category: "sales",
     price: {
       es: "Gratis con opciones de pago",
       en: "Free with paid options"
     },
     difficulty: "beginner",
-    logo: "https://www.getmagical.com/favicon.ico",
+    logo: "https://uploads-ssl.webflow.com/5ed91db11af64853fc5849c9/609c408e226dfe4df821747a_icon.svg",
     slug: "getmagical",
     featured: false,
     url: "https://www.getmagical.com/"
   },
   {
-    id: "98",
+    id: "119",
     name: "TexAu",
     description: {
       es: "Automatiza la generación de leads y tareas de crecimiento",
@@ -9194,19 +9012,19 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "automation",
+    category: "sales",
     price: {
       es: "Desde $29/mes",
       en: "From $29/month"
     },
     difficulty: "intermediate",
-    logo: "https://www.texau.com/favicon.ico",
+    logo: "https://avatars.githubusercontent.com/u/49680991?s=280&v=4",
     slug: "texau",
     featured: false,
     url: "https://www.texau.com/"
   },
   {
-    id: "99",
+    id: "120",
     name: "Skrapp.io",
     description: {
       es: "Encuentra y verifica correos electrónicos profesionales fácilmente",
@@ -9270,19 +9088,19 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "lead-generation",
+    category: "sales",
     price: {
       es: "Gratis con opciones de pago",
       en: "Free with paid options"
     },
     difficulty: "beginner",
-    logo: "https://skrapp.io/favicon.ico",
+    logo: "https://cdn-1.webcatalog.io/catalog/scrap-io/scrap-io-social-preview.png?v=1714777220043",
     slug: "skrapp-io",
     featured: false,
     url: "https://skrapp.io/"
   },
   {
-    id: "97",
+    id: "121",
     name: "Snov.io",
     description: {
       es: "Plataforma todo en uno para generación de leads y automatización de ventas",
@@ -9346,7 +9164,7 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "marketing",
+    category: "sales",
     price: {
       es: "Gratis con opciones de pago",
       en: "Free with paid options"
@@ -9358,7 +9176,7 @@ const tools: ToolCard[] = [
     url: "https://snov.io/"
   },
   {
-    id: "98",
+    id: "122",
     name: "Lusha",
     description: {
       es: "Accede a datos de contacto B2B precisos y actualizados",
@@ -9433,88 +9251,9 @@ const tools: ToolCard[] = [
     featured: false,
     url: "https://www.lusha.com/"
   },
+  
   {
-    id: "97",
-    name: "Instantly.ai",
-    description: {
-      es: "Automatiza y escala tus campañas de email frío con IA",
-      en: "Automate and scale your cold email campaigns with AI"
-    },
-    detailedDescription: {
-      es: "Instantly.ai es una plataforma de engagement de ventas y generación de leads que permite automatizar campañas de email frío, gestionar múltiples cuentas de correo y mejorar la entregabilidad mediante inteligencia artificial. Ofrece una base de datos B2B, CRM impulsado por IA y una bandeja de entrada unificada para gestionar todas las conversaciones.",
-      en: "Instantly.ai is a sales engagement and lead generation platform that enables automation of cold email campaigns, management of multiple email accounts, and improved deliverability through artificial intelligence. It offers a B2B database, AI-powered CRM, and a unified inbox to manage all conversations."
-    },
-    useCases: {
-      es: [
-        "Automatización de campañas de email frío",
-        "Gestión de múltiples cuentas de correo electrónico",
-        "Mejora de la entregabilidad y evitación de filtros de spam",
-        "Segmentación y personalización de mensajes",
-        "Seguimiento y análisis de métricas de campañas"
-      ],
-      en: [
-        "Automation of cold email campaigns",
-        "Management of multiple email accounts",
-        "Improvement of deliverability and spam filter avoidance",
-        "Segmentation and personalization of messages",
-        "Tracking and analysis of campaign metrics"
-      ]
-    },
-    resources: {
-      es: [
-        {
-          title: "Sitio oficial de Instantly.ai",
-          url: "https://instantly.ai/",
-          type: "article",
-          description: "Página principal con información y acceso a la plataforma"
-        },
-        {
-          title: "Blog de Instantly.ai",
-          url: "https://instantly.ai/blog/",
-          type: "article",
-          description: "Artículos sobre estrategias de email marketing y ventas"
-        },
-        {
-          title: "Guía de ventas con Instantly.ai",
-          url: "https://instantly.ai/sales",
-          type: "article",
-          description: "Información sobre cómo utilizar Instantly.ai para ventas"
-        }
-      ],
-      en: [
-        {
-          title: "Instantly.ai Official Site",
-          url: "https://instantly.ai/",
-          type: "article",
-          description: "Main page with information and access to the platform"
-        },
-        {
-          title: "Instantly.ai Blog",
-          url: "https://instantly.ai/blog/",
-          type: "article",
-          description: "Articles on email marketing and sales strategies"
-        },
-        {
-          title: "Instantly.ai Sales Guide",
-          url: "https://instantly.ai/sales",
-          type: "article",
-          description: "Information on how to use Instantly.ai for sales"
-        }
-      ]
-    },
-    category: "marketing",
-    price: {
-      es: "Desde $37/mes",
-      en: "From $37/month"
-    },
-    difficulty: "intermediate",
-    logo: "https://instantly.ai/favicon.ico",
-    slug: "instantly-ai",
-    featured: false,
-    url: "https://instantly.ai/"
-  },
-  {
-    id: "98",
+    id: "124",
     name: "Smartlead.ai",
     description: {
       es: "Plataforma de email frío con entregabilidad premium y automatización avanzada",
@@ -9588,13 +9327,13 @@ const tools: ToolCard[] = [
       en: "14-day free trial"
     },
     difficulty: "intermediate",
-    logo: "https://www.smartlead.ai/favicon.ico",
+    logo: "https://pbs.twimg.com/profile_images/1567729907794587648/bFN4IbN5_400x400.jpg",
     slug: "smartlead-ai",
     featured: false,
     url: "https://www.smartlead.ai/"
   },
   {
-    id: "99",
+    id: "125",
     name: "Lemlist",
     description: {
       es: "Automatiza campañas de email frío multicanal con personalización avanzada",
@@ -9668,13 +9407,14 @@ const tools: ToolCard[] = [
       en: "From $69/month"
     },
     difficulty: "intermediate",
-    logo: "https://www.lemlist.com/favicon.ico",
+    logo: "https://cdn.prod.website-files.com/651d69a866763b8d1369908a/6780df71ef14fcfb8eb9a3f2_lemlist-logo.png",
     slug: "lemlist",
     featured: false,
     url: "https://www.lemlist.com/"
   },
   {
-    id: "100",
+    id: "126",
+    tags: ["YC", "irrelevant"],
     name: "Chonkie",
     description: {
       es: "Biblioteca ligera y rápida para fragmentación de texto en aplicaciones RAG",
@@ -9738,20 +9478,21 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "developer",
+    category: "technical",
     price: {
       es: "Gratis",
       en: "Free"
     },
     difficulty: "intermediate",
-    logo: "https://www.chonkie.ai/favicon.ico",
+    logo: "https://repository-images.githubusercontent.com/956908445/2d9521f2-d3a0-44ec-9ee4-f3baa0cf4764",
     slug: "chonkie",
     featured: false,
     url: "https://www.chonkie.ai/"
   },
   {
-    id: "99",
+    id: "127",
     name: "Weaviate",
+    tags: ["YC"],
     description: {
       es: "Base de datos vectorial de código abierto para aplicaciones de IA",
       en: "Open-source vector database for AI applications"
@@ -9818,20 +9559,21 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "developer",
+    category: "technical",
     price: {
       es: "Gratis (código abierto)",
       en: "Free (open-source)"
     },
     difficulty: "advanced",
-    logo: "https://weaviate.io/favicon.ico",
+    logo: "https://cdn.dribbble.com/userupload/3228886/file/original-f9901440223a152388ad6a5f03acf584.png",
     slug: "weaviate",
     featured: false,
     url: "https://weaviate.io/"
   },
   {
-    id: "100",
+    id: "128",
     name: "Ergo",
+    tags: ["YC"],
     description: {
       es: "Automatiza operaciones de ventas con agentes de IA",
       en: "Automate sales operations with AI agents"
@@ -9904,14 +9646,15 @@ const tools: ToolCard[] = [
       en: "Contact for pricing"
     },
     difficulty: "intermediate",
-    logo: "https://joinergo.com/favicon.ico",
+    logo: "https://bookface-images.s3.amazonaws.com/small_logos/bd659fbea3fde9a2b42434fe03f0a75943f09e6a.png",
     slug: "ergo",
     featured: false,
     url: "https://joinergo.com/"
   },
   {
-    id: "101",
+    id: "129",
     name: "Convex",
+    tags: ["Top"],
     description: {
       es: "Plataforma backend reactiva para desarrolladores de aplicaciones",
       en: "Reactive backend platform for app developers"
@@ -9978,7 +9721,7 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "developer",
+    category: "technical",
     price: {
       es: "Gratis (código abierto)",
       en: "Free (open-source)"
@@ -9990,7 +9733,7 @@ const tools: ToolCard[] = [
     url: "https://www.convex.dev/"
   },
   {
-    id: "102",
+    id: "130",
     name: "21st.dev",
     description: {
       es: "Marketplace de componentes UI para diseñadores e ingenieros",
@@ -10058,7 +9801,7 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "design",
+    category: "technical",
     price: {
       es: "Gratis con opciones premium",
       en: "Free with premium options"
@@ -10070,7 +9813,8 @@ const tools: ToolCard[] = [
     url: "https://21st.dev/"
   },
   {
-    id: "103",
+    id: "131",
+    tags: ["YC"],
     name: "Wildcard",
     description: {
       es: "Conecta agentes de IA con APIs mediante lenguaje natural",
@@ -10136,7 +9880,7 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "developer",
+    category: "ai_agents",
     price: {
       es: "Gratis (código abierto)",
       en: "Free (open-source)"
@@ -10148,7 +9892,7 @@ const tools: ToolCard[] = [
     url: "https://wild-card.ai/"
   },
   {
-    id: "104",
+    id: "132",
     name: "Ardor",
     description: {
       es: "Plataforma para construir y escalar agentes de IA en la nube",
@@ -10214,19 +9958,19 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "developer",
+    category: "ai_agents",
     price: {
       es: "Consultar precios",
       en: "Contact for pricing"
     },
     difficulty: "intermediate",
-    logo: "https://ardor.cloud/favicon.ico",
+    logo: "https://framerusercontent.com/images/ccsJSaDWZYi5FAbm2VGH9Gfkhpk.svg",
     slug: "ardor",
     featured: false,
     url: "https://ardor.cloud/"
   },
   {
-    id: "105",
+    id: "133",
     name: "Toolify.ai",
     description: {
       es: "Directorio integral de herramientas de inteligencia artificial",
@@ -10294,7 +10038,7 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "productivity",
+    category: "other",
     price: {
       es: "Gratis",
       en: "Free"
@@ -10306,8 +10050,9 @@ const tools: ToolCard[] = [
     url: "https://www.toolify.ai/"
   },
   {
-    id: "106",
+    id: "134",
     name: "Airweave.ai",
+    tags: ["YC"],
     description: {
       es: "Transforma datos de aplicaciones en conocimiento accesible para agentes de IA",
       en: "Transform application data into agent-accessible knowledge"
@@ -10374,19 +10119,20 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "developer",
+    category: "technical",
     price: {
       es: "Gratis (código abierto)",
       en: "Free (open-source)"
     },
     difficulty: "advanced",
-    logo: "https://airweave.ai/favicon.ico",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlSDidrF84oUgiA2IbRF_1ztqUbXgIhVaHDw&s",
     slug: "airweave-ai",
     featured: false,
     url: "https://airweave.ai/"
   },
   {
-    id: "107",
+    id: "135",
+    tags: ["YC"],
     name: "Waffle.ai",
     description: {
       es: "Generador de sitios web impulsado por IA sin necesidad de código",
@@ -10452,7 +10198,7 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "developer",
+    category: "apps",
     price: {
       es: "Gratis",
       en: "Free"
@@ -10464,7 +10210,8 @@ const tools: ToolCard[] = [
     url: "https://www.waffle.ai/"
   },
   {
-    id: "108",
+    id: "136",
+    tags: ["YC"],
     name: "Golf.dev",
     description: {
       es: "Framework de código abierto para servidores MCP orientados a agentes",
@@ -10530,19 +10277,19 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "developer",
+    category: "technical",
     price: {
       es: "Gratis (código abierto)",
       en: "Free (open-source)"
     },
     difficulty: "advanced",
-    logo: "https://golf.dev/favicon.ico",
+    logo: "https://pbs.twimg.com/profile_images/1924944883372187648/MGQn1p8L_400x400.jpg",
     slug: "golf-dev",
     featured: false,
     url: "https://golf.dev/"
   },
   {
-    id: "109",
+    id: "137",
     name: "Linkup",
     description: {
       es: "Motor de búsqueda optimizado para agentes de IA y LLMs",
@@ -10608,19 +10355,20 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "developer",
+    category: "technical",
     price: {
       es: "Gratis con opciones de pago",
       en: "Free with paid options"
     },
     difficulty: "intermediate",
-    logo: "https://www.linkup.so/favicon.ico",
+    logo: "https://framerusercontent.com/images/7zeIm6t3f1HaSltkw8upEvsD80.png?scale-down-to=1024",
     slug: "linkup",
     featured: false,
     url: "https://www.linkup.so/"
   },
   {
-    id: "110",
+    id: "138",
+    tags: ["YC"],
     name: "Vybe",
     description: {
       es: "Plataforma para construir aplicaciones internas impulsadas por IA",
@@ -10686,19 +10434,19 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "developer",
+    category: "technical",
     price: {
       es: "Consultar precios",
       en: "Contact for pricing"
     },
     difficulty: "intermediate",
-    logo: "https://www.vybe.build/favicon.ico",
+    logo: "https://www.vybe.build/lovable-uploads/9e2d2bf3-36c6-486d-b234-4d8420f57389.png",
     slug: "vybe",
     featured: false,
     url: "https://www.vybe.build/"
   },
   {
-    id: "111",
+    id: "139",
     name: "Cluely",
     description: {
       es: "Asistente de IA invisible para reuniones y entrevistas",
@@ -10770,13 +10518,14 @@ const tools: ToolCard[] = [
       en: "Contact for pricing"
     },
     difficulty: "intermediate",
-    logo: "https://cluely.com/favicon.ico",
+    logo: "https://media.licdn.com/dms/image/sync/v2/D4E27AQFdU0DgUeLMzA/articleshare-shrink_800/B4EZaF_bOGHEAI-/0/1746004719150?e=2147483647&v=beta&t=kWdIXwNAsy4JdJlXW67HsHmGmMTa4Z_gco92Kva-Bhc",
     slug: "cluely",
     featured: false,
     url: "https://cluely.com/"
   },
   {
-    id: "112",
+    id: "140",
+    tags: ["YC", "irrelevant"],
     name: "Relixir",
     description: {
       es: "Optimización para motores de búsqueda generativos (GEO)",
@@ -10848,13 +10597,13 @@ const tools: ToolCard[] = [
       en: "Contact for pricing"
     },
     difficulty: "intermediate",
-    logo: "https://relixir.ai/favicon.ico",
+    logo: "https://framerusercontent.com/images/1YFifCCnfiNE328ziAk3m8KsbBg.png",
     slug: "relixir",
     featured: false,
     url: "https://relixir.ai/"
   },
   {
-    id: "113",
+    id: "141",
     name: "Product Hunt",
     description: {
       es: "Descubre y lanza los mejores productos tecnológicos",
@@ -10920,7 +10669,7 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "community",
+    category: "other",
     price: {
       es: "Gratis",
       en: "Free"
@@ -10932,7 +10681,7 @@ const tools: ToolCard[] = [
     url: "https://www.producthunt.com/"
   },
   {
-    id: "114",
+    id: "142",
     name: "1Password",
     description: {
       es: "Gestor de contraseñas seguro y fácil de usar",
@@ -10998,7 +10747,7 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "security",
+    category: "other",
     price: {
       es: "Desde $2.99/mes",
       en: "From $2.99/month"
@@ -11010,7 +10759,7 @@ const tools: ToolCard[] = [
     url: "https://1password.com/es/"
   },
   {
-    id: "113",
+    id: "143",
     name: "Beehiiv",
     description: {
       es: "Plataforma de newsletters todo en uno para creadores de contenido",
@@ -11084,14 +10833,15 @@ const tools: ToolCard[] = [
       en: "Free up to 2,500 subscribers; plans from $39/month"
     },
     difficulty: "beginner",
-    logo: "https://www.beehiiv.com/favicon.ico",
+    logo: "https://sieberedu.com/wp-content/uploads/2024/05/Behiiv-logo-sieberedu.png.webp",
     slug: "beehiiv",
     featured: true,
     url: "https://www.beehiiv.com/"
   },
   {
-    id: "114",
+    id: "144",
     name: "Kaizen Automation",
+    tags: ["YC"],
     description: {
       es: "Soluciones integrales de automatización industrial y control de procesos",
       en: "Comprehensive industrial automation and process control solutions"
@@ -11168,20 +10918,171 @@ const tools: ToolCard[] = [
     slug: "kaizen-automation",
     featured: false,
     url: "https://kaizentc.com/"
+  },
+  {
+    id: "145",
+    name: "PostHog",
+    tags: ["Top"],
+    description: {
+      es: "Plataforma de análisis de productos todo en uno con capacidades de autoconsumo",
+      en: "All-in-one product analytics platform with self-hosting capabilities"
+    },
+    detailedDescription: {
+      es: "PostHog es una plataforma de análisis de productos que permite a las empresas entender cómo los usuarios interactúan con sus productos. Ofrece herramientas integradas como heatmaps, grabaciones de sesiones, embudos, cohortes, AB testing y más, todo en una sola interfaz. A diferencia de otras plataformas, PostHog se puede autohospedar, lo que permite un control completo sobre los datos y privacidad.",
+      en: "PostHog is a product analytics platform that helps businesses understand how users interact with their products. It offers built-in tools such as heatmaps, session recordings, funnels, cohorts, A/B testing, and more—all in one interface. Unlike other platforms, PostHog can be self-hosted, giving full control over data and privacy."
+    },
+    useCases: {
+      es: [
+        "Análisis del comportamiento de usuarios en productos digitales",
+        "Grabación y reproducción de sesiones de usuarios",
+        "Pruebas A/B y experimentación de funcionalidades",
+        "Visualización de embudos de conversión",
+        "Autohospedaje para cumplimiento de privacidad"
+      ],
+      en: [
+        "User behavior analysis in digital products",
+        "User session recording and playback",
+        "A/B testing and feature experimentation",
+        "Conversion funnel visualization",
+        "Self-hosting for privacy compliance"
+      ]
+    },
+    resources: {
+      es: [
+        {
+          title: "Sitio oficial de PostHog",
+          url: "https://posthog.com/",
+          type: "article",
+          description: "Página principal con información sobre la plataforma y sus funcionalidades"
+        },
+        {
+          title: "Documentación de PostHog",
+          url: "https://posthog.com/docs",
+          type: "documentation",
+          description: "Guía completa para desarrolladores y equipos de producto"
+        },
+        {
+          title: "Comparativa con otras herramientas",
+          url: "https://posthog.com/docs/comparisons",
+          type: "article",
+          description: "Comparaciones entre PostHog y otras plataformas como Mixpanel o Google Analytics"
+        }
+      ],
+      en: [
+        {
+          title: "PostHog Official Site",
+          url: "https://posthog.com/",
+          type: "article",
+          description: "Main page with information about the platform and features"
+        },
+        {
+          title: "PostHog Documentation",
+          url: "https://posthog.com/docs",
+          type: "documentation",
+          description: "Comprehensive guide for developers and product teams"
+        },
+        {
+          title: "Tool Comparisons",
+          url: "https://posthog.com/docs/comparisons",
+          type: "article",
+          description: "Comparisons between PostHog and other platforms like Mixpanel or Google Analytics"
+        }
+      ]
+    },
+    category: "technical",
+    price: {
+      es: "Plan gratuito disponible, precios según uso o autohospedaje",
+      en: "Free plan available, pricing varies by usage or self-hosting"
+    },
+    difficulty: "intermediate",
+    logo: "https://w7.pngwing.com/pngs/534/147/png-transparent-posthog-full-logo-tech-companies-thumbnail.png",
+    slug: "posthog",
+    featured: false,
+    url: "https://posthog.com/"
+  },
+  {
+    id: "146",
+    tags: ["Top"],
+    name: "Openpanel",
+    description: {
+      es: "Plataforma moderna de analítica de productos enfocada en el crecimiento",
+      en: "Modern product analytics platform focused on growth"
+    },
+    detailedDescription: {
+      es: "Openpanel es una herramienta de analítica de productos diseñada para ayudar a equipos de crecimiento, producto y marketing a tomar decisiones basadas en datos reales. Ofrece análisis en tiempo real, segmentación avanzada, embudos de conversión, cohortes y más. Se destaca por su enfoque visual e intuitivo, y por no requerir un equipo de datos para su implementación.",
+      en: "Openpanel is a product analytics tool built to help growth, product, and marketing teams make data-driven decisions. It provides real-time analytics, advanced segmentation, conversion funnels, cohorts, and more. It stands out for its visual, intuitive interface and ease of use without needing a dedicated data team."
+    },
+    useCases: {
+      es: [
+        "Seguimiento en tiempo real del comportamiento de usuarios",
+        "Análisis de embudos de conversión y retención",
+        "Segmentación dinámica de usuarios por eventos y atributos",
+        "Medición de impacto de cambios en el producto",
+        "Empoderamiento de equipos sin necesidad de soporte técnico"
+      ],
+      en: [
+        "Real-time user behavior tracking",
+        "Conversion and retention funnel analysis",
+        "Dynamic user segmentation by events and attributes",
+        "Measuring impact of product changes",
+        "Empowering teams without technical support"
+      ]
+    },
+    resources: {
+      es: [
+        {
+          title: "Sitio oficial de Openpanel",
+          url: "https://openpanel.com/",
+          type: "article",
+          description: "Página principal con información sobre características y beneficios"
+        },
+        {
+          title: "Documentación de Openpanel",
+          url: "https://docs.openpanel.com/",
+          type: "documentation",
+          description: "Guía para comenzar con la integración y uso de la herramienta"
+        },
+        {
+          title: "Precios y planes",
+          url: "https://openpanel.com/pricing",
+          type: "article",
+          description: "Información sobre los diferentes planes de uso de Openpanel"
+        }
+      ],
+      en: [
+        {
+          title: "Openpanel Official Site",
+          url: "https://openpanel.com/",
+          type: "article",
+          description: "Main page with information about features and benefits"
+        },
+        {
+          title: "Openpanel Docs",
+          url: "https://docs.openpanel.com/",
+          type: "documentation",
+          description: "Guide to get started with integration and usage"
+        },
+        {
+          title: "Pricing and Plans",
+          url: "https://openpanel.com/pricing",
+          type: "article",
+          description: "Details on Openpanel's pricing tiers and usage limits"
+        }
+      ]
+    },
+    category: "technical",
+    price: {
+      es: "Plan gratuito con funciones básicas, planes pagos según uso",
+      en: "Free plan with basic features, paid tiers based on usage"
+    },
+    difficulty: "intermediate",
+    logo: "https://images.seeklogo.com/logo-png/52/1/openpanel-logo-png_seeklogo-523771.png",
+    slug: "openpanel",
+    featured: false,
+    url: "https://openpanel.com/"
   }
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-
   
 ];
 
