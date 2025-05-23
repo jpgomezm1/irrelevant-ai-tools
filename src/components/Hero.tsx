@@ -23,12 +23,7 @@ const Hero: React.FC<HeroProps> = ({ language, onJoinWhatsApp }) => {
           {/* Left Column - Content */}
           <div className="order-2 lg:order-1 text-center lg:text-left">
             {/* Featured Badge */}
-            <div className="inline-flex items-center mb-8 px-6 py-3 rounded-full border border-[#8B5FFF]/30 bg-gradient-to-r from-[#8B5FFF]/10 via-[#8B5FFF]/5 to-transparent backdrop-blur-xl">
-              <div className="w-2 h-2 bg-[#8B5FFF] rounded-full mr-3 animate-pulse"></div>
-              <span className="text-[#A78BFA] text-sm font-semibold tracking-wider uppercase">
-                {language === "es" ? "🚀 Tu conexión con el futuro" : "🚀 Your connection to the future"}
-              </span>
-            </div>
+
             
             {/* Main Title */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[0.9] mb-8">
