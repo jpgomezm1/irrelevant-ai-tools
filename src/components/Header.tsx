@@ -11,18 +11,32 @@ const Header: React.FC<HeaderProps> = ({
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showComingSoon, setShowComingSoon] = useState(false);
   const t = translations[currentLang];
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (showComingSoon) {
+      const timer = setTimeout(() => {
+        setShowComingSoon(false);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [showComingSoon]);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
+  const handleNewsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    setShowComingSoon(true);
+  };
 
   return (
     <div>
@@ -35,10 +49,28 @@ const Header: React.FC<HeaderProps> = ({
         <div className="absolute top-24 right-1/4 w-2 h-2 bg-purple-500 rounded-full animate-ping opacity-35"></div>
       </div>
 
+      {/* Coming Soon Toast */}
+      {showComingSoon && (
+        <div className="fixed top-24 left-1/2 transform -translate-x-1/2 z-[100] transition-all duration-300 animate-bounce-in">
+          <div className="relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-purple-400 rounded-xl blur opacity-75"></div>
+            <div className="relative bg-black px-6 py-4 rounded-xl border border-purple-500/50 shadow-xl">
+              <p className="text-white font-bold text-center">
+                {currentLang === "es" ? "¡Próximamente!" : "Coming Soon!"}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Desktop Header */}
       <header className="fixed top-4 left-0 right-0 z-50 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className={`relative group transition-all duration-700 ease-out ${scrolled ? 'scale-98 translate-y-1' : 'scale-100'}`}>
+          <div
+            className={`relative group transition-all duration-700 ease-out ${
+              scrolled ? "scale-98 translate-y-1" : "scale-100"
+            }`}
+          >
             {/* Enhanced glow effect */}
             <div className="absolute -inset-1 bg-gradient-to-r from-purple-500/20 via-purple-600/20 to-purple-500/20 rounded-3xl blur-2xl opacity-50 group-hover:opacity-75 transition-all duration-700 animate-pulse"></div>
             
@@ -80,14 +112,20 @@ const Header: React.FC<HeaderProps> = ({
                       <div className="absolute inset-0 bg-purple-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -m-2"></div>
                     </Link>
 
-                    {/* News Link - Commented out */}
-                    {/* <Link
-                      to="/news"
+                    {/* AI News Coming Soon Link */}
+                    <a
+                      href="#"
+                      onClick={handleNewsClick}
                       className="text-[#E5E7EB] hover:text-white font-medium transition-all duration-300 hover:scale-105 relative group"
                     >
-                      <span className="relative z-10">{currentLang === "es" ? "Noticias" : "News"}</span>
+                      <span className="relative z-10 flex items-center">
+                        {currentLang === "es" ? "Noticias AI" : "AI News"}
+                        <span className="ml-2 px-2 py-0.5 text-xs bg-purple-500 text-white rounded-full font-bold animate-pulse">
+                          {currentLang === "es" ? "Próximamente" : "Coming Soon"}
+                        </span>
+                      </span>
                       <div className="absolute inset-0 bg-purple-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -m-2"></div>
-                    </Link> */}
+                    </a>
 
                     {/* Resources Link */}
                     <Link
@@ -231,19 +269,28 @@ const Header: React.FC<HeaderProps> = ({
               </Link>
             </div>
 
-            {/* News Link Mobile - Commented out */}
-            {/* <div className="relative group">
+            {/* AI News Coming Soon Link Mobile */}
+            <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-[#8B5FFF]/25 to-[#7C3AED]/25 rounded-3xl blur opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <Link
-                to="/news"
-                onClick={closeMenu}
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setShowComingSoon(true);
+                  closeMenu();
+                }}
                 className="relative w-full bg-gradient-to-r from-[#8B5FFF]/20 to-[#7C3AED]/20 text-white p-4 rounded-3xl font-bold text-lg transition-all duration-500 hover:scale-105 border border-[#8B5FFF]/30 shadow-xl shadow-[#8B5FFF]/20 overflow-hidden flex items-center justify-center space-x-3 block"
               >
                 <span className="text-2xl">📰</span>
-                <span className="relative z-10">{currentLang === "es" ? "Noticias AI" : "AI News"}</span>
+                <div className="relative z-10 flex items-center">
+                  <span>{currentLang === "es" ? "Noticias AI" : "AI News"}</span>
+                  <span className="ml-2 px-2 py-0.5 text-xs bg-purple-500 text-white rounded-full font-bold animate-pulse">
+                    {currentLang === "es" ? "Próximamente" : "Coming Soon"}
+                  </span>
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-              </Link>
-            </div> */}
+              </a>
+            </div>
 
             {/* Resources Link Mobile */}
             <div className="relative group">
