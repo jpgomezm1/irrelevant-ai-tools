@@ -99,7 +99,7 @@ const Hero: React.FC<HeroProps> = ({ language, onJoinWhatsApp }) => {
                 <div className="flex items-center">
                   <div className="w-2 h-2 md:w-3 md:h-3 bg-gradient-to-r from-green-400 to-green-500 rounded-full mr-2 animate-pulse"></div>
                   <span className="whitespace-nowrap">
-                    {language === "es" ? "500+ empresarios conectados" : "500+ connected entrepreneurs"}
+                    {language === "es" ? "100+ empresarios conectados" : "100+ connected entrepreneurs"}
                   </span>
                 </div>
                 <div className="flex items-center">
