@@ -11080,7 +11080,89 @@ const tools: ToolCard[] = [
     slug: "openpanel",
     featured: false,
     url: "https://openpanel.com/"
+  },
+  {
+    id: "147",
+    tags: ["Top"],
+    name: "Databutton",
+    description: {
+      es: "Plataforma de desarrollo impulsada por IA para crear apps sin saber programar",
+      en: "AI-powered development platform to build apps without coding"
+    },
+    detailedDescription: {
+      es: "Databutton es una plataforma que permite a cualquier persona crear aplicaciones web completas usando inteligencia artificial. A través de una interfaz sencilla y comandos en lenguaje natural, transforma ideas en software funcional. Ideal para emprendedores y equipos que desean automatizar tareas o lanzar productos sin necesidad de programadores.",
+      en: "Databutton is a platform that enables anyone to build full web applications using AI. Through a simple interface and natural language commands, it turns ideas into functional software. Perfect for entrepreneurs and teams looking to automate tasks or launch products without developers."
+    },
+    useCases: {
+      es: [
+        "Crear aplicaciones web sin necesidad de programar",
+        "Automatizar tareas con scripts en Python",
+        "Desarrollar APIs y herramientas internas rápidamente",
+        "Prototipar productos SaaS para validación temprana",
+        "Conectar herramientas con agentes de IA como ChatGPT"
+      ],
+      en: [
+        "Build web apps without coding",
+        "Automate tasks using Python scripts",
+        "Develop APIs and internal tools quickly",
+        "Prototype SaaS products for early validation",
+        "Connect tools with AI agents like ChatGPT"
+      ]
+    },
+    resources: {
+      es: [
+        {
+          title: "Sitio oficial de Databutton",
+          url: "https://databutton.com/",
+          type: "article",
+          description: "Página principal con información sobre la plataforma y sus capacidades"
+        },
+        {
+          title: "Guía de introducción a Databutton",
+          url: "https://docs.databutton.com/",
+          type: "documentation",
+          description: "Documentación oficial para comenzar a usar Databutton"
+        },
+        {
+          title: "Modelo MCP para agentes",
+          url: "https://databutton.com/mcp",
+          type: "article",
+          description: "Información sobre cómo conectar tus apps con asistentes de IA"
+        }
+      ],
+      en: [
+        {
+          title: "Databutton Official Site",
+          url: "https://databutton.com/",
+          type: "article",
+          description: "Homepage with platform overview and features"
+        },
+        {
+          title: "Databutton Docs",
+          url: "https://docs.databutton.com/",
+          type: "documentation",
+          description: "Official documentation to get started with Databutton"
+        },
+        {
+          title: "MCP Protocol for AI Agents",
+          url: "https://databutton.com/mcp",
+          type: "article",
+          description: "Details on connecting apps to AI assistants like ChatGPT"
+        }
+      ]
+    },
+    category: "automation",
+    price: {
+      es: "Plan gratuito con funciones limitadas. Planes pagos desde $20 USD al mes",
+      en: "Free plan with limited features. Paid plans starting at $20/month"
+    },
+    difficulty: "beginner",
+    logo: "https://app.databutton.com/favicon-32x32.png",
+    slug: "databutton",
+    featured: false,
+    url: "https://databutton.com/"
   }
+  
   
   
   
