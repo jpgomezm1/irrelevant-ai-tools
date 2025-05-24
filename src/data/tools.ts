@@ -10958,7 +10958,7 @@ const tools: ToolCard[] = [
         {
           title: "Documentación de PostHog",
           url: "https://posthog.com/docs",
-          type: "documentation",
+          type: "article",
           description: "Guía completa para desarrolladores y equipos de producto"
         },
         {
@@ -10978,7 +10978,7 @@ const tools: ToolCard[] = [
         {
           title: "PostHog Documentation",
           url: "https://posthog.com/docs",
-          type: "documentation",
+          type: "article",
           description: "Comprehensive guide for developers and product teams"
         },
         {
@@ -11039,7 +11039,7 @@ const tools: ToolCard[] = [
         {
           title: "Documentación de Openpanel",
           url: "https://docs.openpanel.com/",
-          type: "documentation",
+          type: "article",
           description: "Guía para comenzar con la integración y uso de la herramienta"
         },
         {
@@ -11059,7 +11059,7 @@ const tools: ToolCard[] = [
         {
           title: "Openpanel Docs",
           url: "https://docs.openpanel.com/",
-          type: "documentation",
+          type: "article",
           description: "Guide to get started with integration and usage"
         },
         {
@@ -11120,7 +11120,7 @@ const tools: ToolCard[] = [
         {
           title: "Guía de introducción a Databutton",
           url: "https://docs.databutton.com/",
-          type: "documentation",
+          type: "article",
           description: "Documentación oficial para comenzar a usar Databutton"
         },
         {
@@ -11140,7 +11140,7 @@ const tools: ToolCard[] = [
         {
           title: "Databutton Docs",
           url: "https://docs.databutton.com/",
-          type: "documentation",
+          type: "article",
           description: "Official documentation to get started with Databutton"
         },
         {
@@ -11151,13 +11151,13 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "automation",
+    category: "apps",
     price: {
       es: "Plan gratuito con funciones limitadas. Planes pagos desde $20 USD al mes",
       en: "Free plan with limited features. Paid plans starting at $20/month"
     },
     difficulty: "beginner",
-    logo: "https://app.databutton.com/favicon-32x32.png",
+    logo: "https://blog.databutton.com/content/images/2024/04/db-icon.png",
     slug: "databutton",
     featured: false,
     url: "https://databutton.com/"
