@@ -11295,7 +11295,7 @@ const tools: ToolCard[] = [
       en: "From $30/user per month (depending on plan)"
     },
     difficulty: "beginner",
-    logo: "https://www.heynomi.com/logo192.png",
+    logo: "https://heynomi.com/images/nomi-logo.png",
     slug: "nomi",
     featured: true,
     url: "https://www.heynomi.com/"
