@@ -11201,7 +11201,7 @@ const tools: ToolCard[] = [
         {
           title: "Repositorio GitHub de HelixDB",
           url: "https://github.com/HelixDB/helix-db",
-          type: "code",
+          type: "article",
           description: "Código fuente y guía de instalación CLI"
         },
         {
@@ -11232,7 +11232,7 @@ const tools: ToolCard[] = [
         }
       ]
     },
-    category: "tech",
+    category: "technical",
     price: {
       es: "Gratis y de código abierto",
       en: "Free and open-source"
