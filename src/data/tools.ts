@@ -11161,7 +11161,89 @@ const tools: ToolCard[] = [
     slug: "databutton",
     featured: false,
     url: "https://databutton.com/"
+  },
+  {
+    id: "148",
+    tags: ["YC"],
+    name: "HelixDB",
+    description: {
+      es: "Base de datos híbrida de grafos y vectores diseñada para aplicaciones de IA modernas",
+      en: "Hybrid graph and vector database built for modern AI applications"
+    },
+    detailedDescription: {
+      es: "HelixDB es una base de datos open source escrita en Rust que combina capacidades de grafos y vectores, permitiendo búsquedas semánticas y análisis de relaciones complejas en un solo sistema. Es ideal para construir copilotos, asistentes de búsqueda, y soluciones basadas en RAG (retrieval-augmented generation).",
+      en: "HelixDB is an open-source database written in Rust that combines graph and vector capabilities, enabling semantic search and complex relationship analysis in a single system. It’s ideal for building copilots, search assistants, and RAG-based solutions."
+    },
+    useCases: {
+      es: [
+        "Asistentes de IA con recuperación semántica",
+        "Motores de búsqueda sobre documentos empresariales",
+        "Mapeo y análisis de relaciones entre entidades (RAG)",
+        "Sistemas de recomendación híbridos con grafos y vectores",
+        "Capas de memoria para agentes de lenguaje (LLMs)"
+      ],
+      en: [
+        "AI assistants with semantic retrieval",
+        "Enterprise document search engines",
+        "Entity relationship mapping and reasoning (RAG)",
+        "Hybrid recommender systems with graphs and vectors",
+        "Memory layers for language model agents (LLMs)"
+      ]
+    },
+    resources: {
+      es: [
+        {
+          title: "Sitio oficial de HelixDB",
+          url: "https://www.helix-db.com/",
+          type: "article",
+          description: "Página principal con información técnica y casos de uso"
+        },
+        {
+          title: "Repositorio GitHub de HelixDB",
+          url: "https://github.com/HelixDB/helix-db",
+          type: "code",
+          description: "Código fuente y guía de instalación CLI"
+        },
+        {
+          title: "Introducción a Helix",
+          url: "https://www.helix-db.com/docs",
+          type: "article",
+          description: "Documentación oficial para comenzar a usar Helix"
+        }
+      ],
+      en: [
+        {
+          title: "HelixDB Official Site",
+          url: "https://www.helix-db.com/",
+          type: "article",
+          description: "Homepage with technical overview and use cases"
+        },
+        {
+          title: "HelixDB GitHub Repository",
+          url: "https://github.com/HelixDB/helix-db",
+          type: "article",
+          description: "Source code and CLI installation guide"
+        },
+        {
+          title: "Helix Docs",
+          url: "https://www.helix-db.com/docs",
+          type: "article",
+          description: "Official docs to get started with Helix"
+        }
+      ]
+    },
+    category: "tech",
+    price: {
+      es: "Gratis y de código abierto",
+      en: "Free and open-source"
+    },
+    difficulty: "intermediate",
+    logo: "https://cdn.worldvectorlogo.com/logos/helix.svg",
+    slug: "helixdb",
+    featured: false,
+    url: "https://www.helix-db.com/"
   }
+  
   
   
   
