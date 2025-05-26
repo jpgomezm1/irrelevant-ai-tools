@@ -11242,9 +11242,64 @@ const tools: ToolCard[] = [
     slug: "helixdb",
     featured: false,
     url: "https://www.helix-db.com/"
+  },
+  {
+    id: "149",
+    tags: ["Top", "YC"],
+    name: "Nomi",
+    description: {
+      es: "Copiloto de ventas impulsado por IA que mejora las llamadas en tiempo real",
+      en: "AI sales copilot that improves calls in real time"
+    },
+    detailedDescription: {
+      es: "Nomi es una plataforma de inteligencia artificial diseñada para asistir a equipos de ventas durante sus llamadas. Escucha en tiempo real, sugiere respuestas, toma notas automáticas y ayuda a cerrar más tratos. Ideal para equipos que buscan mejorar sus tasas de conversión y profesionalizar su proceso comercial.",
+      en: "Nomi is an AI-powered platform built to assist sales teams during live calls. It listens in real time, suggests answers, takes automatic notes, and helps close more deals. Perfect for teams looking to improve conversion rates and professionalize their sales process."
+    },
+    useCases: {
+      es: [
+        "Mejorar las tasas de cierre en llamadas comerciales",
+        "Entrenar nuevos vendedores con apoyo en tiempo real",
+        "Reducir errores durante el pitch o la negociación",
+        "Automatizar la toma de notas y sincronización con CRM",
+        "Construir un playbook de ventas basado en datos"
+      ],
+      en: [
+        "Improve closing rates in sales calls",
+        "Train new reps with real-time coaching",
+        "Reduce mistakes during pitches or negotiations",
+        "Automate note-taking and CRM syncing",
+        "Build a data-driven sales playbook"
+      ]
+    },
+    resources: {
+      es: [
+        {
+          "title": "Sitio oficial de Nomi",
+          "url": "https://www.heynomi.com/",
+          "type": "article",
+          "description": "Plataforma y demo del copiloto de ventas con IA"
+        }
+      ],
+      en: [
+        {
+          "title": "Nomi Official Website",
+          "url": "https://www.heynomi.com/",
+          "type": "article",
+          "description": "Platform and demo of the AI sales copilot"
+        }
+      ]
+    },
+    category: "sales",
+    price: {
+      es: "Desde $30/usuario al mes (según plan)",
+      en: "From $30/user per month (depending on plan)"
+    },
+    difficulty: "beginner",
+    logo: "https://www.heynomi.com/logo192.png",
+    slug: "nomi",
+    featured: true,
+    url: "https://www.heynomi.com/"
   }
-  
-  
   
   
   
