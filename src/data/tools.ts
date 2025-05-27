@@ -11299,7 +11299,77 @@ const tools: ToolCard[] = [
     slug: "nomi",
     featured: true,
     url: "https://www.heynomi.com/"
+  },
+  {
+    id: "150",
+    tags: ["Top", "irrelevant"],
+    name: "Profound",
+    description: {
+      es: "Analizador de visibilidad en motores de respuesta como ChatGPT, Perplexity y Gemini",
+      en: "Visibility analyzer for answer engines like ChatGPT, Perplexity, and Gemini"
+    },
+    detailedDescription: {
+      es: "Profound es una herramienta de análisis de Answer Engine Optimization (AEO) que permite evaluar qué tan bien posicionada está tu marca en las respuestas generadas por modelos de IA como ChatGPT, Gemini y Perplexity. Te ayuda a identificar oportunidades de contenido, auditar tus páginas existentes y descubrir preguntas clave donde tu empresa debería estar presente.",
+      en: "Profound is an Answer Engine Optimization (AEO) analysis tool that helps evaluate how well your brand is positioned in AI-generated responses from tools like ChatGPT, Gemini, and Perplexity. It helps identify content opportunities, audit your existing pages, and uncover key questions where your brand should appear."
+    },
+    useCases: {
+      es: [
+        "Auditar si tu marca aparece en las respuestas de modelos como ChatGPT",
+        "Identificar preguntas clave donde deberías posicionarte",
+        "Optimizar contenido para motores de respuesta (AEO)",
+        "Descubrir oportunidades de contenido en tu industria",
+        "Compararte con competidores en visibilidad IA"
+      ],
+      en: [
+        "Audit whether your brand appears in AI answers like ChatGPT",
+        "Identify key questions where you should be visible",
+        "Optimize content for answer engines (AEO)",
+        "Uncover content opportunities in your industry",
+        "Benchmark your AI visibility against competitors"
+      ]
+    },
+    resources: {
+      es: [
+        {
+          title: "Sitio oficial de Profound",
+          url: "https://www.tryprofound.com/",
+          type: "article",
+          description: "Página principal con acceso a la herramienta y recursos de AEO"
+        },
+        {
+          title: "Guía sobre qué es AEO",
+          url: "https://www.tryprofound.com/guides/what-is-answer-engine-optimization",
+          type: "article",
+          description: "Artículo introductorio para entender Answer Engine Optimization"
+        }
+      ],
+      en: [
+        {
+          title: "Profound Official Site",
+          url: "https://www.tryprofound.com/",
+          type: "article",
+          description: "Homepage with access to the tool and AEO resources"
+        },
+        {
+          title: "What is AEO Guide",
+          url: "https://www.tryprofound.com/guides/what-is-answer-engine-optimization",
+          type: "article",
+          description: "Introductory article explaining Answer Engine Optimization"
+        }
+      ]
+    },
+    category: "aeo",
+    price: {
+      es: "Planes desde $29 USD/mes con prueba gratuita",
+      en: "Plans from $29/month with free trial"
+    },
+    difficulty: "beginner",
+    logo: "https://www.britopian.com/wp-content/uploads/2025/04/profound-ai-logo-300x300.png",
+    slug: "profound",
+    featured: true,
+    url: "https://www.tryprofound.com/"
   }
+  
   
   
   

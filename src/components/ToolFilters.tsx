@@ -40,6 +40,7 @@ const ToolFilters: React.FC<ToolFiltersProps> = ({
     { id: "sales", icon: "💼" },
     { id: "technical", icon: "🔧" },
     { id: "voice", icon: "🎤" },
+    { id: "aeo", icon: "🔎" }
   ];
 
   const difficulties = [

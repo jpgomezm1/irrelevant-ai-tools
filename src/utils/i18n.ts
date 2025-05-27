@@ -34,7 +34,8 @@ const translations = {
       productivity: "Productividad",
       sales: "Ventas",
       technical: "Técnico",
-      voice: "Voz"
+      voice: "Voz",
+      aeo: "AEO",
     },
     difficulty: {
       beginner: "Principiante",
@@ -167,7 +168,8 @@ const translations = {
       productivity: "Productivity",
       sales: "Sales",
       technical: "Technical",
-      voice: "Voice"
+      voice: "Voice",
+      aeo: "AEO",
     },
     difficulty: {
       beginner: "Beginner",
