@@ -7,7 +7,7 @@ import NewsletterModal from "../components/NewsletterModal";
 import tools from "../data/tools";
 import { useLanguage } from "../context/LanguageContext";
 import { FilterOptions, ToolCard } from "../types";
-import { Wrench } from "lucide-react";
+import { Wrench, Shuffle } from "lucide-react";
 
 const ToolsPage = () => {
   const { language, setLanguage } = useLanguage();
@@ -21,6 +21,41 @@ const ToolsPage = () => {
   });
   
   const [filteredTools, setFilteredTools] = useState<ToolCard[]>(tools);
+  const [isShuffling, setIsShuffling] = useState(false);
+  const [showFloatingButton, setShowFloatingButton] = useState(false);
+  
+  // Función para mezclar array usando Fisher-Yates shuffle
+  const shuffleArray = <T,>(array: T[]): T[] => {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  };
+
+  // Función para hacer shuffle de las herramientas
+  const handleShuffle = () => {
+    setIsShuffling(true);
+    
+    // Simular una pequeña carga para UX
+    setTimeout(() => {
+      setFilteredTools(prevTools => shuffleArray(prevTools));
+      setIsShuffling(false);
+    }, 500);
+  };
+
+  // Detectar scroll para mostrar botón flotante
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const shouldShow = scrollY > 800; // Mostrar después de 800px de scroll
+      setShowFloatingButton(shouldShow);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   
   // Apply filters whenever they change
   useEffect(() => {
@@ -187,6 +222,8 @@ const ToolsPage = () => {
           onFilterChange={setFilters}
           totalTools={tools.length}
           filteredCount={filteredTools.length}
+          onShuffle={handleShuffle}
+          isShuffling={isShuffling}
         />
         
         <ToolGrid tools={filteredTools} language={language} />
@@ -225,6 +262,27 @@ const ToolsPage = () => {
         isOpen={isNewsletterModalOpen}
         onClose={() => setIsNewsletterModalOpen(false)}
       />
+
+      {/* Floating Shuffle Button */}
+      {showFloatingButton && filteredTools.length > 0 && (
+        <button
+          onClick={handleShuffle}
+          disabled={isShuffling}
+          className={`fixed bottom-6 right-6 z-50 group relative inline-flex items-center justify-center w-14 h-14 font-semibold text-white bg-gradient-to-r from-[#8B5FFF] to-[#7C3AED] rounded-full shadow-2xl shadow-[#8B5FFF]/40 hover:shadow-[#8B5FFF]/60 transform hover:scale-110 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none ${
+            showFloatingButton ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'
+          }`}
+          title={language === "es" ? "Mezclar herramientas" : "Shuffle tools"}
+        >
+          <div className="absolute -inset-1 bg-gradient-to-r from-[#8B5FFF] to-[#7C3AED] rounded-full blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
+          <div className="relative">
+            {isShuffling ? (
+              <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+            ) : (
+              <Shuffle size={24} className="group-hover:rotate-180 transition-transform duration-500" />
+            )}
+          </div>
+        </button>
+      )}
 
       {/* CSS for animations */}
       <style jsx>{`

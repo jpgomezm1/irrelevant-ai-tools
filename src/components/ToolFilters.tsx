@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { FilterOptions, Language } from "../types";
 import translations from "../utils/i18n";
-import { Search, X, Filter, ChevronDown, Award, Zap, Star } from "lucide-react";
+import { Search, X, Filter, ChevronDown, Award, Zap, Star, Shuffle, Sparkles } from "lucide-react";
 
 interface ToolFiltersProps {
   language: Language;
   onFilterChange: (filters: FilterOptions) => void;
   totalTools: number;
   filteredCount: number;
+  onShuffle?: () => void;
+  isShuffling?: boolean;
 }
 
 const ToolFilters: React.FC<ToolFiltersProps> = ({
@@ -15,6 +17,8 @@ const ToolFilters: React.FC<ToolFiltersProps> = ({
   onFilterChange,
   totalTools,
   filteredCount,
+  onShuffle,
+  isShuffling = false,
 }) => {
   const t = translations[language];
   
@@ -84,30 +88,60 @@ const ToolFilters: React.FC<ToolFiltersProps> = ({
           </p>
         </div>
 
-        {/* Search Bar - Mejorado para móviles */}
-        <div className="relative mb-6 max-w-xl mx-auto">
-          <div className="relative group">
-            <div className="relative bg-gradient-to-r from-[#8B5FFF]/10 to-[#7C3AED]/10 backdrop-blur-xl border border-[#8B5FFF]/30 rounded-2xl overflow-hidden shadow-lg">
-              <div className="flex items-center">
-                <Search size={18} className="absolute left-4 text-[#9CA3AF] transition-colors duration-300 group-focus-within:text-[#8B5FFF]" />
-                <input
-                  type="text"
-                  placeholder={language === "es" ? "Buscar herramientas..." : "Search tools..."}
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                  className="w-full pl-12 pr-12 py-3 md:py-4 bg-transparent text-white placeholder-[#9CA3AF] focus:outline-none text-sm md:text-base"
-                />
-                {search && (
-                  <button
-                    onClick={() => setSearch("")}
-                    className="absolute right-3 text-[#9CA3AF] hover:text-white p-1 rounded-full hover:bg-[#8B5FFF]/20 transition-all duration-300"
-                  >
-                    <X size={16} />
-                  </button>
-                )}
+        {/* Search Bar and Shuffle Button Row */}
+        <div className="flex flex-col md:flex-row gap-4 mb-6 max-w-4xl mx-auto">
+          {/* Search Bar */}
+          <div className="relative flex-1">
+            <div className="relative group">
+              <div className="relative bg-gradient-to-r from-[#8B5FFF]/10 to-[#7C3AED]/10 backdrop-blur-xl border border-[#8B5FFF]/30 rounded-2xl overflow-hidden shadow-lg">
+                <div className="flex items-center">
+                  <Search size={18} className="absolute left-4 text-[#9CA3AF] transition-colors duration-300 group-focus-within:text-[#8B5FFF]" />
+                  <input
+                    type="text"
+                    placeholder={language === "es" ? "Buscar herramientas..." : "Search tools..."}
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                    className="w-full pl-12 pr-12 py-3 md:py-4 bg-transparent text-white placeholder-[#9CA3AF] focus:outline-none text-sm md:text-base"
+                  />
+                  {search && (
+                    <button
+                      onClick={() => setSearch("")}
+                      className="absolute right-3 text-[#9CA3AF] hover:text-white p-1 rounded-full hover:bg-[#8B5FFF]/20 transition-all duration-300"
+                    >
+                      <X size={16} />
+                    </button>
+                  )}
+                </div>
               </div>
             </div>
           </div>
+
+          {/* Shuffle Button */}
+          {onShuffle && (
+            <div className="flex justify-center md:justify-end">
+              <button
+                onClick={onShuffle}
+                disabled={isShuffling || filteredCount === 0}
+                className="group relative inline-flex items-center justify-center px-4 md:px-6 py-3 md:py-4 font-semibold text-white bg-gradient-to-r from-[#8B5FFF] to-[#7C3AED] rounded-2xl shadow-xl shadow-[#8B5FFF]/30 hover:shadow-[#8B5FFF]/50 transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none whitespace-nowrap"
+              >
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-[#8B5FFF] to-[#7C3AED] rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
+                <div className="relative flex items-center space-x-2 md:space-x-3">
+                  {isShuffling ? (
+                    <>
+                      <div className="w-4 h-4 md:w-5 md:h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                      <span className="hidden md:inline">{language === "es" ? "Mezclando..." : "Shuffling..."}</span>
+                    </>
+                  ) : (
+                    <>
+                      <Shuffle size={18} className="group-hover:rotate-180 transition-transform duration-500" />
+                      <span className="hidden md:inline">{language === "es" ? "Mezclar" : "Shuffle"}</span>
+                      <Sparkles size={14} className="animate-pulse" />
+                    </>
+                  )}
+                </div>
+              </button>
+            </div>
+          )}
         </div>
 
         {/* Mobile Filter Toggle */}
@@ -135,7 +169,7 @@ const ToolFilters: React.FC<ToolFiltersProps> = ({
         {/* Filters Container */}
         <div className={`md:block ${showFilters ? 'block' : 'hidden'} space-y-6`}>
           
-          {/* Special Tags Filters - Nueva sección */}
+          {/* Special Tags Filters */}
           <div>
             <h3 className="text-white font-semibold mb-3 text-sm md:text-base">
               {language === "es" ? "Colecciones Especiales" : "Special Collections"}
@@ -177,7 +211,7 @@ const ToolFilters: React.FC<ToolFiltersProps> = ({
             </div>
           </div>
           
-          {/* Category Filters - Responsive Grid with Scrollable Container */}
+          {/* Category Filters */}
           <div>
             <h3 className="text-white font-semibold mb-3 text-sm md:text-base">
               {language === "es" ? "Categorías" : "Categories"}
@@ -215,7 +249,7 @@ const ToolFilters: React.FC<ToolFiltersProps> = ({
             </div>
           </div>
           
-          {/* Difficulty Filters - Responsive Grid */}
+          {/* Difficulty Filters */}
           <div>
             <h3 className="text-white font-semibold mb-3 text-sm md:text-base">
               {language === "es" ? "Nivel de dificultad" : "Difficulty Level"}
@@ -249,7 +283,7 @@ const ToolFilters: React.FC<ToolFiltersProps> = ({
             </div>
           </div>
 
-          {/* Clear Filters - Solo si hay filtros activos */}
+          {/* Clear Filters */}
           {hasActiveFilters && (
             <div className="text-center">
               <button
@@ -263,7 +297,7 @@ const ToolFilters: React.FC<ToolFiltersProps> = ({
           )}
         </div>
         
-        {/* Results count - Más compacto */}
+        {/* Results count */}
         <div className="mt-8 bg-gradient-to-r from-[#8B5FFF]/10 to-[#7C3AED]/10 backdrop-blur-xl border border-[#8B5FFF]/30 rounded-2xl p-3 md:p-4 text-center">
           <span className="text-[#E5E7EB] text-sm md:text-base">
             {language === "es" ? "Mostrando" : "Showing"}{" "}
