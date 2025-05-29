@@ -11433,7 +11433,7 @@ const tools: ToolCard[] = [
       en: "Open-source with local or cloud deployment options"
     },
     difficulty: "intermediate",
-    logo: "https://avatars.githubusercontent.com/u/165264894?s=200&v=4",
+    logo: "https://i.ytimg.com/vi/2Iy5ssyeneA/maxresdefault.jpg",
     slug: "chunkr",
     featured: true,
     url: "https://chunkr.ai/"
