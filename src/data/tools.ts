@@ -11368,7 +11368,77 @@ const tools: ToolCard[] = [
     slug: "profound",
     featured: true,
     url: "https://www.tryprofound.com/"
+  },
+  {
+    id: "151",
+    tags: ["irrelevant", "YC"],
+    name: "Chunkr",
+    description: {
+      es: "Procesador inteligente de documentos para convertir archivos complejos en datos útiles para IA",
+      en: "Smart document processor that turns complex files into AI-ready data"
+    },
+    detailedDescription: {
+      es: "Chunkr es una herramienta de procesamiento de documentos que permite transformar archivos PDF, Word, imágenes u otros formatos en datos estructurados. Ideal para flujos de trabajo de RAG (retrieval augmented generation), análisis con modelos de lenguaje o extracción de insights a partir de documentos complejos.",
+      en: "Chunkr is a document processing tool that transforms PDFs, Word files, images, and more into structured data. Ideal for retrieval augmented generation (RAG) workflows, language model analysis, or extracting insights from complex documents."
+    },
+    useCases: {
+      es: [
+        "Procesar archivos PDF y Word para modelos de IA",
+        "Extraer datos desde documentos escaneados usando OCR",
+        "Dividir documentos por secciones clave como títulos, tablas y fórmulas",
+        "Convertir documentos en chunks listos para sistemas RAG",
+        "Exportar resultados en HTML, JSON o Markdown"
+      ],
+      en: [
+        "Process PDF and Word files for AI models",
+        "Extract data from scanned documents using OCR",
+        "Segment documents into key parts like titles, tables, and formulas",
+        "Convert documents into chunks for RAG systems",
+        "Export results in HTML, JSON, or Markdown"
+      ]
+    },
+    resources: {
+      es: [
+        {
+          title: "Sitio oficial de Chunkr",
+          url: "https://chunkr.ai/",
+          type: "article",
+          description: "Acceso a la herramienta y su documentación"
+        },
+        {
+          title: "Guía rápida para empezar",
+          url: "https://docs.chunkr.ai/docs/get-started/quickstart",
+          type: "article",
+          description: "Cómo procesar documentos con el SDK de Python"
+        }
+      ],
+      en: [
+        {
+          title: "Official Chunkr Site",
+          url: "https://chunkr.ai/",
+          type: "article",
+          description: "Access the tool and documentation"
+        },
+        {
+          title: "Quickstart Guide",
+          url: "https://docs.chunkr.ai/docs/get-started/quickstart",
+          type: "article",
+          description: "How to process documents using the Python SDK"
+        }
+      ]
+    },
+    category: "technical",
+    price: {
+      es: "Código abierto con opciones de despliegue local o en la nube",
+      en: "Open-source with local or cloud deployment options"
+    },
+    difficulty: "intermediate",
+    logo: "https://avatars.githubusercontent.com/u/165264894?s=200&v=4",
+    slug: "chunkr",
+    featured: true,
+    url: "https://chunkr.ai/"
   }
+  
   
   
   
