@@ -3,7 +3,9 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import WhatsAppModal from "../components/WhatsAppModal";
 import NewsletterModal from "../components/NewsletterModal";
+import LeadMagnetModal from "../components/LeadMagnetModal";
 import { useLanguage } from "../context/LanguageContext";
+import { useLeadMagnetTimer } from "../hooks/useLeadMagnetTimer";
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
@@ -28,6 +30,11 @@ const Index = () => {
 
   const [isWhatsAppModalOpen, setIsWhatsAppModalOpen] = useState(false);
   const [isNewsletterModalOpen, setIsNewsletterModalOpen] = useState(false);
+
+  const { shouldShow: shouldShowLeadMagnet, handleClose: handleCloseLeadMagnet } = useLeadMagnetTimer({
+    delayInSeconds: 5, // 10 segundos para pruebas
+    storageKey: 'leadMagnetShown_index'
+  });
 
   // Update page title and meta based on language
   useEffect(() => {
@@ -237,7 +244,7 @@ const Index = () => {
                 </p>
               </div>
               <div className="text-center bg-gradient-to-r from-yellow-500/10 to-amber-500/10 backdrop-blur-xl border border-yellow-500/20 rounded-2xl p-8 transform hover:scale-105 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-yellow-500/20 to-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-4">  
+                <div className="w-16 h-16 bg-gradient-to-r from-yellow-500/20 to-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="text-yellow-400" size={32} />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">
@@ -520,6 +527,12 @@ const Index = () => {
         language={language}
         isOpen={isNewsletterModalOpen}
         onClose={() => setIsNewsletterModalOpen(false)}
+      />
+
+      <LeadMagnetModal
+        language={language}
+        isOpen={shouldShowLeadMagnet}
+        onClose={handleCloseLeadMagnet}
       />
 
       {/* CSS for animations */}

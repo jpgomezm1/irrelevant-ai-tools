@@ -21,10 +21,20 @@ import NewsletterModal from "../components/NewsletterModal";
 import { getDifficultyLabel, getCategoryLabel } from "../utils/i18n";
 import { useLanguage } from "../context/LanguageContext";
 
+// Agregar estas importaciones
+import LeadMagnetModal from "../components/LeadMagnetModal";
+import { useLeadMagnetTimer } from "../hooks/useLeadMagnetTimer";
+
 const ToolDetailPage: React.FC = () => {
   const { language, setLanguage } = useLanguage();
   const { slug } = useParams<{ slug: string }>();
   const [isNewsletterModalOpen, setIsNewsletterModalOpen] = useState(false);
+
+  // Agregar después de los otros useState
+  const { shouldShow: shouldShowLeadMagnet, handleClose: handleCloseLeadMagnet } = useLeadMagnetTimer({
+    delayInSeconds: 15, // Un poco más de tiempo en páginas de detalle
+    storageKey: 'leadMagnetShown_toolDetail'
+  });
 
   // Siempre scrollear al top cuando abra o cambie de herramienta
   useEffect(() => {
@@ -58,7 +68,7 @@ const ToolDetailPage: React.FC = () => {
   };
 
   // Configuración para los tags
-  const tagConfig = {
+  const tagConfig: { [key: string]: { icon: JSX.Element; text: string; gradient: string; textColor: string } } = {
     YC: {
       icon: <Award size={16} className="mr-2" />,
       text: "Y Combinator Backed",
@@ -182,7 +192,7 @@ const ToolDetailPage: React.FC = () => {
                   <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white via-[#A78BFA] to-[#8B5FFF] bg-clip-text text-transparent">
                     {tool.name}
                   </h1>
-                  
+
                   {/* Featured badge (if not using tags) */}
                   {tool.featured && !tool.tags?.includes('Top') && (
                     <div className="bg-gradient-to-r from-[#8B5FFF] to-[#7C3AED] px-3 py-1 text-xs rounded-full text-white font-semibold flex items-center space-x-1">
@@ -191,14 +201,14 @@ const ToolDetailPage: React.FC = () => {
                     </div>
                   )}
                 </div>
-                
+
                 {/* Tags badges */}
                 {tool.tags && tool.tags.length > 0 && (
                   <div className="flex flex-wrap gap-2 mb-2">
                     {tool.tags.map((tag) => (
                       tagConfig[tag] && (
-                        <div 
-                          key={tag} 
+                        <div
+                          key={tag}
                           className={`bg-gradient-to-r ${tagConfig[tag].gradient} px-3 py-1.5 text-sm rounded-lg text-white font-semibold flex items-center shadow-lg`}
                         >
                           {tagConfig[tag].icon}
@@ -378,6 +388,13 @@ const ToolDetailPage: React.FC = () => {
         language={language}
         isOpen={isNewsletterModalOpen}
         onClose={() => setIsNewsletterModalOpen(false)}
+      />
+
+      {/* Agregar antes del cierre del último div */}
+      <LeadMagnetModal
+        language={language}
+        isOpen={shouldShowLeadMagnet}
+        onClose={handleCloseLeadMagnet}
       />
 
       {/* CSS para animaciones */}

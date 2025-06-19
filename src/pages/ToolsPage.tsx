@@ -9,21 +9,31 @@ import { useLanguage } from "../context/LanguageContext";
 import { FilterOptions, ToolCard } from "../types";
 import { Wrench, Shuffle } from "lucide-react";
 
+// Agregar estas importaciones
+import LeadMagnetModal from "../components/LeadMagnetModal";
+import { useLeadMagnetTimer } from "../hooks/useLeadMagnetTimer";
+
 const ToolsPage = () => {
   const { language, setLanguage } = useLanguage();
-  
+
   const [isNewsletterModalOpen, setIsNewsletterModalOpen] = useState(false);
   const [filters, setFilters] = useState<FilterOptions>({
     category: null,
     difficulty: null,
     search: "",
-    tag: null
+    tag: null,
   });
-  
+
   const [filteredTools, setFilteredTools] = useState<ToolCard[]>(tools);
   const [isShuffling, setIsShuffling] = useState(false);
   const [showFloatingButton, setShowFloatingButton] = useState(false);
-  
+
+  // Agregar después de los otros useState
+  const { shouldShow: shouldShowLeadMagnet, handleClose: handleCloseLeadMagnet } = useLeadMagnetTimer({
+    delayInSeconds: 10, // 10 segundos para pruebas
+    storageKey: 'leadMagnetShown_tools'
+  });
+
   // Función para mezclar array usando Fisher-Yates shuffle
   const shuffleArray = <T,>(array: T[]): T[] => {
     const shuffled = [...array];
@@ -37,7 +47,7 @@ const ToolsPage = () => {
   // Función para hacer shuffle de las herramientas
   const handleShuffle = () => {
     setIsShuffling(true);
-    
+
     // Simular una pequeña carga para UX
     setTimeout(() => {
       setFilteredTools(prevTools => shuffleArray(prevTools));
@@ -56,26 +66,26 @@ const ToolsPage = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  
+
   // Apply filters whenever they change
   useEffect(() => {
     let result = [...tools];
-    
+
     // Filter by category
     if (filters.category) {
       result = result.filter((tool) => tool.category === filters.category);
     }
-    
+
     // Filter by difficulty
     if (filters.difficulty) {
       result = result.filter((tool) => tool.difficulty === filters.difficulty);
     }
-    
+
     // Filter by tag
     if (filters.tag) {
       result = result.filter((tool) => tool.tags && tool.tags.includes(filters.tag));
     }
-    
+
     // Filter by search term
     if (filters.search) {
       const searchTerm = filters.search.toLowerCase();
@@ -85,16 +95,16 @@ const ToolsPage = () => {
           tool.description[language].toLowerCase().includes(searchTerm)
       );
     }
-    
+
     setFilteredTools(result);
   }, [filters, language]);
-  
+
   // Update page title and meta based on language
   useEffect(() => {
-    document.title = language === "es" 
-      ? "Herramientas AI | Irrelevant - Catálogo de Herramientas IA para Empresas" 
+    document.title = language === "es"
+      ? "Herramientas AI | Irrelevant - Catálogo de Herramientas IA para Empresas"
       : "AI Tools | Irrelevant - AI Tools Catalog for Businesses";
-      
+
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
@@ -103,12 +113,12 @@ const ToolsPage = () => {
         : "Discover the best AI tools to grow your business without technical complications.");
     }
   }, [language]);
-  
+
   return (
     <div className="relative min-h-screen overflow-hidden">
       {/* Fondo unificado para toda la página */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0B0D1A] via-[#1A1B2E] to-[#0F1219]"></div>
-      
+
       {/* Animated Grid Pattern - Global */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0" style={{
@@ -117,36 +127,36 @@ const ToolsPage = () => {
           animation: 'gridMove 20s linear infinite'
         }}></div>
       </div>
-      
+
       {/* Dynamic Neural Network Lines - Global */}
       <svg className="absolute inset-0 w-full h-full opacity-30" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="lineGradientGlobal" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#8B5FFF" stopOpacity="0.8"/>
-            <stop offset="50%" stopColor="#A78BFA" stopOpacity="0.4"/>
-            <stop offset="100%" stopColor="#7C3AED" stopOpacity="0.2"/>
+            <stop offset="0%" stopColor="#8B5FFF" stopOpacity="0.8" />
+            <stop offset="50%" stopColor="#A78BFA" stopOpacity="0.4" />
+            <stop offset="100%" stopColor="#7C3AED" stopOpacity="0.2" />
           </linearGradient>
         </defs>
         <path d="M0,200 Q400,100 800,150 T1600,200" stroke="url(#lineGradientGlobal)" strokeWidth="2" fill="none" className="animate-pulse">
-          <animate attributeName="d" 
-            values="M0,200 Q400,100 800,150 T1600,200;M0,250 Q400,150 800,100 T1600,180;M0,200 Q400,100 800,150 T1600,200" 
-            dur="8s" repeatCount="indefinite"/>
+          <animate attributeName="d"
+            values="M0,200 Q400,100 800,150 T1600,200;M0,250 Q400,150 800,100 T1600,180;M0,200 Q400,100 800,150 T1600,200"
+            dur="8s" repeatCount="indefinite" />
         </path>
         <path d="M0,400 Q600,300 1200,350 T1800,400" stroke="url(#lineGradientGlobal)" strokeWidth="1.5" fill="none" className="animate-pulse delay-1000">
-          <animate attributeName="d" 
-            values="M0,400 Q600,300 1200,350 T1800,400;M0,350 Q600,450 1200,300 T1800,380;M0,400 Q600,300 1200,350 T1800,400" 
-            dur="10s" repeatCount="indefinite"/>
+          <animate attributeName="d"
+            values="M0,400 Q600,300 1200,350 T1800,400;M0,350 Q600,450 1200,300 T1800,380;M0,400 Q600,300 1200,350 T1800,400"
+            dur="10s" repeatCount="indefinite" />
         </path>
       </svg>
-      
+
       {/* Floating Orbs - Global */}
       <div className="absolute top-[15%] left-[10%] w-[500px] h-[500px] bg-gradient-radial from-[#8B5FFF]/20 via-[#8B5FFF]/5 to-transparent rounded-full blur-3xl animate-float"></div>
       <div className="absolute bottom-[20%] right-[5%] w-[400px] h-[400px] bg-gradient-radial from-[#A78BFA]/15 via-[#A78BFA]/3 to-transparent rounded-full blur-3xl animate-float-delayed"></div>
       <div className="absolute top-[50%] right-[20%] w-[300px] h-[300px] bg-gradient-radial from-[#7C3AED]/20 via-[#7C3AED]/5 to-transparent rounded-full blur-2xl animate-pulse"></div>
-      
+
       {/* Cyber Grid Overlay - Global */}
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#8B5FFF]/5 to-transparent"></div>
-      
+
       {/* Contenido - Todo en relative z-10 para estar encima del fondo */}
       <div className="relative z-10">
         <Header
@@ -154,7 +164,7 @@ const ToolsPage = () => {
           onLanguageChange={setLanguage}
           onNewsletterClick={() => setIsNewsletterModalOpen(true)}
         />
-        
+
         {/* Hero Section */}
         <section className="pt-32 pb-16">
           <div className="container mx-auto px-4 md:px-6 lg:px-8">
@@ -185,10 +195,10 @@ const ToolsPage = () => {
                   {language === "es" ? "para Empresas" : "for Business"}
                 </span>
               </h1>
-              
+
               <p className="text-xl md:text-2xl text-[#9CA3AF] mb-8 leading-relaxed max-w-3xl mx-auto">
-                {language === "es" 
-                  ? "Descubre herramientas de IA que transformarán tu negocio en piloto automático" 
+                {language === "es"
+                  ? "Descubre herramientas de IA que transformarán tu negocio en piloto automático"
                   : "Discover AI tools that will transform your business on autopilot"}
               </p>
 
@@ -216,7 +226,7 @@ const ToolsPage = () => {
             </div>
           </div>
         </section>
-        
+
         <ToolFilters
           language={language}
           onFilterChange={setFilters}
@@ -225,16 +235,16 @@ const ToolsPage = () => {
           onShuffle={handleShuffle}
           isShuffling={isShuffling}
         />
-        
+
         <ToolGrid tools={filteredTools} language={language} />
-        
+
         <footer className="py-8 border-t border-white/10">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-gray-400 mb-4 md:mb-0">
                 © 2025 Irrelevant. {language === "es" ? "Todos los derechos reservados." : "All rights reserved."}
               </p>
-              
+
               <div className="flex space-x-6">
                 <Link to="/" className="text-gray-300 hover:text-[#8B5FFF] transition-colors">
                   {language === "es" ? "Inicio" : "Home"}
@@ -256,7 +266,7 @@ const ToolsPage = () => {
           </div>
         </footer>
       </div>
-      
+
       <NewsletterModal
         language={language}
         isOpen={isNewsletterModalOpen}
@@ -283,6 +293,13 @@ const ToolsPage = () => {
           </div>
         </button>
       )}
+
+      {/* Agregar antes del cierre */}
+      <LeadMagnetModal
+        language={language}
+        isOpen={shouldShowLeadMagnet}
+        onClose={handleCloseLeadMagnet}
+      />
 
       {/* CSS for animations */}
       <style jsx>{`
