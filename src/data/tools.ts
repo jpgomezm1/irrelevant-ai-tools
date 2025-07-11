@@ -9451,11 +9451,11 @@ const tools: ToolCard[] = [
           description: "Guías y referencias para desarrolladores"
         },
         {
-          title: "Repositorio de Chonkie en GitHub",
-          url: "https://github.com/chonkie-inc",
-          type: "code",
-          description: "Código fuente y herramientas para desarrolladores"
-        }
+          title: "Documentación de Chonkie",
+          url: "https://docs.chonkie.ai/",
+          type: "article",
+          description: "Guías y referencias para desarrolladores"
+        },
       ],
       en: [
         {
@@ -9471,11 +9471,11 @@ const tools: ToolCard[] = [
           description: "Guides and references for developers"
         },
         {
-          title: "Chonkie GitHub Repository",
-          url: "https://github.com/chonkie-inc",
-          type: "code",
-          description: "Source code and developer tools"
-        }
+          title: "Chonkie Documentation",
+          url: "https://docs.chonkie.ai/",
+          type: "article",
+          description: "Guides and references for developers"
+        },
       ]
     },
     category: "technical",
@@ -11437,11 +11437,847 @@ const tools: ToolCard[] = [
     slug: "chunkr",
     featured: true,
     url: "https://chunkr.ai/"
-  }
-  
-  
-  
-  
+  },
+  {
+      id: "152",
+      name: "Capacitive AI",
+      description: {
+        es: "Permite a la IA interactuar y automatizar tareas en tus plataformas SaaS.",
+        en: "Enables AI to interact with and automate tasks across your SaaS platforms."
+      },
+      detailedDescription: {
+        es: "Capacitive AI proporciona la infraestructura para que los agentes de IA se conecten y operen en todo tu stack de software. Permite a la IA realizar tareas manuales como actualizar CRMs, realizar búsquedas empresariales y enviar facturas, liberando a los empleados para trabajos más estratégicos. Ofrece monitoreo centralizado y seguridad, y puede configurarse para requerir aprobación humana o funcionar de forma autónoma.",
+        en: "Capacitive AI provides the infrastructure for AI agents to connect and operate across your entire software stack. It enables AI to perform manual tasks like updating CRMs, performing enterprise searches, and sending invoices, freeing employees for more strategic work. It offers centralized monitoring and security, and can be configured to require human approval or run autonomously."
+      },
+      useCases: {
+        es: [
+          "Automatizar tareas repetitivas en plataformas SaaS (ej. actualizar CRMs)",
+          "Realizar búsquedas complejas en múltiples herramientas empresariales",
+          "Gestionar y enviar documentos como facturas o reportes",
+          "Supercargar otros agentes de IA con contexto rico y conexiones directas",
+          "Centralizar el monitoreo y la seguridad de las interacciones de IA con el software"
+        ],
+        en: [
+          "Automate repetitive tasks across SaaS platforms (e.g., updating CRMs)",
+          "Perform complex searches across multiple enterprise tools",
+          "Manage and send documents like invoices or reports",
+          "Supercharge other AI agents with rich context and direct connections",
+          "Centralize monitoring and security for AI interactions with software"
+        ]
+      },
+      resources: {
+        es: [
+          {
+            title: "Sitio oficial de Capacitive AI",
+            url: "https://www.capacitive.ai/",
+            type: "article",
+            description: "Explora cómo Capacitive AI puede automatizar tus flujos de trabajo empresariales."
+          }
+        ],
+        en: [
+          {
+            title: "Capacitive AI Official Site",
+            url: "https://www.capacitive.ai/",
+            type: "article",
+            description: "Explore how Capacitive AI can automate your enterprise workflows."
+          }
+        ]
+      },
+      category: "automation",
+      price: {
+        es: "Contactar para información de precios",
+        en: "Contact for pricing information"
+      },
+      difficulty: "intermediate",
+      logo: "https://www.capacitive.ai/logo.png",
+      slug: "capacitive-ai",
+      featured: true,
+      url: "https://www.capacitive.ai/"
+    },
+  {
+      id: "153",
+      tags: ["YC"],
+      name: "Workflow86",
+      description: {
+        es: "Plataforma de automatización de flujos de trabajo impulsada por IA para optimizar operaciones.",
+        en: "AI-powered workflow automation platform designed to streamline operations and processes."
+      },
+      detailedDescription: {
+        es: "Workflow86 es una plataforma que combina inteligencia artificial, intervención humana ('human-in-the-loop') y código personalizado para crear soluciones de automatización. Utiliza un 'AI Copilot' para planificar y construir automatizaciones a partir de descripciones de usuario, permitiendo la generación de contenido, análisis de datos, investigación web y más. Incluye un gestor de tareas para pasos que requieren revisión o aprobación humana y un motor de orquestación avanzado para flujos complejos con lógica condicional y ejecuciones paralelas. Se integra con sistemas existentes y permite la ejecución de código JavaScript o Python.",
+        en: "Workflow86 is a platform that combines AI, human-in-the-loop capabilities, and custom code to build automation solutions. It uses an 'AI Copilot' to plan and build automations from user descriptions, enabling content generation, data analysis, web research, and more. It includes a task manager for human review/approval steps and an advanced orchestration engine for complex flows with conditional logic and parallel runs. It integrates with existing systems and supports custom JavaScript or Python code execution."
+      },
+      useCases: {
+        es: [
+          "Automatización de gestión de leads y seguimiento de ventas",
+          "Programación de publicaciones en redes sociales y campañas de email marketing",
+          "Gestión automatizada de contratos y aprobaciones legales",
+          "Automatización de órdenes de compra y gestión de proveedores",
+          "Mejora de tiempos de respuesta en soporte al cliente con enrutamiento de tickets",
+          "Automatización de onboarding de empleados y flujos de RRHH",
+          "Procesamiento de facturas y gestión de nóminas en finanzas",
+          "Automatización de tickets y monitoreo de sistemas en TI"
+        ],
+        en: [
+          "Automating lead management and sales follow-ups",
+          "Scheduling social media posts and email marketing campaigns",
+          "Automated contract management and legal approvals",
+          "Automating purchase orders and vendor management",
+          "Improving customer support response times with ticket routing",
+          "Automating employee onboarding and HR workflows",
+          "Processing invoices and managing payroll in finance",
+          "Automating tickets and system monitoring in IT"
+        ]
+      },
+      resources: {
+        es: [
+          {
+            title: "Sitio oficial de Workflow86",
+            url: "https://www.workflow86.com/",
+            type: "article",
+            description: "Página principal de la plataforma de automatización impulsada por IA."
+          },
+          {
+            title: "¿Cómo funciona Workflow86?",
+            url: "https://www.workflow86.com/how-it-works",
+            type: "article",
+            description: "Descripción detallada del proceso de automatización con AI Copilot."
+          }
+        ],
+        en: [
+          {
+            title: "Workflow86 Official Site",
+            url: "https://www.workflow86.com/",
+            type: "article",
+            description: "Homepage of the AI-powered automation platform."
+          },
+          {
+            title: "How Workflow86 Works",
+            url: "https://www.workflow86.com/how-it-works",
+            type: "article",
+            description: "Detailed description of the automation process with AI Copilot."
+          }
+        ]
+      },
+      category: "automation",
+      price: {
+        es: "Contactar para información de precios",
+        en: "Contact for pricing information"
+      },
+      difficulty: "intermediate",
+      logo: "hhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVkx8qBqpnvuQAkfpHmiLRNKzIV-JC1ihTmg&s",
+      slug: "workflow86",
+      featured: false,
+      url: "https://www.workflow86.com/"
+    },
+  {
+      id: "154",
+      tags: ["Developer Tools", "Git", "Collaboration", "IDE"],
+      name: "GitKraken",
+      description: {
+        es: "Plataforma DevEx con herramientas Git que mejoran la velocidad del equipo y la colaboración de desarrolladores.",
+        en: "DevEx platform offering a suite of legendary Git tools designed to enhance team velocity and collaboration for developers."
+      },
+      detailedDescription: {
+        es: "GitKraken es una suite de herramientas Git que simplifica los flujos de trabajo de desarrollo y mejora la experiencia del desarrollador. Ofrece visualización de datos complejos de Git, minimiza distracciones para un trabajo enfocado, facilita la colaboración en equipos distribuidos y se integra con stacks tecnológicos existentes. Incluye herramientas como GitKraken Desktop, GitLens para VS Code, GitKraken CLI y GitKraken.dev, con funcionalidades como gráficos de commit, gestión de tareas, espacios de trabajo compartidos y sincronización en tiempo real.",
+        en: "GitKraken is a suite of Git tools that simplifies development workflows and improves the developer experience. It offers visualization of complex Git data, minimizes distractions for focused work, facilitates collaboration for distributed teams, and integrates with existing tech stacks. It includes tools like GitKraken Desktop, GitLens for VS Code, GitKraken CLI, and GitKraken.dev, with features like commit graphs, task management, shared workspaces, and real-time synchronization."
+      },
+      useCases: {
+        es: [
+          "Visualización del historial de Git y resolución de conflictos de fusión",
+          "Colaboración en equipo a través de espacios de trabajo compartidos",
+          "Revisión de solicitudes de extracción (PR) y código",
+          "Integración con plataformas como GitHub, GitLab, Bitbucket, Azure y Jira",
+          "Gestión de tareas y flujo de trabajo para desarrolladores individuales y equipos",
+          "Simplificación de la gestión de múltiples repositorios y onboarding de nuevos miembros"
+        ],
+        en: [
+          "Visualizing Git history and resolving merge conflicts",
+          "Team collaboration through shared workspaces",
+          "Pull Request (PR) and code review",
+          "Integration with platforms like GitHub, GitLab, Bitbucket, Azure, and Jira",
+          "Task and workflow management for individual developers and teams",
+          "Simplifying multi-repo management and new member onboarding"
+        ]
+      },
+      resources: {
+        es: [
+          {
+            title: "Sitio oficial de GitKraken",
+            url: "https://www.gitkraken.com/",
+            type: "article",
+            description: "Descubre las herramientas Git legendarias para equipos de desarrollo."
+          },
+          {
+            title: "Características de GitKraken",
+            url: "https://www.gitkraken.com/features",
+            type: "article",
+            description: "Explora todas las funcionalidades que ofrece la plataforma."
+          }
+        ],
+        en: [
+          {
+            title: "GitKraken Official Site",
+            url: "https://www.gitkraken.com/",
+            type: "article",
+            description: "Discover the legendary Git tools for development teams."
+          },
+          {
+            title: "GitKraken Features",
+            url: "https://www.gitkraken.com/features",
+            type: "article",
+            description: "Explore all the functionalities offered by the platform."
+          }
+        ]
+      },
+      category: "technical",
+      price: {
+        es: "Planes gratuitos y de pago disponibles",
+        en: "Free and paid plans available"
+      },
+      difficulty: "beginner",
+      logo: "https://cdn.worldvectorlogo.com/logos/gitkraken.svg",
+      slug: "gitkraken",
+      featured: true,
+      url: "https://www.gitkraken.com/"
+    },
+  {
+      id: "155",
+      tags: ["irrelevant"],
+      name: "Upstash",
+      description: {
+        es: "Plataforma de datos serverless que ofrece Redis, Vector, QStash, Workflow y Search.",
+        en: "Serverless data platform providing Redis, Vector, QStash, Workflow, and Search."
+      },
+      detailedDescription: {
+        es: "Upstash es una plataforma de datos diseñada para entornos serverless, ofreciendo baja latencia global gracias a su replicación de datos en múltiples regiones. Funciona con APIs basadas en HTTP, además de soportar clientes estándar vía el protocolo Redis, y tiene un modelo de precios por solicitud que escala a cero. Ofrece alta disponibilidad, escalabilidad infinita, almacenamiento persistente y está optimizado para funciones serverless y de 'edge'.",
+        en: "Upstash is a data platform designed for serverless environments, offering global low latency due to its multi-region data replication. It operates with HTTP-based APIs, in addition to supporting standard clients via the Redis protocol, and has a per-request pricing model that scales to zero. It offers high availability, infinite scalability, persistent storage, and is optimized for serverless and edge functions."
+      },
+      useCases: {
+        es: [
+          "Caché de datos para aplicaciones de alta concurrencia",
+          "Gestión de sesiones de usuario en aplicaciones web",
+          "Implementación de límites de tasa (rate limiting)",
+          "Creación de tablas de clasificación (leaderboards)",
+          "Desarrollo de aplicaciones de chat en tiempo real",
+          "Almacenamiento y búsqueda de vectores para aplicaciones de IA/ML"
+        ],
+        en: [
+          "Data caching for high-concurrency applications",
+          "User session management in web applications",
+          "Implementing rate limiting",
+          "Creating leaderboards",
+          "Developing real-time chat applications",
+          "Storing and searching vectors for AI/ML applications"
+        ]
+      },
+      resources: {
+        es: [
+          {
+            title: "Sitio oficial de Upstash",
+            url: "https://upstash.com/",
+            type: "article",
+            description: "Plataforma de datos serverless para Redis, Vector, QStash y más."
+          },
+          {
+            title: "Documentación de Upstash",
+            url: "https://docs.upstash.com/",
+            type: "article",
+            description: "Guías detalladas y referencia de la API para los servicios de Upstash."
+          }
+        ],
+        en: [
+          {
+            title: "Upstash Official Site",
+            url: "https://upstash.com/",
+            type: "article",
+            description: "Serverless data platform for Redis, Vector, QStash, and more."
+          },
+          {
+            title: "Upstash Documentation",
+            url: "https://docs.upstash.com/",
+            type: "article",
+            description: "Detailed guides and API reference for Upstash services."
+          }
+        ]
+      },
+      category: "technical",
+      price: {
+        es: "Modelo de pago por uso, con nivel gratuito y límite de precio",
+        en: "Pay-per-request model, with free tier and price cap"
+      },
+      difficulty: "intermediate",
+      logo: "https://upstash.com/logo/upstash-icon-white-bg.png",
+      slug: "upstash",
+      featured: true,
+      url: "https://upstash.com/"
+    },
+  {
+      id: "156",
+      name: "Cluely",
+      description: {
+        es: "Herramienta de IA que proporciona inteligencia contextual en tiempo real durante actividades informáticas, como reuniones y llamadas.",
+        en: "AI tool providing real-time, context-aware intelligence during computer activities like meetings and calls."
+      },
+      detailedDescription: {
+        es: "Cluely opera viendo lo que hay en tu pantalla y escuchando lo que oyes, ofreciendo respuestas relevantes sin unirse activamente a reuniones ni aparecer en pantallas compartidas. Escucha en segundo plano y comprende el contenido de la pantalla y el audio, respondiendo instantáneamente con información contextual cuando se presiona una tecla. Es indetectable para otros participantes y herramientas externas, y su ventana es movible para no interrumpir el flujo de trabajo.",
+        en: "Cluely operates by seeing what's on your screen and hearing what you hear, providing relevant responses without actively joining meetings or appearing in shared screens. It silently listens in the background, understands screen content and audio, and responds instantly with contextual information when a key is pressed. It's undetectable to other participants and external tools, and its window is movable to avoid breaking workflow."
+      },
+      useCases: {
+        es: [
+          "Asistencia en tiempo real durante reuniones, respondiendo preguntas y recordando información",
+          "Apoyo en llamadas de ventas, manejando objeciones y proporcionando información de producto",
+          "Ayuda en el trabajo individual profundo (estudio, depuración, escritura, investigación) leyendo la pantalla y respondiendo a las indicaciones",
+          "Evitar el cambio de pestañas para buscar información durante el trabajo en el ordenador"
+        ],
+        en: [
+          "Real-time assistance during meetings, answering questions and recalling information",
+          "Support on sales calls, handling objections and providing product information",
+          "Assistance during solo deep work (studying, debugging, writing, researching) by reading the screen and responding to prompts",
+          "Avoiding tab switching to find information during computer work"
+        ]
+      },
+      resources: {
+        es: [
+          {
+            title: "Sitio oficial de Cluely",
+            url: "https://cluely.com/",
+            type: "article",
+            description: "Descubre cómo Cluely te da una ventaja de IA en tiempo real."
+          },
+          {
+            title: "Preguntas Frecuentes sobre Cluely",
+            url: "https://cluely.com/faq",
+            type: "article",
+            description: "Respuestas a preguntas comunes sobre la funcionalidad y privacidad de Cluely."
+          }
+        ],
+        en: [
+          {
+            title: "Cluely Official Site",
+            url: "https://cluely.com/",
+            type: "article",
+            description: "Discover how Cluely gives you a real-time AI edge."
+          },
+          {
+            title: "Cluely FAQ",
+            url: "https://cluely.com/faq",
+            type: "article",
+            description: "Answers to common questions about Cluely's functionality and privacy."
+          }
+        ]
+      },
+      category: "dairy",
+      price: {
+        es: "Modelo de suscripción (contactar para detalles)",
+        en: "Subscription model (contact for details)"
+      },
+      difficulty: "beginner",
+      logo: "https://avatars.githubusercontent.com/u/202236240?s=200&v=4",
+      slug: "cluely",
+      featured: true,
+      url: "https://cluely.com/"
+    },
+  {
+      id: "157",
+      name: "Captain Data",
+      description: {
+        es: "API de datos de intención para potenciar la inteligencia de ventas, revelando perfiles de compradores y señales en tiempo real.",
+        en: "Intent Data API designed to supercharge sales intelligence by uncovering buyer profiles and signals at scale and in real-time."
+      },
+      detailedDescription: {
+        es: "Captain Data ofrece una suite de APIs para extraer, enriquecer e integrar datos web, enfocándose en perfiles de compradores (personas y empresas), señales de intención (carrera, social, reseñas) y engagement. Construida para desarrolladores, integra más de 30 fuentes web como LinkedIn y Google Maps, y automatiza flujos de trabajo con plantillas preconstruidas. Destaca por su escalabilidad y estabilidad, especialmente para datos de LinkedIn, procesando millones de transacciones API mensualmente.",
+        en: "Captain Data offers a suite of APIs to extract, enrich, and integrate web data, focusing on buyer profiles (people and companies), intent signals (career, social, reviews), and engagement. Built for developers, it integrates over 30 web sources like LinkedIn and Google Maps, and automates workflows with pre-built templates. It stands out for its scalability and stability, especially for LinkedIn data, processing millions of API transactions monthly."
+      },
+      useCases: {
+        es: [
+          "Crear software SaaS de ventas más rápido con APIs y acciones automatizadas",
+          "Potenciar agentes y herramientas de IA con datos de intención de LinkedIn",
+          "Convertir datos web en una ventaja competitiva para equipos de ventas y operaciones de ingresos",
+          "Automatizar la generación de leads y el enriquecimiento de bases de datos",
+          "Automatizar tareas en LinkedIn, como solicitudes de conexión y extracción de perfiles",
+          "Extraer y enriquecer datos de empresas y contactos para ventas"
+        ],
+        en: [
+          "Building sales SaaS software faster with APIs and automated actions",
+          "Powering AI agents and tools with LinkedIn intent data",
+          "Turning web data into a competitive edge for sales and revenue operations teams",
+          "Automating lead generation and database enrichment",
+          "Automating tasks on LinkedIn, such as connection requests and profile extraction",
+          "Extracting and enriching company and contact data for sales"
+        ]
+      },
+      resources: {
+        es: [
+          {
+            title: "Sitio oficial de Captain Data",
+            url: "https://www.captaindata.com/",
+            type: "article",
+            description: "La API de datos de intención para potenciar tu inteligencia de ventas."
+          },
+          {
+            title: "Documentación de la API de Captain Data",
+            url: "https://docs.captaindata.com/",
+            type: "article",
+            description: "Referencia completa de la API y guías para desarrolladores."
+          }
+        ],
+        en: [
+          {
+            title: "Captain Data Official Site",
+            url: "https://www.captaindata.com/",
+            type: "article",
+            description: "The intent data API to supercharge your sales intelligence."
+          },
+          {
+            title: "Captain Data API Documentation",
+            url: "https://docs.captaindata.com/",
+            type: "article",
+            description: "Comprehensive API reference and developer guides."
+          }
+        ]
+      },
+      category: "sales",
+      price: {
+        es: "Planes de pago (contactar para detalles)",
+        en: "Paid plans (contact for details)"
+      },
+      difficulty: "advanced",
+      logo: "https://cdn.prod.website-files.com/655b8092803c160e897db87b/6566140600f7387cb317d9ff_63c915b4185e340898ba1c6a_cd_logo.svg",
+      slug: "captain-data",
+      featured: true,
+      url: "https://www.captaindata.com/"
+    },
+  {
+      id: "158",
+      tags: ["irrelevant", "Top"],
+      name: "Reclaim.ai",
+      description: {
+        es: "Aplicación de calendario con IA para proteger el tiempo, mejorar el enfoque y automatizar la programación.",
+        en: "AI calendar app and scheduling tool to protect time, improve focus, and automate scheduling."
+      },
+      detailedDescription: {
+        es: "Reclaim.ai se conecta a tu calendario y utiliza IA para defender el tiempo para diversas actividades, sin entrenar la IA con datos de usuario. Automatiza la programación, encuentra los momentos óptimos para eventos y analiza el uso del tiempo. Ofrece funcionalidades como 'Focus Time' para trabajo concentrado, 'Hábitos' para rutinas, 'Tareas' para programar flexiblemente, 'Smart Meetings' para encontrar mejores horarios de reunión, y 'Scheduling Links' para compartir disponibilidad. También incluye tiempo de búfer automático y sincronización de calendario.",
+        en: "Reclaim.ai connects to your calendar and uses AI to defend time for various activities, without training AI on user data. It automates scheduling, finds optimal times for events, and analyzes time usage. It offers features like 'Focus Time' for deep work, 'Habits' for routines, 'Tasks' for flexible scheduling, 'Smart Meetings' for finding best meeting times, and 'Scheduling Links' to share availability. It also includes automatic buffer time and calendar sync."
+      },
+      useCases: {
+        es: [
+          "Proteger el tiempo de enfoque para trabajo concentrado",
+          "Automatizar la programación de hábitos y rutinas diarias",
+          "Encontrar los mejores horarios para reuniones entre múltiples participantes",
+          "Optimizar la planificación de proyectos y la asignación de tareas para equipos",
+          "Mejorar el equilibrio entre vida laboral y personal analizando el uso del tiempo",
+          "Acelerar la reserva de reuniones y la gestión de la agenda para asistentes ejecutivos"
+        ],
+        en: [
+          "Protecting focus time for deep work",
+          "Automating the scheduling of daily habits and routines",
+          "Finding the best times for meetings among multiple attendees",
+          "Optimizing project planning and task allocation for teams",
+          "Improving work-life balance by analyzing time usage",
+          "Accelerating meeting booking and agenda management for executive assistants"
+        ]
+      },
+      resources: {
+        es: [
+          {
+            title: "Sitio oficial de Reclaim.ai",
+            url: "https://reclaim.ai/",
+            type: "article",
+            description: "Recupera tu tiempo con la aplicación de calendario inteligente."
+          },
+          {
+            title: "Características de Reclaim.ai",
+            url: "https://reclaim.ai/features",
+            type: "article",
+            description: "Descripción completa de todas las funcionalidades de la herramienta."
+          }
+        ],
+        en: [
+          {
+            title: "Reclaim.ai Official Site",
+            url: "https://reclaim.ai/",
+            type: "article",
+            description: "Reclaim your time with the intelligent calendar app."
+          },
+          {
+            title: "Reclaim.ai Features",
+            url: "https://reclaim.ai/features",
+            type: "article",
+            description: "Full description of all the tool's functionalities."
+          }
+        ]
+      },
+      category: "productivity",
+      price: {
+        es: "Plan gratuito disponible, planes de pago desde $8 USD/mes",
+        en: "Free plan available, paid plans from $8 USD/month"
+      },
+      difficulty: "beginner",
+      logo: "https://cdn.prod.website-files.com/5f15081919fdf673994ab5fd/64a4c06e6315a23d4ecf975c_Reclaim-Logo.svg",
+      slug: "reclaim-ai",
+      featured: true,
+      url: "https://reclaim.ai/"
+    },
+  {
+      id: "159",
+      tags: ["irrelevant", "Top"],
+      name: "Mem.ai",
+      description: {
+        es: "Aplicación de notas impulsada por IA para almacenar y recuperar pensamientos e información sin organización manual.",
+        en: "AI notes app designed to store thoughts and information without the need for manual organization."
+      },
+      detailedDescription: {
+        es: "Mem.ai funciona como un 'cerebro extendido' que utiliza IA para gestionar tus notas. Su función 'Mem Chat' permite a la IA responder preguntas, resumir y redactar contenido basándose en tus notas. También muestra 'Notas Relacionadas' automáticamente y ofrece 'Colecciones' impulsadas por IA para una organización simplificada. La 'Búsqueda Inteligente' utiliza IA para encontrar notas rápidamente más allá de las palabras clave. Soporta modo de voz, colaboración, formato familiar y sincronización en tiempo real.",
+        en: "Mem.ai acts as an 'extended brain' leveraging AI to manage your notes. Its 'Mem Chat' feature allows AI to answer questions, summarize, and draft content based on your notes. It also automatically shows 'Related Notes' and offers AI-powered 'Collections' for simplified organization. 'Smart Search' uses AI to quickly find notes beyond keywords. It supports voice mode, collaboration, familiar formatting, and real-time syncing."
+      },
+      useCases: {
+        es: [
+          "Tomar notas y organizarlas automáticamente con IA",
+          "Responder preguntas y resumir reuniones basándose en tus propias notas",
+          "Generar borradores de contenido (ej. pitches, especificaciones, estrategias) a partir de información almacenada",
+          "Descubrir conexiones entre ideas y notas sin categorización manual",
+          "Almacenar y recuperar rápidamente cualquier pensamiento o información para emprendedores, creadores de contenido, etc.",
+          "Gestión de conocimiento personal y colaboración en equipo"
+        ],
+        en: [
+          "Taking notes and automatically organizing them with AI",
+          "Answering questions and summarizing meetings based on your own notes",
+          "Drafting content (e.g., pitches, specs, strategies) from stored information",
+          "Discovering connections between ideas and notes without manual categorization",
+          "Quickly storing and retrieving any thought or information for entrepreneurs, content creators, etc.",
+          "Personal knowledge management and team collaboration"
+        ]
+      },
+      resources: {
+        es: [
+          {
+            title: "Sitio oficial de Mem.ai",
+            url: "https://get.mem.ai/",
+            type: "article",
+            description: "Tu cerebro extendido impulsado por IA para todas tus ideas."
+          },
+          {
+            title: "Introducción a Mem",
+            url: "https://get.mem.ai/onboarding",
+            type: "article",
+            description: "Guía para empezar a usar Mem y sus funcionalidades principales."
+          }
+        ],
+        en: [
+          {
+            title: "Mem.ai Official Site",
+            url: "https://get.mem.ai/",
+            type: "article",
+            description: "Your AI-powered extended brain for all your ideas."
+          },
+          {
+            title: "Getting Started with Mem",
+            url: "https://get.mem.ai/onboarding",
+            type: "article",
+            description: "Guide to getting started with Mem and its core functionalities."
+          }
+        ]
+      },
+      category: "productivity",
+      price: {
+        es: "Plan gratuito disponible, planes de pago con funciones avanzadas",
+        en: "Free plan available, paid plans with advanced features"
+      },
+      difficulty: "beginner",
+      logo: "https://storage.googleapis.com/mem-public-assets/sq-f.jpg",
+      slug: "mem-ai",
+      featured: true,
+      url: "https://get.mem.ai/"
+    },
+  ,
+{
+    id: "160",
+    tags: ["irrelevant"],
+    name: "Unkey",
+    description: {
+      es: "Plataforma de desarrollo para integrar funciones esenciales de API como claves, límites de tasa y análisis de uso.",
+      en: "Developer platform to integrate essential API features like API keys, rate limiting, and usage analytics."
+    },
+    detailedDescription: {
+      es: "Unkey simplifica la seguridad y el control de acceso de APIs mediante SDKs amigables para desarrolladores, una API REST intuitiva y una especificación OpenAPI. Permite crear, verificar y expirar claves de API, configurar límites de tasa, y obtener análisis de uso en tiempo real. Ofrece seguridad robusta con claves hasheadas y auditoría, y garantiza baja latencia global para un rendimiento rápido. También facilita la monetización al rastrear el uso.",
+      en: "Unkey simplifies API security and access control through developer-friendly SDKs, an intuitive REST API, and an OpenAPI spec. It allows creating, verifying, and expiring API keys, configuring rate limits, and gaining real-time usage analytics. It offers robust security with hashed keys and auditing, and ensures global low latency for fast performance. It also facilitates monetization by tracking usage."
+    },
+    useCases: {
+      es: [
+        "Asegurar APIs con control de acceso robusto y revocación instantánea de claves",
+        "Implementar límites de tasa eficientes para prevenir abusos y garantizar un uso justo",
+        "Obtener información en tiempo real sobre el uso de la API para monitoreo y análisis de negocio",
+        "Monetizar APIs rastreando y facturando en función del uso",
+        "Garantizar un rendimiento de baja latencia global para las APIs",
+        "Agilizar el desarrollo y la implementación de APIs con SDKs e integraciones"
+      ],
+      en: [
+        "Securing APIs with robust access control and instant key revocation",
+        "Implementing efficient rate limiting to prevent abuse and ensure fair usage",
+        "Gaining real-time insights into API usage for monitoring and business intelligence",
+        "Monetizing APIs by tracking and billing based on usage",
+        "Ensuring low-latency API performance globally",
+        "Streamlining API development and deployment with SDKs and integrations"
+      ]
+    },
+    resources: {
+      es: [
+        {
+          title: "Sitio oficial de Unkey",
+          url: "https://www.unkey.com/",
+          type: "article",
+          description: "La plataforma de desarrolladores para un acceso a la API sencillo y seguro."
+        },
+        {
+          title: "Documentación de Unkey",
+          url: "https://unkey.com/docs",
+          type: "article",
+          description: "Guías detalladas, referencia de la API y ejemplos de uso."
+        }
+      ],
+      en: [
+        {
+          title: "Unkey Official Site",
+          url: "https://www.unkey.com/",
+          type: "article",
+          description: "The developer platform for easy and secure API access."
+        },
+        {
+          title: "Unkey Documentation",
+          url: "https://unkey.com/docs",
+          type: "article",
+          description: "Detailed guides, API reference, and usage examples."
+        }
+      ]
+    },
+    category: "technical",
+    price: {
+      es: "Plan gratuito disponible, planes de pago escalables",
+      en: "Free tier available, scalable paid plans"
+    },
+    difficulty: "intermediate",
+    logo: "https://2025.allthingsopen.org/wp-content/uploads/2024/05/Gold_Unkey-1.jpg",
+    slug: "unkey",
+    featured: true,
+    url: "https://www.unkey.com/"
+  },
+,
+{
+    id: "161",
+    name: "Assistant UI",
+    description: {
+      es: "Librería TypeScript/React para construir interfaces de chat de IA, con componentes personalizables y gestión de estado.",
+      en: "TypeScript/React library for building AI chat interfaces, with customizable components and state management."
+    },
+    detailedDescription: {
+      es: "Assistant-ui es una herramienta que facilita la creación rápida de interfaces de chat de IA de alta calidad. Proporciona componentes front-end primitivos y capas de gestión de estado, permitiendo a los desarrolladores centrarse en las características únicas de sus aplicaciones. Ofrece interfaces de chat instantáneas y personalizables, gestión robusta de estado para interacciones de chat (optimizada para streaming y renderizado eficiente), alto rendimiento y es agnóstica a frameworks (compatible con Vercel AI SDK, conexiones directas LLM o soluciones personalizadas, y cualquier framework basado en React).",
+      en: "Assistant-ui is a tool that facilitates the rapid creation of high-quality AI chat interfaces. It provides frontend primitive components and state management layers, allowing developers to focus on the unique features of their applications. It offers instant and customizable chat interfaces, robust state management for chat interactions (optimized for streaming and efficient rendering), high performance, and is framework agnostic (compatible with Vercel AI SDK, direct LLM connections, or custom solutions, and any React-based framework)."
+    },
+    useCases: {
+      es: [
+        "Construir clones de ChatGPT o interfaces de chat personalizadas.",
+        "Desarrollar chatbots de soporte al cliente impulsados por IA.",
+        "Implementar asistentes de IA dentro de aplicaciones existentes.",
+        "Crear aplicaciones multi-agente complejas con interfaces de chat interactivas."
+      ],
+      en: [
+        "Building ChatGPT clones or custom chat interfaces.",
+        "Developing AI-powered customer support chatbots.",
+        "Implementing AI assistants within existing applications.",
+        "Creating complex multi-agent applications with interactive chat interfaces."
+      ]
+    },
+    resources: {
+      es: [
+        {
+          title: "Sitio oficial de Assistant UI",
+          url: "https://www.assistant-ui.com/",
+          type: "article",
+          description: "La librería TypeScript/React para chat de IA."
+        },
+        {
+          title: "Documentación de Assistant UI",
+          url: "https://www.assistant-ui.com/docs/about-assistantui",
+          type: "article",
+          description: "Información detallada sobre cómo funciona y sus características."
+        }
+      ],
+      en: [
+        {
+          title: "Assistant UI Official Site",
+          url: "https://www.assistant-ui.com/",
+          type: "article",
+          description: "The TypeScript/React library for AI chat."
+        },
+        {
+          title: "Assistant UI Documentation",
+          url: "https://www.assistant-ui.com/docs/about-assistantui",
+          type: "article",
+          description: "Detailed information on how it works and its features."
+        }
+      ]
+    },
+    category: "technical",
+    price: {
+      es: "Código abierto, planes de pago para servicios en la nube (Assistant Cloud)",
+      en: "Open-source, paid plans for cloud services (Assistant Cloud)"
+    },
+    difficulty: "intermediate",
+    logo: "https://media.licdn.com/dms/image/v2/D4E0BAQHEr0ToV8PNyA/company-logo_200_200/company-logo_200_200/0/1726549100401/assistant_ui_logo?e=2147483647&v=beta&t=R81lTCF1Putsjs8lrDl-V4wr7-avv5rZBeltk0VGxTU",
+    slug: "assistant-ui",
+    featured: true,
+    url: "https://www.assistant-ui.com/"
+  },
+{
+    id: "162",
+    name: "Prompt Kit",
+    description: {
+      es: "Conjunto de componentes de UI personalizables para construir experiencias de chat de IA y asistentes.",
+      en: "Set of customizable UI components for building AI chat experiences and assistants."
+    },
+    detailedDescription: {
+      es: "Prompt Kit es una librería de componentes de alta calidad diseñada para aplicaciones de IA, facilitando la creación rápida y estética de interfaces de chat, agentes de IA y asistentes autónomos. Está construida sobre shadcn/ui y es de código abierto. Ofrece componentes como `PromptInput` para la entrada de texto (con estado de carga, altura máxima y callbacks), `PromptInputActions` para añadir acciones con tooltips, y `PromptInputTextarea` para el área de texto (con ajuste de altura automático y manejo de eventos de teclado).",
+      en: "Prompt Kit is a set of high-quality components designed for AI applications, making it easy to quickly and aesthetically build chat interfaces, AI agents, and autonomous assistants. It's built on shadcn/ui and is open source. It offers components such as `PromptInput` for text input (with loading state, max height, and callbacks), `PromptInputActions` for adding actions with tooltips, and `PromptInputTextarea` for the textarea (with auto-height adjustment and keyboard event handling)."
+    },
+    useCases: {
+      es: [
+        "Diseñar interfaces de chat de IA personalizadas para diversas aplicaciones.",
+        "Crear componentes de entrada de texto interactivos para modelos de IA.",
+        "Desarrollar la interfaz de usuario para agentes de IA y asistentes autónomos.",
+        "Implementar funcionalidades de chat con soporte para streaming y rendimiento optimizado."
+      ],
+      en: [
+        "Designing custom AI chat interfaces for various applications.",
+        "Creating interactive text input components for AI models.",
+        "Developing the user interface for AI agents and autonomous assistants.",
+        "Implementing chat functionalities with support for streaming and optimized performance."
+      ]
+    },
+    resources: {
+      es: [
+        {
+          title: "Sitio oficial de Prompt Kit",
+          url: "https://www.prompt-kit.com/",
+          type: "article",
+          description: "La librería de componentes de UI para aplicaciones de IA."
+        },
+        {
+          title: "Documentación de Prompt Kit (Introducción)",
+          url: "https://www.prompt-kit.com/docs/introduction",
+          type: "article",
+          description: "Visión general de la librería Prompt Kit y sus principios de diseño."
+        },
+        {
+          title: "Componente PromptInput de Prompt Kit",
+          url: "https://www.prompt-kit.com/docs/prompt-input",
+          type: "article",
+          description: "Detalles sobre el componente de entrada de texto principal de Prompt Kit."
+        }
+      ],
+      en: [
+        {
+          title: "Prompt Kit Official Site",
+          url: "https://www.prompt-kit.com/",
+          type: "article",
+          description: "The UI component library for AI applications."
+        },
+        {
+          title: "Prompt Kit Documentation (Introduction)",
+          url: "https://www.prompt-kit.com/docs/introduction",
+          type: "article",
+          description: "Overview of the Prompt Kit library and its design principles."
+        },
+        {
+          title: "Prompt Kit PromptInput Component",
+          url: "https://www.prompt-kit.com/docs/prompt-input",
+          type: "article",
+          description: "Details on Prompt Kit's main text input component."
+        }
+      ]
+    },
+    category: "technical",
+    price: {
+      es: "Código abierto",
+      en: "Open source"
+    },
+    difficulty: "intermediate",
+    logo: "https://promptkitstudio.com/cdn/shop/files/prompt_kit_studio_pro_square.png?height=628&pad_color=ffffff&v=1750342403&width=1200",
+    slug: "prompt-kit",
+    featured: false,
+    url: "https://www.prompt-kit.com/"
+  },
+{
+    id: "163",
+    tags: ["YC"],
+    name: "Issen",
+    description: {
+      es: "Tutor de voz en tiempo real impulsado por IA para el aprendizaje de idiomas, que se adapta al usuario.",
+      en: "Real-time AI-powered voice tutor for language learning, adapting to user's goals, level, interests, and learning style."
+    },
+    detailedDescription: {
+      es: "ISSEN es un tutor de voz de IA que transforma el aprendizaje de idiomas al ofrecer una experiencia conversacional natural y fluida. Es multilingüe, comprendiendo la lengua nativa del usuario y el idioma objetivo. Se adapta a los intereses y estilo de aprendizaje del usuario, ofreciendo lecciones de gramática o conversaciones casuales 24/7. Su objetivo es replicar la conexión y efectividad de un maestro humano, proporcionando un espacio real para practicar, recibir retroalimentación y mejorar habilidades en una amplia gama de idiomas.",
+      en: "ISSEN is an AI voice tutor that transforms language learning by offering a natural and fluid conversational experience. It is multilingual, understanding the user's native language and the target language. It adapts to the user's interests and learning style, offering grammar lessons or casual conversations 24/7. Its goal is to replicate the connection and effectiveness of a human teacher, providing a real space to practice, receive feedback, and improve skills in a wide range of languages."
+    },
+    useCases: {
+      es: [
+        "Autoaprendizaje de idiomas a través de conversación en tiempo real.",
+        "Practicar la fluidez y pronunciación en un entorno sin juicios.",
+        "Mejorar la gramática y el vocabulario mediante lecciones adaptadas.",
+        "Obtener retroalimentación personalizada y adaptable al estilo de aprendizaje.",
+        "Aprender una amplia variedad de idiomas disponibles 24/7.",
+        "Mantener la práctica del idioma cuando no se vive en un entorno de inmersión."
+      ],
+      en: [
+        "Self-paced language learning through real-time conversation.",
+        "Practicing fluency and pronunciation in a judgment-free environment.",
+        "Improving grammar and vocabulary through adapted lessons.",
+        "Receiving personalized and adaptable feedback according to learning style.",
+        "Learning a wide variety of languages available 24/7.",
+        "Maintaining language practice when not living in an immersive environment."
+      ]
+    },
+    resources: {
+      es: [
+        {
+          title: "Sitio oficial de Issen (Español)",
+          url: "https://www.issen.com/es/",
+          type: "article",
+          description: "Descubre el tutor de voz de IA para el aprendizaje de idiomas."
+        },
+        {
+          title: "Preguntas Frecuentes de Issen",
+          url: "https://www.issen.com/faq",
+          type: "article",
+          description: "Respuestas a preguntas comunes sobre el funcionamiento y los beneficios de Issen."
+        }
+      ],
+      en: [
+        {
+          title: "Issen Official Site (English)",
+          url: "https://www.issen.com/",
+          type: "article",
+          description: "Discover the AI voice tutor for language learning."
+        },
+        {
+          title: "Issen FAQ",
+          url: "https://www.issen.com/faq",
+          type: "article",
+          description: "Answers to common questions about Issen's functionality and benefits."
+        }
+      ]
+    },
+    category: "productivity",
+    price: {
+      es: "Plan gratuito disponible con tiempo de conversación limitado, planes de pago para acceso ilimitado.",
+      en: "Free plan available with limited conversation time, paid plans for unlimited access."
+    },
+    difficulty: "beginner",
+    logo: "https://framerusercontent.com/assets/wFKE3LxDyM31ZcttUay8bHp35yg.png",
+    slug: "issen",
+    featured: true,
+    url: "https://www.issen.com/es/"
+  }
+   
   
 ];
 
