@@ -151,15 +151,7 @@ const ToolCard: React.FC<ToolCardProps> = ({ tool, language }) => {
         </div>
         
         {/* CTA button */}
-        <div className="mt-auto">
-          <div className="bg-gradient-to-r from-[#8B5FFF]/20 to-[#7C3AED]/20 border-t border-[#8B5FFF]/30 p-4 group-hover:from-[#8B5FFF]/30 group-hover:to-[#7C3AED]/30 transition-all duration-300">
-            <div className="flex items-center justify-center space-x-2 text-[#8B5FFF] group-hover:text-white font-semibold text-sm transition-colors duration-300">
-              <span>{language === "es" ? "Explorar Herramienta" : "Explore Tool"}</span>
-              <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-300" />
-            </div>
-          </div>
-        </div>
-
+        
         {/* External link button - más discreto */}
         <a 
           href={tool.url} 

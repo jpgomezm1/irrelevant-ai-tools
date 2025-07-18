@@ -10453,7 +10453,7 @@ const tools: ToolCard[] = [
       en: "Invisible AI assistant for meetings and interviews"
     },
     detailedDescription: {
-      es: "Cluely es una herramienta de inteligencia artificial que proporciona asistencia en tiempo real durante reuniones, entrevistas y otras interacciones virtuales. Funciona de manera invisible, leyendo la pantalla y escuchando el audio para generar respuestas inteligentes bajo demanda, sin ser detectado por otros participantes.",
+      es: "Cluely es una herramienta que proporciona asistencia en tiempo real durante reuniones, entrevistas y otras interacciones virtuales. Funciona de manera invisible, leyendo la pantalla y escuchando el audio para generar respuestas inteligentes bajo demanda, sin ser detectado por otros participantes.",
       en: "Cluely is an AI tool that provides real-time assistance during meetings, interviews, and other virtual interactions. It operates invisibly, reading the screen and listening to audio to generate intelligent responses on demand, without being detected by other participants."
     },
     useCases: {
@@ -11718,7 +11718,7 @@ const tools: ToolCard[] = [
           id: "156",
           name: "Cluely",
           description: {
-            es: "Herramienta de IA que proporciona inteligencia contextual en tiempo real durante actividades informáticas, como reuniones y llamadas.",
+            es: "Herramienta que proporciona inteligencia contextual en tiempo real durante actividades como reuniones y llamadas.",
             en: "AI tool providing real-time, context-aware intelligence during computer activities like meetings and calls."
           },
           detailedDescription: {
@@ -11771,8 +11771,8 @@ const tools: ToolCard[] = [
           },
           category: "dairy",
           price: {
-            es: "Modelo de suscripción (contactar para detalles)",
-            en: "Subscription model (contact for details)"
+            es: "20 USD x mes",
+            en: "20 USD x month"
           },
           difficulty: "beginner",
           logo: "https://avatars.githubusercontent.com/u/202236240?s=200&v=4",
@@ -12285,7 +12285,1035 @@ const tools: ToolCard[] = [
         featured: true,
         url: "https://www.issen.com/es/"
       },
-   
+    {
+      "id": "164",
+      "name": "Workato",
+      "description": {
+        "es": "Plataforma de automatización empresarial para conectar apps y automatizar flujos de trabajo sin código.",
+        "en": "Enterprise automation platform to connect apps and automate workflows without code."
+      },
+      "detailedDescription": {
+        "es": "Workato es una plataforma de automatización de nivel empresarial (iPaaS) que permite a las organizaciones conectar miles de aplicaciones y automatizar flujos de trabajo complejos. Utiliza una interfaz visual de bajo código/sin código con 'recetas' para que tanto equipos de TI como de negocio puedan crear integraciones robustas, sincronizar datos y construir chatbots para mejorar la eficiencia operativa en toda la empresa.",
+        "en": "Workato is an enterprise-grade automation platform (iPaaS) that allows organizations to connect thousands of applications and automate complex workflows. It uses a low-code/no-code visual interface with 'recipes' so both IT and business teams can build robust integrations, sync data, and create chatbots to improve operational efficiency across the entire company."
+      },
+      "useCases": {
+        "es": [
+          "Automatización de procesos de ventas como 'Quote-to-Cash'",
+          "Sincronización de datos entre CRM y sistemas financieros",
+          "Automatización del onboarding y offboarding de empleados",
+          "Gestión de tickets de TI y notificaciones de soporte",
+          "Creación de chatbots para Slack o Microsoft Teams",
+          "Orquestación de campañas de marketing multicanal"
+        ],
+        "en": [
+          "Automating sales processes like 'Quote-to-Cash'",
+          "Syncing data between CRM and financial systems",
+          "Automating employee onboarding and offboarding",
+          "Managing IT helpdesk tickets and support notifications",
+          "Building chatbots for Slack or Microsoft Teams",
+          "Orchestrating multi-channel marketing campaigns"
+        ]
+      },
+      "resources": {
+        "es": [
+          {
+            "title": "Documentación oficial de Workato",
+            "url": "https://docs.workato.com/",
+            "type": "article",
+            "description": "Guías, referencias de API y documentación completa para empezar a construir automatizaciones."
+          },
+          {
+            "title": "Automation Institute: Cursos de Workato",
+            "url": "https://www.workato.com/automation-institute/",
+            "type": "course",
+            "description": "Cursos y certificaciones oficiales para dominar la plataforma de automatización de Workato."
+          },
+          {
+            "title": "Video: ¿Qué es Workato?",
+            "url": "https://www.youtube.com/watch?v=k_0_vj4a2_E",
+            "type": "video",
+            "description": "Una introducción visual que explica los conceptos clave y el poder de la plataforma Workato."
+          }
+        ],
+        "en": [
+          {
+            "title": "Workato Official Documentation",
+            "url": "https://docs.workato.com/",
+            "type": "article",
+            "description": "Guides, API references, and comprehensive documentation to start building automations."
+          },
+          {
+            "title": "Automation Institute: Workato Courses",
+            "url": "https://www.workato.com/automation-institute/",
+            "type": "course",
+            "description": "Official courses and certifications to master the Workato automation platform."
+          },
+          {
+            "title": "Video: What is Workato?",
+            "url": "https://www.youtube.com/watch?v=q-4a-1-s_4w",
+            "type": "video",
+            "description": "A visual introduction explaining the key concepts and power of the Workato platform."
+          }
+        ]
+      },
+      "category": "automation",
+      "price": {
+        "es": "Planes personalizados según las necesidades del negocio",
+        "en": "Custom plans based on business needs"
+      },
+      "difficulty": "intermediate",
+      "logo": "https://assets.partnerfleet.app/variants/ylku51br5i0se0ig9bzzf6gththg/ea5fa4208abc630da645ee21b35af85af516002067d66c1440b56ce6cc7d0e8d",
+      "slug": "workato",
+      "featured": true,
+      "url": "https://www.workato.com/"
+    },
+    {
+      "id": "165",
+      "name": "InVideo",
+      "description": {
+        "es": "Plataforma de creación de videos en línea para transformar ideas en contenido visual profesional.",
+        "en": "Online video creation platform to turn ideas into professional visual content."
+      },
+      "detailedDescription": {
+        "es": "InVideo es una plataforma de edición y creación de videos en línea que permite a creadores, marketers y equipos de contenido generar videos profesionales en minutos. Ofrece miles de plantillas prediseñadas, herramientas de edición intuitiva y funcionalidades como texto a video, ideal para redes sociales, anuncios, presentaciones o videos explicativos.",
+        "en": "InVideo is an online video editing and creation platform that enables creators, marketers, and content teams to produce professional-quality videos in minutes. It offers thousands of pre-made templates, intuitive editing tools, and features like text-to-video, making it ideal for social media, ads, presentations, or explainer videos."
+      },
+      "useCases": {
+        "es": [
+          "Creación de videos promocionales para redes sociales",
+          "Conversión de artículos de blog en videos visuales",
+          "Diseño de presentaciones animadas o explicativas",
+          "Edición rápida de videos para campañas de marketing",
+          "Producción de contenido educativo o de formación",
+          "Generación de anuncios en video para Meta o YouTube"
+        ],
+        "en": [
+          "Creating promotional videos for social media",
+          "Turning blog articles into visual videos",
+          "Designing animated or explainer presentations",
+          "Quick editing of videos for marketing campaigns",
+          "Producing educational or training content",
+          "Generating video ads for Meta or YouTube"
+        ]
+      },
+      "resources": {
+        "es": [
+          {
+            "title": "Documentación oficial de InVideo",
+            "url": "https://support.invideo.io/en/",
+            "type": "article",
+            "description": "Centro de ayuda con tutoriales, guías paso a paso y resolución de problemas comunes."
+          },
+          {
+            "title": "Curso: Crea videos con InVideo",
+            "url": "https://www.youtube.com/watch?v=Iv4lskgFfgk",
+            "type": "course",
+            "description": "Tutorial completo en video sobre cómo usar las herramientas principales de InVideo."
+          },
+          {
+            "title": "Blog de InVideo",
+            "url": "https://invideo.io/blog/",
+            "type": "article",
+            "description": "Consejos, estrategias y mejores prácticas para la creación de contenido en video."
+          }
+        ],
+        "en": [
+          {
+            "title": "InVideo Help Center",
+            "url": "https://support.invideo.io/en/",
+            "type": "article",
+            "description": "Help center with tutorials, step-by-step guides, and solutions to common issues."
+          },
+          {
+            "title": "Course: Create Videos with InVideo",
+            "url": "https://www.youtube.com/watch?v=Iv4lskgFfgk",
+            "type": "course",
+            "description": "A complete tutorial on how to use InVideo’s main tools effectively."
+          },
+          {
+            "title": "InVideo Blog",
+            "url": "https://invideo.io/blog/",
+            "type": "article",
+            "description": "Tips, strategies, and best practices for video content creation."
+          }
+        ]
+      },
+      "category": "content",
+      "price": {
+        "es": "Plan gratuito disponible. Planes premium desde $15 USD/mes",
+        "en": "Free plan available. Premium plans from $15 USD/month"
+      },
+      "difficulty": "beginner",
+      "logo": "https://img.icons8.com/?size=512&id=NMHBRPq7cNs2&format=png",
+      "slug": "invideo",
+      "featured": true,
+      "url": "https://invideo.io/"
+    },
+    {
+      "id": "166",
+      "tags": ["irrelevant"],
+      "name": "Sentry",
+      "description": {
+        "es": "Plataforma de monitoreo en tiempo real para identificar, rastrear y solucionar errores en aplicaciones.",
+        "en": "Real-time monitoring platform to identify, track, and fix errors in applications."
+      },
+      "detailedDescription": {
+        "es": "Sentry es una herramienta de observabilidad diseñada para desarrolladores que permite detectar, rastrear y resolver errores en aplicaciones web, móviles y de escritorio. Se integra fácilmente con frameworks populares y proporciona información detallada sobre excepciones, rendimiento y trazabilidad del código. Es fundamental para mejorar la calidad del software y acelerar los ciclos de desarrollo.",
+        "en": "Sentry is an observability tool built for developers that enables detection, tracking, and resolution of errors in web, mobile, and desktop applications. It integrates seamlessly with popular frameworks and provides detailed insights into exceptions, performance, and code traceability. It is essential for improving software quality and accelerating development cycles."
+      },
+      "useCases": {
+        "es": [
+          "Monitoreo de errores en producción en tiempo real",
+          "Detección de cuellos de botella de rendimiento en aplicaciones",
+          "Trazabilidad de errores hasta el código fuente específico",
+          "Alertas automáticas para equipos de desarrollo",
+          "Seguimiento de problemas en aplicaciones móviles",
+          "Análisis de impacto de errores por usuario o versión"
+        ],
+        "en": [
+          "Real-time error monitoring in production",
+          "Detecting performance bottlenecks in applications",
+          "Tracing errors back to specific source code",
+          "Automated alerts for development teams",
+          "Tracking issues in mobile applications",
+          "Analyzing error impact by user or version"
+        ]
+      },
+      "resources": {
+        "es": [
+          {
+            "title": "Documentación oficial de Sentry",
+            "url": "https://docs.sentry.io/",
+            "type": "article",
+            "description": "Guía completa para implementar, configurar e integrar Sentry con múltiples entornos y lenguajes."
+          },
+          {
+            "title": "Curso introductorio de Sentry",
+            "url": "https://www.youtube.com/watch?v=vLybU2NWrN8",
+            "type": "course",
+            "description": "Video introductorio sobre cómo empezar a usar Sentry para detectar y solucionar errores."
+          },
+          {
+            "title": "Blog de Sentry",
+            "url": "https://blog.sentry.io/",
+            "type": "article",
+            "description": "Artículos técnicos, casos de uso y mejores prácticas sobre monitoreo de errores y rendimiento."
+          }
+        ],
+        "en": [
+          {
+            "title": "Sentry Official Documentation",
+            "url": "https://docs.sentry.io/",
+            "type": "article",
+            "description": "Comprehensive guide to implementing, configuring, and integrating Sentry with multiple environments and languages."
+          },
+          {
+            "title": "Intro Course: Sentry Basics",
+            "url": "https://www.youtube.com/watch?v=vLybU2NWrN8",
+            "type": "course",
+            "description": "Introductory video on getting started with Sentry for error detection and resolution."
+          },
+          {
+            "title": "Sentry Blog",
+            "url": "https://blog.sentry.io/",
+            "type": "article",
+            "description": "Technical articles, use cases, and best practices for error and performance monitoring."
+          }
+        ]
+      },
+      "category": "technical",
+      "price": {
+        "es": "Plan gratuito disponible. Planes de pago desde $26 USD/mes",
+        "en": "Free plan available. Paid plans start at $26 USD/month"
+      },
+      "difficulty": "intermediate",
+      "logo": "https://www.svgrepo.com/show/306716/sentry.svg",
+      "slug": "sentry",
+      "featured": true,
+      "url": "https://sentry.io/welcome/"
+    },
+    {
+      "id": "167",
+      "name": "StreamYard",
+      "description": {
+        "es": "Estudio de transmisión y grabación de video profesional basado en navegador, ideal para lives, webinars y contenido para redes.",
+        "en": "Browser‑based professional live streaming and video recording studio, perfect for live streams, webinars and social content."
+      },
+      "detailedDescription": {
+        "es": "StreamYard es una plataforma de streaming y grabación de video que permite transmitir y grabar directamente desde el navegador sin descargas. Ofrece multistreaming, integración de invitados por enlace, branding con logos y overlays, grabaciones locales de alta calidad y un estudio reutilizable, facilitando la producción de shows, webinars, podcasts y eventos internos o externos con calidad profesional.",
+        "en": "StreamYard is a browser‑based video streaming and recording platform that allows broadcasting and recording directly from the browser without downloads. It supports multistreaming, guest invites via link, branding with logos and overlays, high‑quality local recordings, and reusable studios, enabling the production of professional‑quality shows, webinars, podcasts and internal or external events."
+      },
+      "useCases": {
+        "es": [
+          "Transmitir en vivo a múltiples plataformas (YouTube, Facebook, LinkedIn, Twitch…)",
+          "Grabar webinars o eventos virtuales de forma profesional",
+          "Realizar entrevistas o paneles con invitados remotos",
+          "Producción de video‑podcasts simultáneos con audio y video",
+          "Crear clases o sesiones de formación en vivo o pregrabadas",
+          "Generar contenido con branding personalizado y overlays"
+        ],
+        "en": [
+          "Stream live to multiple platforms (YouTube, Facebook, LinkedIn, Twitch, etc.)",
+          "Record professional webinars or virtual events",
+          "Conduct interviews or panels with remote guests",
+          "Produce video‑podcasts with both audio and video simultaneously",
+          "Host live or pre‑recorded classes or training sessions",
+          "Generate custom‑branded content with overlays"
+        ]
+      },
+      "resources": {
+        "es": [
+          {
+            "title": "StreamYard Help Center",
+            "url": "https://streamyard.com/",
+            "type": "article",
+            "description": "Centro oficial con guía de ayuda, preguntas frecuentes y soporte."
+          },
+          {
+            "title": "Blog de StreamYard",
+            "url": "https://streamyard.com/blog/",
+            "type": "article",
+            "description": "Artículos sobre estrategias, casos de uso y consejos para streaming."
+          },
+          {
+            "title": "Curso: 5 Funciones de StreamYard que deberías usar",
+            "url": "https://www.youtube.com/watch?v=OSZ91w1HZHY",
+            "type": "video",
+            "description": "Video destacando funciones clave para aprovechar al máximo StreamYard."
+          }
+        ],
+        "en": [
+          {
+            "title": "StreamYard Help Center",
+            "url": "https://streamyard.com/",
+            "type": "article",
+            "description": "Official help center with guides, FAQs, and support."
+          },
+          {
+            "title": "StreamYard Blog",
+            "url": "https://streamyard.com/blog/",
+            "type": "article",
+            "description": "Articles on strategies, use cases, and streaming tips."
+          },
+          {
+            "title": "Video: 5 StreamYard Features You Should be Using",
+            "url": "https://www.youtube.com/watch?v=OSZ91w1HZHY",
+            "type": "video",
+            "description": "Video highlighting key features to make the most of StreamYard."
+          }
+        ]
+      },
+      "category": "content",
+      "price": {
+        "es": "Plan gratuito disponible. Planes de pago desde 44.99 USD.",
+        "en": "Free plan available. Paid plans from 44.99 USD."
+      },
+      "difficulty": "beginner",
+      "logo": "https://getsby.com/wp-content/uploads/2022/08/streamyard.png",
+      "slug": "streamyard",
+      "featured": true,
+      "url": "https://streamyard.com/"
+    },
+    {
+      "id": "168",
+      "tags": ["Top", "irrelevant"],
+      "name": "Granola",
+      "description": {
+        "es": "Bloc de notas con IA para reuniones, que mejora tus apuntes y genera resúmenes automáticos.",
+        "en": "AI notepad for meetings that enhances your notes and generates automatic summaries."
+      },
+      "detailedDescription": {
+        "es": "Granola transcribe el audio de tus reuniones directamente desde el computador sin necesitar bots, mejora tus apuntes escritos y genera resúmenes organizados mediante IA. Además permite usar plantillas personalizadas, chatear con el contenido del transcript y compartir notas fácilmente, funcionando en macOS, Windows e iOS :contentReference[oaicite:1]{index=1}.",
+        "en": "Granola transcribes meeting audio directly from your computer without bots, enhances your manual notes, and generates structured AI summaries. It supports customizable templates, allows chatting with transcript content, and easy sharing. Available on macOS, Windows, and iOS :contentReference[oaicite:2]{index=2}."
+      },
+      "useCases": {
+        "es": [
+          "Transcribir audio de reuniones sin bots",
+          "Mejorar apuntes con resúmenes automáticos",
+          "Usar plantillas adaptadas al tipo de reunión",
+          "Consultar el contenido de reuniones mediante AI",
+          "Compartir notas organizadas con equipos"
+        ],
+        "en": [
+          "Transcribe meeting audio without bots",
+          "Enhance notes with automatic summaries",
+          "Use templates tailored to meeting types",
+          "Query meeting content via AI chat",
+          "Share organized notes with teams"
+        ]
+      },
+      "resources": {
+        "es": [
+          {
+            "title": "Documentación y planes de Granola",
+            "url": "https://www.granola.ai/docs/docs/FAQs/granola-plans-faq",
+            "type": "article",
+            "description": "Información detallada sobre planes, funciones, integraciones y configuración."
+          },
+          {
+            "title": "Blog: Granola 2.0 y carpetas compartidas",
+            "url": "https://www.granola.ai/blog/two-dot-zero",
+            "type": "article",
+            "description": "Explica las nuevas funciones colaborativas como carpetas compartidas y chat sobre múltiples reuniones."
+          },
+          {
+            "title": "Video: Granola AI review",
+            "url": "https://www.youtube.com/watch?v=EySp_B4ZhW4",
+            "type": "video",
+            "description": "Revisión en video sobre cómo funciona Granola para tomar notas en reuniones en macOS."
+          }
+        ],
+        "en": [
+          {
+            "title": "Granola subscription plans",
+            "url": "https://www.granola.ai/docs/docs/FAQs/granola-plans-faq",
+            "type": "article",
+            "description": "Detailed info on plans, features, integrations, and settings."
+          },
+          {
+            "title": "Blog: Granola 2.0 and shared folders",
+            "url": "https://www.granola.ai/blog/two-dot-zero",
+            "type": "article",
+            "description": "Explains collaborative features like shared folders and chatting across meetings."
+          },
+          {
+            "title": "Video: Granola AI review",
+            "url": "https://www.youtube.com/watch?v=EySp_B4ZhW4",
+            "type": "video",
+            "description": "Video review of how Granola works for meeting note‑taking on macOS."
+          }
+        ]
+      },
+      "category": "meetings",
+      "price": {
+        "es": "Plan gratuito: 25 reuniones. Planes de pago desde 18 USD.",
+        "en": "Free plan: 25 meetings. Paid plans from 18 USD"
+      },
+      "difficulty": "beginner",
+      "logo": "https://www.granola.ai/icon.png",
+      "slug": "granola",
+      "featured": true,
+      "url": "https://www.granola.ai/"
+    },
+    {
+      "id": "169",
+      "tags": ["Top"],
+      "name": "v0 by Vercel",
+      "description": {
+        "es": "Programador asistido por IA que genera código y UI a partir de lenguaje natural.",
+        "en": "AI pair‑programmer that generates UI and code from natural language."
+      },
+      "detailedDescription": {
+        "es": "v0 permite describir tus ideas en lenguaje natural y genera interfaces (UI) y código (React con shadcn/ui, Tailwind) listos para desplegar en Vercel. Soporta landing pages, apps full-stack, blogs, chatbots analíticos y más, con integración directa al flujo de desarrollo CI/CD de Vercel.:contentReference[oaicite:2]{index=2}",
+        "en": "v0 lets you describe your ideas in natural language and generates UI and code (React with shadcn/ui, Tailwind) ready to deploy on Vercel. It supports landing pages, full‑stack apps, blogs, analytics, chatbots, and more, directly integrated into Vercel’s CI/CD flow.:contentReference[oaicite:3]{index=3}"
+      },
+      "useCases": {
+        "es": [
+          "Creación de landing pages desde una descripción textual",
+          "Prototipos de interfaces para dashboards o herramientas internas",
+          "Generación de aplicaciones web con lógica y UI automatizada",
+          "Desarrollo de chatbots o análisis de datos GUI‑driven"
+        ],
+        "en": [
+          "Generating landing pages from text descriptions",
+          "Prototypes for dashboards or internal tool UIs",
+          "Building web apps with automated UI and logic",
+          "Developing chatbots or data‑analysis UIs"
+        ]
+      },
+      "resources": {
+        "es": [
+          {
+            "title": "Documentación oficial de v0",
+            "url": "https://vercel.com/docs/v0",
+            "type": "article",
+            "description": "Guía oficial para usar v0, desde primeros pasos hasta despliegue."
+          },
+          {
+            "title": "Guía: How to Use v0 by Vercel",
+            "url": "https://bitcot.com/v0-vercel-ai-website-app-builder-guide",
+            "type": "article",
+            "description": "Tutorial reciente (Jul 2025) para generar UI y código con prompts naturales.:contentReference[oaicite:4]{index=4}"
+          },
+          {
+            "title": "Artículos ejemplos: v0 by Vercel",
+            "url": "https://zapier.com/blog/v0-by-vercel-examples",
+            "type": "article",
+            "description": "Ejemplos reales de productos construidos usando v0 con prompts en lenguaje natural.:contentReference[oaicite:5]{index=5}"
+          }
+        ],
+        "en": [
+          {
+            "title": "v0 Documentation",
+            "url": "https://vercel.com/docs/v0",
+            "type": "article",
+            "description": "Official guide to using v0, from setup to deployment."
+          },
+          {
+            "title": "How to Use v0 by Vercel",
+            "url": "https://bitcot.com/v0-vercel-ai-website-app-builder-guide",
+            "type": "article",
+            "description": "Recent (Jul 2025) tutorial on generating UI and code using natural‑language prompts.:contentReference[oaicite:6]{index=6}"
+          },
+          {
+            "title": "v0 by Vercel examples",
+            "url": "https://zapier.com/blog/v0-by-vercel-examples",
+            "type": "article",
+            "description": "Real product examples built with v0 using natural‑language prompts.:contentReference[oaicite:7]{index=7}"
+          }
+        ]
+      },
+      "category": "apps",
+      "price": {
+        "es": "Plan gratuito disponible. Planes de pago desde 20 USD.",
+        "en": "Free plan available. Paid plans from 20 USD."
+      },
+      "difficulty": "intermediate",
+      "logo": "https://10web.io/wp-content/uploads/2024/08/v0_by_Vercel_logo.png",
+      "slug": "v0",
+      "featured": true,
+      "url": "https://vercel.com/docs/v0"
+    },
+    {
+      "id": "170",
+      "tags": ["Top"],
+      "name": "Higgsfield AI",
+      "description": {
+        "es": "Plataforma de generación de video e imágenes con IA, con control cinematográfico de cámara y efectos visuales.",
+        "en": "AI-powered image and video generation platform with cinematic camera control and visual effects."
+      },
+      "detailedDescription": {
+        "es": "Higgsfield AI permite crear efectos visuales cinematográficos, animar imágenes estáticas y generar videos con movimientos de cámara sofisticados (como crash zoom, dolly, 360° orbit) mediante IA. Ideal para creadores de contenido que buscan resultados de alta calidad sin conocimientos técnicos avanzados.",
+        "en": "Higgsfield AI lets you create cinematic visual effects, animate static images, and generate videos with advanced camera movements (like crash zoom, dolly, 360° orbit) using AI. Ideal for content creators seeking high-quality output without technical expertise."
+      },
+      "useCases": {
+        "es": [
+          "Animar imágenes con movimientos cinematográficos para redes sociales",
+          "Crear teasers visuales o intros dinámicas",
+          "Generación rápida de video para campañas de marketing",
+          "Producir contenido visual impactante para storytelling"
+        ],
+        "en": [
+          "Animate images with cinematic motions for social media",
+          "Create dynamic teasers or intros",
+          "Generate quick video for marketing campaigns",
+          "Produce impactful visual content for storytelling"
+        ]
+      },
+      "resources": {
+        "es": [
+          {
+            "title": "Documentación y precios de Higgsfield",
+            "url": "https://higgsfield.ai/pricing",
+            "type": "article",
+            "description": "Detalles de planes, créditos y uso de modelos en Higgsfield."
+          },
+          {
+            "title": "Blog con ejemplos de creaciones",
+            "url": "https://aitools.inc/tools/higgsfield-ai",
+            "type": "article",
+            "description": "Análisis y casos de uso del generador de video con efectos cinematográficos."
+          },
+          {
+            "title": "Video: planes y precios de Higgsfield",
+            "url": "https://www.youtube.com/watch?v=R5KXtcmCq64",
+            "type": "video",
+            "description": "Comparativa de funciones según el plan de suscripción."
+          }
+        ],
+        "en": [
+          {
+            "title": "Higgsfield Pricing",
+            "url": "https://higgsfield.ai/pricing",
+            "type": "article",
+            "description": "Plan details, credits, and model access in Higgsfield."
+          },
+          {
+            "title": "Higgsfield AI tool review",
+            "url": "https://aitools.inc/tools/higgsfield-ai",
+            "type": "article",
+            "description": "Review and use cases of the cinematic AI video generator."
+          },
+          {
+            "title": "Video: Higgsfield AI plans and pricing",
+            "url": "https://www.youtube.com/watch?v=R5KXtcmCq64",
+            "type": "video",
+            "description": "Overview of features by subscription tier."
+          }
+        ]
+      },
+      "category": "content",
+      "price": {
+        "es": "Gratis: 5 créditos/día. Plan Basic desde 9 USD/mes.",
+        "en": "Free: 5 credits/day. Basic plan from 9 USD/mo."
+      },
+      "difficulty": "beginner",
+      "logo": "https://pbs.twimg.com/profile_images/1906739239183630336/907a7JTU_400x400.jpg",
+      "slug": "higgsfield",
+      "featured": true,
+      "url": "https://higgsfield.ai/"
+    },
+    {
+      "id": "171",
+      "name": "Firebase Studio",
+      "description": {
+        "es": "Entorno de desarrollo AI-agentic en la nube para crear apps full‑stack asistidas por IA.",
+        "en": "Agentic cloud-based development environment for building full‑stack AI apps."
+      },
+      "detailedDescription": {
+        "es": "Firebase Studio es un IDE en la nube con agentes de IA (Gemini) que te permite prototipar, desarrollar y desplegar aplicaciones full‑stack desde el navegador. Incluye plantillas, integración de Git, emuladores, ambiente basado en Project IDX y despliegue directo a Firebase Hosting y Google Cloud. Actualmente está en preview gratuito:contentReference[oaicite:1]{index=1}.",
+        "en": "Firebase Studio is a cloud‑based IDE with AI agents (Gemini) that lets you prototype, build, and deploy full‑stack apps entirely from the browser. It includes templates, Git integration, emulators, a Project IDX-based environment, and direct deployment to Firebase Hosting and Google Cloud. It’s currently in free preview:contentReference[oaicite:2]{index=2}."
+      },
+      "useCases": {
+        "es": [
+          "Prototipar apps con prompts multimodales (texto, dibujo, imágenes)",
+          "Desarrollar aplicaciones full‑stack asistidas por IA",
+          "Importar repositorios Git y refactorizar con Gemini",
+          "Emular y previsualizar apps web y Android desde el navegador",
+          "Desplegar apps directamente a Firebase Hosting o Cloud Run"
+        ],
+        "en": [
+          "Prototype apps with multimodal prompts (text, drawing, images)",
+          "Develop full‑stack AI‑assisted applications",
+          "Import Git repos and refactor with Gemini",
+          "Emulate and preview web and Android apps in-browser",
+          "Deploy apps directly to Firebase Hosting or Cloud Run"
+        ]
+      },
+      "resources": {
+        "es": [
+          {
+            "title": "Documentación oficial de Firebase Studio",
+            "url": "https://firebase.google.com/docs/studio",
+            "type": "article",
+            "description": "Guía completa sobre cómo usar Firebase Studio y sus capacidades AI."
+          },
+          {
+            "title": "Firebase Blog: Introducing Firebase Studio",
+            "url": "https://firebase.blog/posts/2025/04/introducing-firebase-studio/",
+            "type": "article",
+            "description": "Anuncio del lanzamiento en preview y sus funcionalidades principales."
+          },
+          {
+            "title": "Tutorial: Firebase Studio pricing preview access",
+            "url": "https://www.datacamp.com/tutorial/firebase-studio",
+            "type": "article",
+            "description": "Explicación del acceso gratuito en preview con hasta 3 workspaces."
+          }
+        ],
+        "en": [
+          {
+            "title": "Firebase Studio Documentation",
+            "url": "https://firebase.google.com/docs/studio",
+            "type": "article",
+            "description": "Comprehensive guide on using Firebase Studio and its AI capabilities."
+          },
+          {
+            "title": "Firebase Blog: Introducing Firebase Studio",
+            "url": "https://firebase.blog/posts/2025/04/introducing-firebase-studio/",
+            "type": "article",
+            "description": "Announcement of its preview launch and core features."
+          },
+          {
+            "title": "Firebase Studio Pricing Overview",
+            "url": "https://www.datacamp.com/tutorial/firebase-studio",
+            "type": "article",
+            "description": "Explains free preview access with up to 3 workspaces."
+          }
+        ]
+      },
+      "category": "apps",
+      "price": {
+        "es": "Gratis: hasta 3 workspaces en preview. Más con Google Developer Program.",
+        "en": "Free: up to 3 workspaces in preview. More via Google Developer Program."
+      },
+      "difficulty": "intermediate",
+      "logo": "https://firebase.google.com/images/icons/firebase_studio.png",
+      "slug": "firebase-studio",
+      "featured": true,
+      "url": "https://studio.firebase.google.com"
+    },
+    {
+      "id": "172",
+      "name": "Willow Voice",
+      "description": {
+        "es": "Herramienta de dictado por voz con IA que convierte tu voz en texto claro, formateado y personalizado.",
+        "en": "AI-powered voice dictation tool that turns your speech into clear, formatted, and personalized writing."
+      },
+      "detailedDescription": {
+        "es": "Willow Voice es una app de dictado impulsada por IA para Mac que permite dictar en cualquier aplicación; corrige automáticamente ortografía, puntuación y formato, adapta tu estilo de escritura y respeta tu privacidad al procesar todo localmente sin almacenar archivos de audio o texto.:contentReference[oaicite:1]{index=1}",
+        "en": "Willow Voice is an AI dictation Mac app that lets you dictate into any app; it auto-corrects spelling, punctuation, and formatting, adapts to your writing style, and preserves privacy by processing everything locally—without storing audio or transcripts.:contentReference[oaicite:2]{index=2}"
+      },
+      "useCases": {
+        "es": [
+          "Redactar emails, mensajes o documentos más rápido",
+          "Tomar notas sin escribir en reuniones o brainstorms",
+          "Responder correos o chats con comandos de voz",
+          "Usar en ambientes silenciosos con modo susurro"
+        ],
+        "en": [
+          "Write emails, messages or documents faster",
+          "Take notes in meetings or brainstorms hands-free",
+          "Reply via voice commands to emails or chats",
+          "Use in quiet environments with whisper mode"
+        ]
+      },
+      "resources": {
+        "es": [
+          {
+            "title": "Willow Voice Pricing",
+            "url": "https://willowvoice.com/pricing",
+            "type": "article",
+            "description": "Página oficial con detalles de planes gratuitos e individuales."
+          }
+        ],
+        "en": [
+          {
+            "title": "Willow Voice Pricing",
+            "url": "https://willowvoice.com/pricing",
+            "type": "article",
+            "description": "Official page detailing free trial and individual plan."
+          }
+        ]
+      },
+      "category": "voice",
+      "price": {
+        "es": "Gratis: 2 000 palabras. Individual USD 12/mes (anual).",
+        "en": "Free: 2,000 words. Individual USD 12/month (billed annually)."
+      },
+      "difficulty": "beginner",
+      "logo": "https://pbs.twimg.com/profile_images/1918060497108385792/N4rx9Y7i_400x400.jpg",
+      "slug": "willow-voice",
+      "featured": true,
+      "url": "https://willowvoice.com/"
+    },
+    {
+      "id": "173",
+      "name": "Fluently",
+      "description": {
+        "es": "Coach de inglés por IA que ofrece feedback en tiempo real durante tus llamadas.",
+        "en": "AI-powered English coach that gives real-time feedback during your calls."
+      },
+      "detailedDescription": {
+        "es": "Fluently analiza tus conversaciones en plataformas como Zoom o Google Meet, corrige errores de gramática, pronunciación y vocabulario, y aprende de tu desempeño para adaptar un plan personalizado y mejorar tus habilidades de speaking.",
+        "en": "Fluently listens during calls on platforms like Zoom or Google Meet, corrects grammar, pronunciation, and vocabulary mistakes, and adapts a learning plan based on your performance to help improve your speaking skills."
+      },
+      "useCases": {
+        "es": [
+          "Mejorar pronunciación y fluidez durante videollamadas",
+          "Corregir errores gramaticales y de vocabulario en tiempo real",
+          "Recibir análisis personalizados tras cada llamada",
+          "Seguir tu progreso en inglés sobre conversaciones reales"
+        ],
+        "en": [
+          "Improve pronunciation and fluency during video calls",
+          "Fix grammar and vocabulary mistakes in real time",
+          "Get personalized feedback after each call",
+          "Track your English progress based on real conversations"
+        ]
+      },
+      "resources": {
+        "es": [
+          {
+            "title": "Fluently Help Center",
+            "url": "https://help.getfluently.app/en/articles/11372936-how-much-does-the-app-cost",
+            "type": "article",
+            "description": "Centro de ayuda donde se explican los precios según tu país."
+          }
+        ],
+        "en": [
+          {
+            "title": "Fluently Help Center",
+            "url": "https://help.getfluently.app/en/articles/11372936-how-much-does-the-app-cost",
+            "type": "article",
+            "description": "Help center explaining pricing variations by country."
+          }
+        ]
+      },
+      "category": "productivity",  /* ajustes: no category skill, use productivity? use 'technical'? It's English learning so productivity? Might pick 'content'? better 'productivity' */
+      "price": {
+        "es": "Gratis. Premium desde USD 9.99/semana.",
+        "en": "Free. Premium from USD 9.99/week."
+      },
+      "difficulty": "beginner",
+      "logo": "https://cdn-1.webcatalog.io/catalog/fluently-app/fluently-app-icon-filled-256.png?v=1724832121882",
+      "slug": "fluently",
+      "featured": true,
+      "url": "https://getfluently.app/"
+    },
+    {
+      "id": "174",
+      "tags": ["irrelevant"],
+      "name": "Grafana",
+      "description": {
+        "es": "Plataforma de visualización y análisis de métricas, logs y trazas para monitoreo y observabilidad.",
+        "en": "Visualization and analysis platform for metrics, logs, and traces for monitoring and observability."
+      },
+      "detailedDescription": {
+        "es": "Grafana es una herramienta potente para visualizar datos de múltiples orígenes (Prometheus, Loki, Tempo, etc.), crear dashboards interactivos y configurar alertas. Está disponible como solución autohospedada o como servicio en la nube (Grafana Cloud), con opciones de monitoreo de infraestructuras, logs, trazas, pruebas sintéticas, y capacidades avanzadas con Grafana AI.",
+        "en": "Grafana is a powerful tool to visualize data from multiple sources (Prometheus, Loki, Tempo, etc.), build interactive dashboards, and set alerts. Available as a self‑hosted solution or as a cloud service (Grafana Cloud), with infrastructure monitoring, logs, tracing, synthetic tests, and advanced capabilities like Grafana AI."
+      },
+      "useCases": {
+        "es": [
+          "Monitorización de infraestructura y servicios",
+          "Visualización de métricas de tiempo real",
+          "Análisis de logs y trazas",
+          "Pruebas sintéticas y rendimiento",
+          "Alertas y gestión de incidentes",
+          "Predicciones y detección de anomalías con IA"
+        ],
+        "en": [
+          "Infrastructure and service monitoring",
+          "Real‑time metrics visualization",
+          "Log and trace analysis",
+          "Synthetic testing and performance",
+          "Alerts and incident management",
+          "AI‑powered forecasting and anomaly detection"
+        ]
+      },
+      "resources": {
+        "es": [
+          {
+            "title": "Planes oficiales de Grafana Cloud",
+            "url": "https://grafana.com/pricing/",
+            "type": "article",
+            "description": "Información detallada sobre los planes Free, Pro y Advanced, y tarifas por uso."
+          },
+          {
+            "title": "Documentación de Grafana",
+            "url": "https://grafana.com/docs/",
+            "type": "article",
+            "description": "Guía oficial para desplegar, configurar y utilizar Grafana en modo self‑hosted o Cloud."
+          },
+          {
+            "title": "Blog y casos de uso de Grafana",
+            "url": "https://grafana.com/blog/",
+            "type": "article",
+            "description": "Artículos sobre novedades, casos reales y mejores prácticas de observabilidad."
+          }
+        ],
+        "en": [
+          {
+            "title": "Grafana Cloud Pricing",
+            "url": "https://grafana.com/pricing/",
+            "type": "article",
+            "description": "Detailed info about Free, Pro, and Advanced plans, and usage-based pricing."
+          },
+          {
+            "title": "Grafana Documentation",
+            "url": "https://grafana.com/docs/",
+            "type": "article",
+            "description": "Official guide to deploy, configure, and use Grafana self‑hosted or in Cloud."
+          },
+          {
+            "title": "Grafana Blog & Use Cases",
+            "url": "https://grafana.com/blog/",
+            "type": "article",
+            "description": "Articles on features, real‑world use cases, and observability best practices."
+          }
+        ]
+      },
+      "category": "technical",
+      "price": {
+        "es": "Gratis. Pro desde 19 USD/mes. Advanced desde 299 USD/mes.",
+        "en": "Free. Pro from USD 19/mo. Advanced from USD 299/mo."
+      },
+      "difficulty": "intermediate",
+      "logo": "https://w7.pngwing.com/pngs/434/923/png-transparent-grafana-hd-logo-thumbnail.png",
+      "slug": "grafana",
+      "featured": true,
+      "url": "https://grafana.com/"
+    },
+    {
+      "id": "175",
+      "tags": ["YC"],
+      "name": "PARES",
+      "description": {
+        "es": "Plataforma integral impulsada por IA para profesionales del sector inmobiliario comercial.",
+        "en": "AI-powered all‑in‑one platform for commercial real estate professionals."
+      },
+      "detailedDescription": {
+        "es": "PARES automatiza el flujo de trabajo del corretaje comercial, desde la prospección de propiedades hasta el cierre de operaciones, con funcionalidades como base de datos de propiedades, CRM, generación de documentos (OM/BOV), underwriting AI, campañas de marketing y almacenamiento seguro.",
+        "en": "PARES automates commercial real estate brokerage workflows—from property prospecting to deal closing—with features such as property database, CRM, OM/BOV generation, AI underwriting, marketing campaigns, and secure file storage."
+      },
+      "useCases": {
+        "es": [
+          "Encontrar propietarios con IA y skip‑tracing",
+          "Contactar prospectos con llamadas y voicemails automáticos",
+          "Preparar documentos como OM/BOV con IA",
+          "Analizar transacciones mediante AI underwriting",
+          "Gestionar pipeline y automatizar seguimientos"
+        ],
+        "en": [
+          "Identify property owners via AI and skip‑tracing",
+          "Reach prospects with automated calls and voicemails",
+          "Generate OM/BOV documents using AI",
+          "Analyze transactions via AI underwriting",
+          "Manage pipelines and automate follow‑ups"
+        ]
+      },
+      "resources": {
+        "es": [
+          {
+            "title": "Planes oficiales de PARES",
+            "url": "https://pares.ai/",
+            "type": "article",
+            "description": "Información sobre los planes Basic y Pro en modalidad anual."
+          }
+        ],
+        "en": [
+          {
+            "title": "PARES Official Pricing",
+            "url": "https://pares.ai/",
+            "type": "article",
+            "description": "Info on Basic and Pro annual pricing plans."
+          }
+        ]
+      },
+      "category": "sales",
+      "price": {
+        "es": "Basic USD 50/usuario/mes (anual). Pro USD 75/usuario/mes (anual).",
+        "en": "Basic USD 50/user/mo (annual). Pro USD 75/user/mo (annual)."
+      },
+      "difficulty": "intermediate",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDN4QMmkinVWpTDxrlZ_SQlVO24-m0A7mzlw&s",
+      "slug": "pares",
+      "featured": true,
+      "url": "https://www.pares.ai/"
+    },
+    {
+      "id": "176",
+      "tags": ["YC"],
+      "name": "Reducto",
+      "description": {
+        "es": "API de ingesta de documentos que convierte archivos no estructurados en datos estructurados listos para modelos LLM.",
+        "en": "Document ingestion API that turns unstructured files into structured data ready for LLMs."
+      },
+      "detailedDescription": {
+        "es": "Reducto combina OCR y modelos de visión‑lenguaje para procesar PDFs, imágenes, hojas de cálculo y presentaciones, extrayendo tablas, formularios, gráficos y texto con alta precisión para alimentar pipelines de IA.",
+        "en": "Reducto combines OCR and vision‑language models to process PDFs, images, spreadsheets, and presentations—extracting tables, forms, graphs, and text with high accuracy for AI pipelines."
+      },
+      "useCases": {
+        "es": [
+          "Parseo de documentos financieros con tablas complejas",
+          "Extracción estructurada de formularios, facturas y reportes",
+          "Procesamiento de imágenes y textos mixtos en múltiples idiomas",
+          "Preparación de datos para pipelines RAG o LLM"
+        ],
+        "en": [
+          "Parsing financial documents with complex tables",
+          "Structured extraction of forms, invoices, and reports",
+          "Processing mixed image and text content across languages",
+          "Preparing data for RAG or LLM pipelines"
+        ]
+      },
+      "resources": {
+        "es": [
+          {
+            "title": "Planes oficiales de Reducto",
+            "url": "https://reducto.ai/pricing",
+            "type": "article",
+            "description": "Detalles del plan Standard, Growth y Enterprise con precios por página."
+          },
+          {
+            "title": "Documentación de Reducto",
+            "url": "https://docs.reducto.ai/overview",
+            "type": "article",
+            "description": "Guía de funciones principales como parse, extract, split y edit."
+          },
+          {
+            "title": "Blog: casos reales y modos de uso",
+            "url": "https://reducto.ai/blog/the-real-cost-of-manual-document-processing",
+            "type": "article",
+            "description": "Perspectiva sobre el impacto de automatizar la ingesta de documentos."
+          }
+        ],
+        "en": [
+          {
+            "title": "Reducto Pricing",
+            "url": "https://reducto.ai/pricing",
+            "type": "article",
+            "description": "Details on Standard, Growth, and Enterprise plans with per‑page pricing."
+          },
+          {
+            "title": "Reducto API Documentation",
+            "url": "https://docs.reducto.ai/overview",
+            "type": "article",
+            "description": "Guide to core endpoints like parse, extract, split, and edit."
+          },
+          {
+            "title": "Blog: The Real Cost of Manual Document Processing",
+            "url": "https://reducto.ai/blog/the-real-cost-of-manual-document-processing",
+            "type": "article",
+            "description": "Insight into automating document ingestion workflows."
+          }
+        ]
+      },
+      "category": "technical",
+      "price": {
+        "es": "Standard USD 350/mes (15 k páginas incluidas).",
+        "en": "Standard USD 350/mo (15 K pages included)."
+      },
+      "difficulty": "intermediate",
+      "logo": "https://pbs.twimg.com/profile_images/1899648978314305536/PHE8hDyV_400x400.jpg",
+      "slug": "reducto",
+      "featured": true,
+      "url": "https://reducto.ai/"
+    },
+    {
+      "id": "177",
+      "name": "Blink",
+      "description": {
+        "es": "Constructor de apps web full‑stack desde ideas en lenguaje natural, sin código.",
+        "en": "AI app builder that generates full‑stack web apps from natural language ideas."
+      },
+      "detailedDescription": {
+        "es": "Blink permite describir una idea en lenguaje natural y genera automáticamente una app web completa: UI, base de datos, backend, autenticación, hosting y lógica, todo listo para desplegar en segundos.",
+        "en": "Blink lets you describe an idea in natural language and automatically generates a full‑stack web app: UI, database, backend, authentication, hosting, and logic, all deployable in seconds."
+      },
+      "useCases": {
+        "es": [
+          "Crear MVPs sin programar",
+          "Desarrollar herramientas internas rápidas",
+          "Lanzar sitios o apps SaaS desde texto",
+          "Prototipar interfaces funcionales con lógica"
+        ],
+        "en": [
+          "Build MVPs without coding",
+          "Develop internal tools fast",
+          "Launch SaaS websites or apps from text",
+          "Prototype functional UIs with logic"
+        ]
+      },
+      "resources": {
+        "es": [
+          {
+            "title": "Sitio oficial de Blink",
+            "url": "https://blink.new/",
+            "type": "article",
+            "description": "Página principal donde se presenta la herramienta e información inicial."
+          }
+        ],
+        "en": [
+          {
+            "title": "Y Combinator – Blink",
+            "url": "https://www.ycombinator.com/companies/blink-new",
+            "type": "article",
+            "description": "Ficha en Y Combinator describiendo funcionalidades principales."
+          }
+        ]
+      },
+      "category": "apps",
+      "price": {
+        "es": "Precio no disponible públicamente.",
+        "en": "Price not publicly available."
+      },
+      "difficulty": "beginner",
+      "logo": "https://media.licdn.com/dms/image/v2/D560BAQGjIbXbOk_mkg/company-logo_200_200/company-logo_200_200/0/1715673897737/blink_labs_ai_logo?e=2147483647&v=beta&t=uLG_wxcafRlLGIKtyifiA1jHdTP_wufRolUpVwqib0g",
+      "slug": "blink-new",
+      "featured": true,
+      "url": "https://blink.new/"
+    }
   
 ];
 
