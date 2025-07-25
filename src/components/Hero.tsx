@@ -15,6 +15,11 @@ const Hero: React.FC<HeroProps> = ({ language, onJoinWhatsApp }) => {
    window.open('https://chat.whatsapp.com/JMSMme18JN9B6zHdRC6ZGg', '_blank');
  };
 
+ // Función para navegar a las herramientas
+ const handleToolsClick = () => {
+   window.location.href = '/tools';
+ };
+
  return (
    <section className="relative min-h-[100dvh] flex items-center overflow-hidden">
      <div className="container mx-auto px-4 sm:px-6 md:px-8 relative z-10">
@@ -26,24 +31,21 @@ const Hero: React.FC<HeroProps> = ({ language, onJoinWhatsApp }) => {
 
            
            {/* Main Title */}
-           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[0.9] mb-6 md:mb-8">
-             <span className="block bg-gradient-to-r from-[#FFFFFF] via-[#A78BFA] to-[#8B5FFF] bg-clip-text text-transparent">
-               {language === "es" ? "Conectamos la IA" : "We connect AI"}
-             </span>
-             <span className="block bg-gradient-to-r from-[#8B5FFF] via-[#7C3AED] to-[#A78BFA] bg-clip-text text-transparent mt-2">
-               {language === "es" ? "con tu Visión" : "with your Vision"}
-             </span>
-             <span className="block text-[#FFFFFF] text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-3 md:mt-4 font-light">
-               {language === "es" ? "de forma práctica" : "in a practical way"}
-             </span>
-           </h1>
-           
-           {/* Enhanced Subtitle */}
-           <p className="text-lg sm:text-xl md:text-2xl text-[#9CA3AF] mb-8 md:mb-12 leading-relaxed mx-auto lg:mx-0 max-w-2xl lg:max-w-none">
-             {language === "es" 
-               ? "El puente entre la tecnología que está cambiando el mundo y builders que buscan materializar sus ideas. Sin tecnicismos, solo resultados." 
-               : "The bridge between world-changing technology and builders seeking to materialize their ideas. No jargon, just results."}
-           </p>
+<h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[0.9] mb-6 md:mb-8">
+ <span className="block bg-gradient-to-r from-[#FFFFFF] via-[#A78BFA] to-[#8B5FFF] bg-clip-text text-transparent">
+   {language === "es" ? "150+ Tools de IA" : "150+ AI Tools"}
+ </span>
+ <span className="block bg-gradient-to-r from-[#8B5FFF] via-[#7C3AED] to-[#A78BFA] bg-clip-text text-transparent mt-2">
+   {language === "es" ? "Probadas y Actualizadas" : "Tested and Updated"}
+ </span>
+</h1>
+
+{/* Enhanced Subtitle */}
+<p className="text-lg sm:text-xl md:text-2xl text-[#9CA3AF] mb-8 md:mb-12 leading-relaxed mx-auto lg:mx-0 max-w-2xl lg:max-w-none">
+ {language === "es" 
+   ? "La plataforma completa con herramientas de IA verificadas, recursos de aprendizaje y noticias para que no te pierdas cómo la IA está cambiando el mundo." 
+   : "The complete platform with verified AI tools, learning resources and news so you don't miss how AI is changing the world."}
+</p>
            
            {/* Key Features */}
            <div className="flex flex-wrap gap-3 md:gap-4 mb-8 md:mb-10 justify-center lg:justify-start">
@@ -67,11 +69,33 @@ const Hero: React.FC<HeroProps> = ({ language, onJoinWhatsApp }) => {
              </div>
            </div>
            
-           {/* Botón de WhatsApp Mejorado */}
+           {/* Botones CTA */}
            <div className="space-y-3 sm:space-y-4">
+             {/* Botón Principal - Explorar Herramientas */}
+             <button 
+               onClick={handleToolsClick}
+               className="group relative inline-flex items-center justify-center w-full sm:w-auto sm:min-w-[280px] lg:min-w-[320px] px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg font-bold text-white bg-gradient-to-r from-[#8B5FFF] via-[#7C3AED] to-[#8B5FFF] bg-size-200 bg-pos-0 hover:bg-pos-100 rounded-xl shadow-xl shadow-[#8B5FFF]/20 hover:shadow-[#8B5FFF]/40 transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 ease-out border border-[#8B5FFF]/30"
+             >
+               <div className="absolute -inset-0.5 bg-gradient-to-r from-[#8B5FFF] via-[#7C3AED] to-[#8B5FFF] rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
+               <div className="relative flex items-center">
+                 <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2 sm:mr-3" fill="currentColor" viewBox="0 0 24 24">
+                   <path d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.39zM11 18a7 7 0 1 1 7-7 7 7 0 0 1-7 7z"/>
+                 </svg>
+                 <span className="whitespace-nowrap text-sm sm:text-base">
+                   {language === "es" ? "Explorar Herramientas IA" : "Explore AI Tools"}
+                 </span>
+                 <div className="ml-2 sm:ml-3 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
+                   <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-4 md:h-4 transform group-hover:translate-x-0.5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                   </svg>
+                 </div>
+               </div>
+             </button>
+
+             {/* Botón Secundario - WhatsApp */}
              <button 
                onClick={handleWhatsAppClick}
-               className="group relative inline-flex items-center justify-center px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg font-semibold text-white bg-gradient-to-r from-[#25D366] via-[#128C7E] to-[#25D366] bg-size-200 bg-pos-0 hover:bg-pos-100 rounded-xl shadow-xl shadow-[#25D366]/20 hover:shadow-[#25D366]/40 transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 ease-out border border-[#25D366]/30"
+               className="group relative inline-flex items-center justify-center w-full sm:w-auto sm:min-w-[280px] lg:min-w-[320px] px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg font-semibold text-white bg-gradient-to-r from-[#25D366] via-[#128C7E] to-[#25D366] bg-size-200 bg-pos-0 hover:bg-pos-100 rounded-xl shadow-xl shadow-[#25D366]/20 hover:shadow-[#25D366]/40 transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 ease-out border border-[#25D366]/30"
              >
                <div className="absolute -inset-0.5 bg-gradient-to-r from-[#25D366] via-[#128C7E] to-[#25D366] rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
                <div className="relative flex items-center">
