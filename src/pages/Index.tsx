@@ -224,8 +224,8 @@ const Index = () => {
               </h2>
               <p className="text-xl text-[#9CA3AF] max-w-2xl mx-auto">
                 {language === "es"
-                  ? "Los empresarios exitosos comparten los mismos desafíos cuando se trata de tecnología"
-                  : "Successful entrepreneurs share the same challenges when it comes to technology"}
+                  ? "Los builders exitosos comparten los mismos desafíos cuando se trata de tecnología"
+                  : "Successful builders share the same challenges when it comes to technology"}
               </p>
             </div>
 
@@ -338,8 +338,8 @@ const Index = () => {
               </h2>
               <p className="text-xl text-[#9CA3AF] max-w-3xl mx-auto">
                 {language === "es"
-                  ? "Empresarios reales compartiendo herramientas que funcionan y estrategias que generan resultados medibles"
-                  : "Real entrepreneurs sharing tools that work and strategies that generate measurable results"}
+                  ? "Builders reales compartiendo herramientas que funcionan y estrategias que generan resultados medibles"
+                  : "Real builders sharing tools that work and strategies that generate measurable results"}
               </p>
             </div>
 
@@ -350,7 +350,7 @@ const Index = () => {
                 </div>
                 <h3 className="text-3xl font-bold text-white mb-2">100+</h3>
                 <p className="text-[#9CA3AF] mb-2">
-                  {language === "es" ? "Empresarios conectados" : "Connected entrepreneurs"}
+                  {language === "es" ? "Builders conectados" : "Builders entrepreneurs"}
                 </p>
                 <div className="flex items-center justify-center text-green-400 text-sm">
                   <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
